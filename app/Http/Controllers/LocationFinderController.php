@@ -11,11 +11,20 @@ class LocationFinderController extends Controller
 {
     public function searchAddress(Request $request){
         $keyword = $request->query('search');
-        $keywords = explode(' ', $keyword );
-        foreach ($keywords as $keyword){
-            $search = Location::where('Address', 'LIKE', "%" . $keyword . "%")->get();
-        }
-        return response()->json(array('search'=>$search, 'keyword'=>$keyword));
+        $keywords = preg_split('/s+/', $keyword, -1, PREG_SPLIT_NO_EMPTY);
+
+
+        $search = Location::where(function ($q) use ($keywords) {
+            foreach ($keywords as $k) {
+                $q->orWhere('Address', 'like', "%{$k}%");
+            }
+        })->get();
+
+
+        
+        
+        
+            return response()->json(array('search'=>$search, 'keyword'=>$keyword));
     }
 
     /**

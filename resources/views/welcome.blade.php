@@ -392,9 +392,27 @@ main#hero .content input[type="text"] {
     padding-right: 50px;
     border-radius: 50px 0 0 50px;
     border-right: 0;
-    padding-left: 20px;
+    padding-left: 48px;
     font-size: 15px;
     border: 0;
+}
+
+
+main#hero .content span{
+    position: absolute;
+    margin-left: 20px;
+    /* height: 25px; */
+    left: 0;
+    /* display: flex; */
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+}
+
+main#hero .content span i{
+    color: #f34b3d91;
+    font-size: 24px;
 }
 
 main#hero .content input[type="text"]:focus {
@@ -402,7 +420,7 @@ main#hero .content input[type="text"]:focus {
     padding-right: 50px;
     border-radius: 50px 0 0 50px;
     border-right: 0;
-    padding-left: 20px;
+    padding-left: 48px;
     font-size: 15px;
     border: 0;
 }
@@ -1038,6 +1056,9 @@ input[type="text"], textarea {
                         </p>
                         <form action="{{ route('stepOne') }}" method="get" class="row col-md-9">
                             <div class="input-group" style="position: relative">
+                            <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            </span>
                                 <input type="text" class="form-control shadow-none" id="address" placeholder="Enter address...">
                                 <button class="btn btn-outline-secondary btn-custom-submit" id="stepOne" type="button"><i class="fas fa-calculator"></i></button>
                                 <div id="search-results">
