@@ -1253,21 +1253,30 @@ $.ajaxSetup({
     <script type="text/javascript">
     $('#address').on('keyup',function(){
         $value = $(this).val();
-        $("#search-results > ul").empty();
+        $("#search-results > ul").empty();  
         if($value.length > 0){
         $.ajax({
             type : 'get',
             url : '{{URL::to('search')}}',
             data:{'search':$value},
             success:function(data){
+                $("#search-results > ul").empty();  
                 console.log(data.search);
                 var ul = $('<ul>').appendTo('#search-results');
                 $(data.search).each(function(index, Address) {
-                    ul.append(
-                        $(document.createElement('li')).text(Address.Address)
-                    );
-                });
+ 
+                    var searchWord= Address.Address;
+                    var exists=$('#search-results ul li:contains('+searchWord+')').length;
 
+
+                    if( !exists){
+                            ul.append(
+                                $(document.createElement('li')).text(Address.Address)
+                            );
+                    }
+                    else{
+                    }
+                });
 
                 
             }
@@ -1275,6 +1284,13 @@ $.ajaxSetup({
         }
     })
     </script>
+
+
+var exists=$('#myList li:contains('+searchWord+')').length;// see if element(s) exists that matches by checking length
+
+if( !exists){
+// code when search doesn't exist
+}
 
     <script>
     $('.input-group').on('click', '#search-results ul li',function(){
