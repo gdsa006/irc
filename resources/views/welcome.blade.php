@@ -1286,11 +1286,6 @@ $.ajaxSetup({
     </script>
 
 
-var exists=$('#myList li:contains('+searchWord+')').length;// see if element(s) exists that matches by checking length
-
-if( !exists){
-// code when search doesn't exist
-}
 
     <script>
     $('.input-group').on('click', '#search-results ul li',function(){
