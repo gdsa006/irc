@@ -25,3 +25,8 @@ Route::get('/stepThreeProcess', [App\Http\Controllers\LeadsController::class,'st
 Route::get('/stepOne', [App\Http\Controllers\LeadsController::class,'StepOne'])->name('stepOne');
 Route::get('/stepTwo', [App\Http\Controllers\LeadsController::class,'StepTwo'])->name('stepTwo');
 Route::get('/stepThree', [App\Http\Controllers\LeadsController::class,'StepThree'])->name('stepThree');
+
+
+Route::get('test', function () {
+    return 'test success';
+});
