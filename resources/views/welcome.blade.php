@@ -1249,7 +1249,7 @@ input[type="text"], textarea {
         $.ajax({
             type : 'get',
             url : '{{URL::to('search')}}',
-            data:{'search':$value},
+            data:{'_token': '{{ csrf_token() }}', 'search':$value},
             success:function(data){
                 console.log(data.search);
                 var ul = $('<ul>').appendTo('#search-results');
@@ -1281,10 +1281,12 @@ input[type="text"], textarea {
         $value=$("#address").val();
         console.log($value);
         $('#hidden-address').val('000');
+        "_token": "{{ csrf_token() }}",
+
         $.ajax({
             type : 'get',
             url : '{{ route('steps') }}',
-            data:{'address':$value},
+            data:{'_token': '{{ csrf_token() }}', 'address':$value},
             success:function(data){
                 console.log(data);
                 if(data.status != "not found"){
@@ -1296,13 +1298,13 @@ input[type="text"], textarea {
         });
     })
 </script>
-<script>
+<!-- <script>
 $.ajaxSetup({
   headers: {
     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
   }
 });
-</script>
+</script> -->
 </body>
     </body>
 </html>
