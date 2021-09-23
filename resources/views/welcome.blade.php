@@ -160,19 +160,20 @@ header#header .icons{
   
   /* Menu */
   .menu1 {
+    position: relative;
     width: 100%;
-    background-color: #ffffff;
-    margin: 0;
+    background-color: transparent;
+    /* margin: 0; */
     display: -ms-grid;
-    display: grid;
-    grid-template-rows: 1fr repeat(4, 0.5fr);
-    grid-row-gap: 25px;
+    /* display: grid; */
+    /* grid-template-rows: 1fr repeat(4, 0.5fr); */
+    /* grid-row-gap: 25px; */
     padding: 0;
     list-style: none;
-    clear: both;
+    /* clear: both; */
     width: 100%;
     text-align: center;
-    height: 0px;
+    height: 0;
     overflow: hidden;
     transition: height .4s ease;
     z-index: 120;
@@ -185,22 +186,24 @@ header#header .icons{
     z-index: 9999999;
   }
   
-  .menu1 a:first-child {
+  /* .menu1 a:first-child {
     margin-top: 40px;
   }
   
   .menu1 a:last-child {
     margin-bottom: 40px;
-  }
+  } */
   
   .link1 {
     width: 100%;
+    display: block;
     margin: 0;
     padding: 10px 0;
-    font: 700 20px 'Oswald', sans-serif;
+    font: 18px;
     text-align: left;
     color: #000;
-    padding: 0 20px;
+    padding: 17px 20px;
+    background: #ffffff
   }
   
   .link1:hover {
@@ -359,7 +362,7 @@ main#hero .image img{
 main#hero .content{
     padding: 40px;
     height: 100%;
-    z-index: 9999;
+    z-index: 0;
     position: relative;
 }
 
@@ -757,7 +760,7 @@ footer #logo{
 }
 
 .modal.leads .data .custom-btn{
-    padding: 10px 25px!important;
+    padding: 5px 25px!important;
     color: #ffffff;
     /* font-weight: 600; */
     border-radius: 50px;
@@ -925,13 +928,18 @@ input[type="text"], textarea {
 
 #search-results li{
     background: #ffffff;
-    padding: 10px;
+    padding: 9px 10px;
     color: #555;
+    font-size: 13px;
+    border-bottom: solid 1px #dfdfdf;
 }
 
 #search-results li:hover{
     cursor: pointer;
     color: #000
+}
+.text-muted{
+    display: none
 }
         </style>
     </head>
@@ -1054,7 +1062,7 @@ input[type="text"], textarea {
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                         </p>
-                        <form action="{{ route('stepOne') }}" method="get" class="row col-md-9">
+                        <form action="{{ route('stepOne') }}" method="post" class="row col-md-9">
                             <div class="input-group" style="position: relative">
                             <span>
                             <i class="fas fa-map-marker-alt"></i>
@@ -1203,11 +1211,33 @@ input[type="text"], textarea {
 
 
 
+      <div class="modal fade" id="formular">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="alert alert-danger">
+                    <h4>Error !</h4>
+                    <p>Email already exist !</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
-
-
+<div class="modal fade" id="emailsent">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="success success-danger">
+                    <h4>Thankyou!</h4>
+                    <p>Your query has been received</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
         <!-- <form action="{{ route('stepOne') }}" method="get">
@@ -1275,7 +1305,7 @@ $.ajaxSetup({
     $('#address').on('keyup',function(){
         $value = $(this).val();
         $("#search-results > ul").empty();  
-        if($value.length > 0){
+        if($value.length > 1){
         $.ajax({
             type : 'get',
             url : '{{URL::to('search')}}',
@@ -1323,7 +1353,7 @@ $.ajaxSetup({
         console.log($value);
         $('#hidden-address').val('000');
         $.ajax({
-            type : 'get',
+            type : 'post',
             url : '{{ route('steps') }}',
             data:{'address':$value},
             success:function(data){
@@ -1331,12 +1361,29 @@ $.ajaxSetup({
                 if(data.status != "not found"){
                     window.location.href = "{{URL::to('stepOne')}}";
                 }else{
-                    alert('incorrect entry');
+                    $('#formular').modal('show');
+                    $('#formular').css('z-index', '9999999');
+                    $('#formular p').text('please enter the address');
                 }
             }
         });
     })
 </script>
+
+
+<script>
+    $("#exampleModal button.close").on('click', function(){
+        var destroySession = "{{ Session::forget('leadData') }}";
+        window.location.href = "{{URL::to('stepOne')}}";
+    });
+    $("#exampleModal #exit").on('click', function(){
+        var destroySession = "{{ Session::forget('leadData') }}";
+        window.location.href = "{{URL::to('stepOne')}}";
+    });
+
+
+    
+    </script>
 
 </body>
     </body>

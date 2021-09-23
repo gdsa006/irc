@@ -43,8 +43,9 @@ $('#stepTwo').on('click',function(){
                 if(data.status == "s2"){
                     window.location.href = "{{URL::to('stepTwo')}}"
                 }else{
-                    alert('incomplete fields');
-                }
+                    $('#formular').modal('show');
+                    $('#formular').css('z-index', '9999999');
+                    $('#formular p').text('please check the inputs');                }
             }
         });
     })

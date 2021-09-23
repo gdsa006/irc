@@ -34,10 +34,13 @@ $('#finalStep').on('click',function(){
             success:function(data){
                 console.log(data);
                 if(data.status == 'success'){
-                    alert("email sent");
                     $('#exampleModal').modal('hide');
+                    $('#emailsent').modal('show');
+                    $('#emailsent').css('z-index', '9999999');
                 }else{
-                    alert("incomplete fields");
+                    $('#formular').modal('show');
+                    $('#formular').css('z-index', '9999999');
+                    $('#formular p').text('please check the inputs');     
                 }
             }
         });

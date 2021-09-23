@@ -18,7 +18,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/search', 'App\Http\Controllers\LocationFinderController@searchAddress');
-Route::get('/steps', [App\Http\Controllers\LeadsController::class,'Steps'])->name('steps');
+Route::post('/steps', [App\Http\Controllers\LeadsController::class,'Steps'])->name('steps');
 Route::get('/stepOneProcess', [App\Http\Controllers\LeadsController::class,'StepOneProcess'])->name('stepOneProcess');
 Route::get('/stepTwoProcess', [App\Http\Controllers\LeadsController::class,'stepTwoProcess'])->name('stepTwoProcess');
 Route::get('/stepThreeProcess', [App\Http\Controllers\LeadsController::class,'stepThreeProcess'])->name('stepThreeProcess');

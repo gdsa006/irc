@@ -40,7 +40,9 @@ $('#stepThree').on('click',function(){
                 if(data.status == "s3"){
                     window.location.href = "{{URL::to('stepThree')}}"
                 }else{
-                    alert("incomplete fields");
+                    $('#formular').modal('show');
+                    $('#formular').css('z-index', '9999999');
+                    $('#formular p').text('please check the inputs');     
                 }
             }
         });

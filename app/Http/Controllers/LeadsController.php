@@ -21,16 +21,17 @@ class LeadsController extends Controller
     }
 
     public function stepOneProcess(Request $request){
-        $fname = $request->fname;
-        $lname = $request->lname;
-        if($fname && $lname){
-            $data = $request->session()->get('leadData');
-            $transferData = $fname . ':' . $lname . ':' . $data;
-            $request->session()->put('leadData', $transferData);
-            return response()->json(array('status' => 's2'));
-        }else{
-            return response()->json(array('status' => 'false'));
-        }
+            $fname = $request->fname;
+            $lname = $request->lname;
+            if($fname && $lname){
+                $data = $request->session()->get('leadData');
+                $transferData = $fname . ':' . $lname . ':' . $data;
+                $request->session()->put('leadData', $transferData);
+                return response()->json(array('status' => 's2'));
+            }else{
+                return response()->json(array('status' => 'false'));
+            }
+        
     }
 
     public function stepTwoProcess(Request $request){
@@ -61,15 +62,27 @@ class LeadsController extends Controller
     }
 
     public function stepOne(Request $request){
+        if($request->session()->has('leadData')){
         return View('form.step.one');
+    }else{  
+        return redirect()->route('home');
+    }
     }
 
     public function stepTwo(Request $request){
+        if($request->session()->has('leadData')){
         return View('form.step.two');
+        }else{
+            return redirect()->route('home');
+        }
     }
 
     public function stepThree(Request $request){
+        if($request->session()->has('leadData')){
         return View('form.step.three');
+        }else{
+            return redirect()->route('home');
+        }
     }
 
 }
