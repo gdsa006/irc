@@ -10,8 +10,11 @@ use DB;
 class LocationFinderController extends Controller
 {
     public function searchAddress(Request $request){
-        $keyword = $request->query('search');; 
-        $search = Location::where('Address', 'LIKE', "%$keyword%")->get();
+        $keyword = $request->query('search');
+        $keywords = explode(' ', $keyword );
+        foreach ($keywords as $keyword){
+            $search = Location::where('Address', 'LIKE', "%" . $keyword . "%")->get();
+        }
         return response()->json(array('search'=>$search, 'keyword'=>$keyword));
     }
 
