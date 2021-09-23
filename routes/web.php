@@ -30,3 +30,7 @@ Route::get('/stepThree', [App\Http\Controllers\LeadsController::class,'StepThree
 Route::get('test', function () {
     return 'test success';
 });
+
+Route::get('ircfileimportexport', [App\Http\Controllers\LocationFinderController::class, 'fileImportExport']);
+Route::post('file-import', [App\Http\Controllers\LocationFinderController::class, 'fileImport'])->name('file-import');
+Route::get('file-export', [App\Http\Controllers\LocationFinderController::class, 'fileExport'])->name('file-export');

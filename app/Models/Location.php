@@ -11,4 +11,8 @@ use Laravel\Sanctum\HasApiTokens;
 class Location extends Authenticatable
 {
     protected $table = 'locations';
+
+    protected $fillable = [
+        'Address',
+    ];
 }
