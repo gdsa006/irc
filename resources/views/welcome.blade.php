@@ -251,8 +251,8 @@ main#hero .image.image3 #roof{
     font-size: 40px;
     color: transparent;
     -webkit-background-clip: text !important;
-    -webkit-text-fill-color: red;
-    color: red;
+    -webkit-text-fill-color: #ffffff;
+    color: #ffffff;
     font-weight: bolder;
 }
 
@@ -266,6 +266,24 @@ main#hero .image.image3{
     width: auto;
     height: auto;
 
+}
+
+main#hero span.singleResult{
+    padding-left: 20px
+}
+
+
+main#hero span.singleResult::after{
+    content: '\f3c5';
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-weight: 900;
+    font-size: 15px;
+    transform: translateY(-50%);
+    /* margin-top: -3px; */
+    color: #9b9b9b;
 }
 
 .rotateme{
@@ -362,8 +380,8 @@ main#hero .image img{
 main#hero .content{
     padding: 40px;
     height: 100%;
-    z-index: 0;
-    position: relative;
+    /* z-index: 1;
+    position: relative; */
 }
 
 main#hero .content h1{
@@ -371,7 +389,7 @@ main#hero .content h1{
     background: -webkit-linear-gradient(#fc600c, #ee4055);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 60px;
+    font-size: 54px;
 }
 
 main#hero .content h3{
@@ -401,7 +419,7 @@ main#hero .content input[type="text"] {
 }
 
 
-main#hero .content span{
+main#hero .content span#location-icon{
     position: absolute;
     margin-left: 20px;
     /* height: 25px; */
@@ -488,7 +506,7 @@ section#process{
 }
 section#process h1{
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 54px;
     font-weight: bold;
     font-size: 48px;
 }
@@ -610,6 +628,11 @@ footer #logo{
     margin-top: -3px;
     color: #fc600c;
 }
+
+
+
+
+
 
 .modal.leads .status::before{
     content: '\f0da';
@@ -934,6 +957,10 @@ input[type="text"], textarea {
     border-bottom: solid 1px #dfdfdf;
 }
 
+#search-results li .singleResult{
+    position: relative;
+}
+
 #search-results li:hover{
     cursor: pointer;
     color: #000
@@ -1064,14 +1091,13 @@ input[type="text"], textarea {
                         </p>
                         <form action="{{ route('stepOne') }}" method="post" class="row col-md-9">
                             <div class="input-group" style="position: relative">
-                            <span>
+                            <span id="location-icon">
                             <i class="fas fa-map-marker-alt"></i>
                             </span>
                                 <input type="text" class="form-control shadow-none" id="address" placeholder="Enter address...">
                                 <button class="btn btn-outline-secondary btn-custom-submit" id="stepOne" type="button"><i class="fas fa-calculator"></i></button>
                                 <div id="search-results">
-                                      <ul>
-                                      </ul>
+                                    <!-- populate results -->
                                 </div>
                             </div>
                         </form>
@@ -1305,14 +1331,14 @@ $.ajaxSetup({
     $('#address').on('keyup',function(){
         $value = $(this).val();
         $("#search-results > ul").empty();  
-        if($value.length > 1){
+        if($value.length > 0){
         $.ajax({
             type : 'get',
             url : '{{URL::to('search')}}',
             data:{'search':$value},
             success:function(data){
                 $("#search-results > ul").empty();  
-                console.log(data.search);
+                console.log(data);
                 var ul = $('<ul>').appendTo('#search-results');
                 $(data.search).each(function(index, Address) {
  
@@ -1322,7 +1348,7 @@ $.ajaxSetup({
 
                     if( !exists){
                             ul.append(
-                                $(document.createElement('li')).text(Address.Address)
+                                $(document.createElement('li')).html('<span class="singleResult">' + Address.Address + '</span>')
                             );
                     }
                     else{
