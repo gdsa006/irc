@@ -12,7 +12,6 @@
                             </div>
                             <div class="form-group">
                                 <input type="button" value="Next" id="stepTwo" class="btn custom-btn float-right">
-                                <input type="button" value="exit" id="exit" class="btn custom-btn float-left" onclick="window.location='{{ route('home') }}'">
                             </div>
 
     <!-- fname<input type="text" id="fname" class="form-control">

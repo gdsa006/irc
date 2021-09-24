@@ -130,6 +130,7 @@ header#header .icons{
     margin-top: 11px;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+    top: -3px;
   }
   
   #toggle1 {
@@ -182,10 +183,17 @@ header#header .icons{
     position: absolute;
     right: 0;
     width: 220px;
-    top: 65px;
+    top: 56px;
     z-index: 9999999;
   }
   
+.menu1::before {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 35px solid #943c3c;
+}
   /* .menu1 a:first-child {
     margin-top: 40px;
   }
@@ -201,16 +209,17 @@ header#header .icons{
     padding: 10px 0;
     font: 18px;
     text-align: left;
-    color: #000;
-    padding: 17px 20px;
-    background: #ffffff
+    color: #dddddd;
+    padding: 10px 20px;
+    background: #1e1e2a
   }
   
   .link1:hover {
-    background-color: #fff;
-    color: rgb(61, 61, 61);
+    background-color: none;
+    color: #ffffff;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    text-decoration: none
   }
 
 
@@ -579,14 +588,18 @@ footer #logo{
 
 .modal.leads .close{
     position: absolute;
-    right: 0;
-    padding: 10px;
-    top: 0;
+    right: 4px;
+    padding: 5px 12px;
+    top: 4px;
+    background: #fc600c;
     padding-top: 5px;
+    opacity: 1;
+    border-radius: 10px;
 }
 
 .modal.leads .close span{
     font-size: 30px;
+    color: #ffffff;
 }
 
 .modal.leads .modal-content{
@@ -783,7 +796,7 @@ footer #logo{
 }
 
 .modal.leads .data .custom-btn{
-    padding: 5px 25px!important;
+    padding: 8px 25px!important;
     color: #ffffff;
     /* font-weight: 600; */
     border-radius: 50px;
@@ -1003,7 +1016,7 @@ input[type="text"], textarea {
                 </div>
                 <div class="col-md-6 col-xs-12" id="social">
                     <ul class="list-inline mb-0">
-                        <li class="list-inline-item">
+                        <!-- <li class="list-inline-item">
                             <a href="#">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
@@ -1021,6 +1034,11 @@ input[type="text"], textarea {
                         <li class="list-inline-item">
                             <a href="#">
                                 <i class="fab fa-instagram"></i>
+                            </a>
+                        </li> -->
+                        <li class="list-inline-item">
+                            <a href="#">
+                                <i class="fas fa-phone-alt"></i>&nbsp; +1 999 2122 343
                             </a>
                         </li>
                     </ul>
@@ -1084,7 +1102,7 @@ input[type="text"], textarea {
                 </div>
                 <div class="col-md-6 col-sm-12 co-xs-12 px-0 align-self-center">
                     <div class="content">
-                        <h1>Roof Replacement</h1>
+                        <h1>Idaho Roofing </h1>
                         <h3>Cost Calculator</h3>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
@@ -1181,7 +1199,7 @@ input[type="text"], textarea {
     </footer>
 
     <!-- modal -->
-    <div class="modal fade bd-example-modal-lg leads" id="exampleModal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal bd-example-modal-lg leads" id="exampleModal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
 
