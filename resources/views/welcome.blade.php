@@ -1011,6 +1011,40 @@ input[type="text"], textarea {
 .text-muted{
     display: none
 }
+
+#emailsent.modal.show .modal-dialog {
+    -webkit-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    top: 50%;
+    margin: 0 auto;
+}
+
+#emailsent i{
+    font-size: 90px;
+    color: mediumseagreen;
+}
+
+#emailsent h4{
+    padding: 30px 0 0;
+}
+
+#emailsent p{
+    padding: 20px 20px 19px;
+    text-align: center;
+    font-size: 24px;
+}
+
+#emailsent .btn-custom{
+    padding: 13px 88px;
+    color: #ffffff;
+    /* font-weight: 600; */
+    border-radius: 10px;
+    margin: 0 auto;
+    font-size: 18px;
+    /* width: 100%; */
+    background-image: linear-gradient(135deg,#fc600c,#ee4055);
+    }
         </style>
     </head>
     <body>
@@ -1305,8 +1339,9 @@ input[type="text"], textarea {
         <div class="modal-content">
             <div class="modal-body">
                 <div class="success success-danger">
-                    <h4>Thankyou!</h4>
-                    <p>Your query has been received</p>
+                    <h4 class="text-center"><i class="far fa-check-circle"></i></h4>
+                    <p>Thank you we will be sending your report shortly to the email or phone you provided</p>
+                    <a href="/" class="btn btn-custom">Ok</a>
                 </div>
             </div>
         </div>
