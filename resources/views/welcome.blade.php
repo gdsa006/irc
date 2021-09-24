@@ -954,12 +954,42 @@ input[type="text"], textarea {
 }
 
 #search-results ul{
+    display: none;
+}
+
+#search-results ul:last-child{
     list-style: none;
     padding: 0;
     margin: 0;
     margin-right: 61px;
     box-shadow: 0 3px 5px rgb(57 63 72 / 30%);
     margin-left: 27px;
+    max-height: 300px;
+    overflow-y: scroll;
+    display: block;
+}
+
+
+#search-results ul::-webkit-scrollbar {
+  width: 0.3em; 
+}
+ 
+#search-results ul::-webkit-scrollbar-track {
+  display: none;
+}
+
+#search-results:hover ul::-webkit-scrollbar-track{
+    display: block;
+} 
+
+
+#search-results:hover ul::-webkit-scrollbar-thumb{
+    display: block;
+} 
+ 
+#search-results ul::-webkit-scrollbar-thumb {
+  background-color: #fc600c;
+  display: none;
 }
 
 #search-results li{
@@ -1359,11 +1389,9 @@ $.ajaxSetup({
                 console.log(data);
                 var ul = $('<ul>').appendTo('#search-results');
                 $(data.search).each(function(index, Address) {
- 
+
                     var searchWord= Address.Address;
                     var exists=$('#search-results ul li:contains('+searchWord+')').length;
-
-
                     if( !exists){
                             ul.append(
                                 $(document.createElement('li')).html('<span class="singleResult">' + Address.Address + '</span>')
@@ -1371,16 +1399,20 @@ $.ajaxSetup({
                     }
                     else{
                     }
-                });
-
-                
+                });                
             }
         });
         }
     })
     </script>
 
-
+<script>
+    $('#address').on('keyup',function(){
+    if( $(this).val() == '' |  $(this).val() == 'NULL') {
+        $("#search-results ul").empty();  
+    }
+});
+    </script>
 
     <script>
     $('.input-group').on('click', '#search-results ul li',function(){
