@@ -1376,17 +1376,22 @@ $.ajaxSetup({
 
 
     <script type="text/javascript">
-    $('#address').on('keyup',function(){
+$( "#address" ).keyup(function() {
         $value = $(this).val();
-        $("#search-results > ul").empty();  
-        if($value.length > 0){
+        $("#search-results > ul").empty(); 
+            console.log($value.length); 
         $.ajax({
             type : 'get',
             url : '{{URL::to('search')}}',
             data:{'search':$value},
             success:function(data){
                 $("#search-results > ul").empty();  
-                console.log(data);
+                console.log(data.keyword);
+                if(data.keyword == null){
+                    console.log('null');
+                    $("#search-results > ul").remove();  
+                }
+                else{
                 var ul = $('<ul>').appendTo('#search-results');
                 $(data.search).each(function(index, Address) {
 
@@ -1399,20 +1404,14 @@ $.ajaxSetup({
                     }
                     else{
                     }
-                });                
+                });     
+                }           
             }
         });
-        }
     })
     </script>
 
-<script>
-    $('#address').on('keyup',function(){
-    if( $(this).val() == '' |  $(this).val() == 'NULL') {
-        $("#search-results ul").empty();  
-    }
-});
-    </script>
+
 
     <script>
     $('.input-group').on('click', '#search-results ul li',function(){
