@@ -39,10 +39,9 @@ $('#stepThree').on('click',function(){
                 console.log(data);
                 if(data.status == "s3"){
                     window.location.href = "{{URL::to('stepThree')}}"
-                }else{
-                    $('#formular').modal('show');
-                    $('#formular').css('z-index', '9999999');
-                    $('#formular p').text('please check the inputs');     
+                }
+                if(data.email){
+                    $('#email').next('.text-muted').show().text(data.email);
                 }
             }
         });

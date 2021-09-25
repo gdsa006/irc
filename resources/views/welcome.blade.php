@@ -1009,7 +1009,8 @@ input[type="text"], textarea {
     color: #000
 }
 .text-muted{
-    display: none
+    font-weight: 700;
+    display: none;
 }
 
 #emailsent.modal.show .modal-dialog {
@@ -1022,7 +1023,7 @@ input[type="text"], textarea {
 
 #emailsent i{
     font-size: 90px;
-    color: mediumseagreen;
+    color: red;
 }
 
 #emailsent h4{
@@ -1171,7 +1172,7 @@ input[type="text"], textarea {
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                         </p>
-                        <form action="{{ route('stepOne') }}" method="post" class="row col-md-9">
+                        <form action="{{ route('stepOne') }}" method="get" class="row col-md-9">
                             <div class="input-group" style="position: relative">
                             <span id="location-icon">
                             <i class="fas fa-map-marker-alt"></i>
@@ -1337,7 +1338,7 @@ input[type="text"], textarea {
 <div class="modal fade" id="emailsent">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-body">
+            <div class="modal-body text-center">
                 <div class="success success-danger">
                     <h4 class="text-center"><i class="far fa-check-circle"></i></h4>
                     <p>Thank you we will be sending your report shortly to the email or phone you provided</p>
@@ -1368,7 +1369,7 @@ input[type="text"], textarea {
         </button>
       </div>
       <div class="modal-body">
-      <form method="post">
+      <form method="get">
      {{ Session::get('leadData') }}
      <hr>
         @yield('content')
@@ -1463,7 +1464,7 @@ $( "#address" ).keyup(function() {
         console.log($value);
         $('#hidden-address').val('000');
         $.ajax({
-            type : 'post',
+            type : 'get',
             url : '{{ route('steps') }}',
             data:{'address':$value},
             success:function(data){
@@ -1482,18 +1483,19 @@ $( "#address" ).keyup(function() {
 
 
 <script>
-    $("#exampleModal button.close").on('click', function(){
-        var destroySession = "{{ Session::forget('leadData') }}";
-        window.location.href = "{{URL::to('stepOne')}}";
-    });
-    $("#exampleModal #exit").on('click', function(){
-        var destroySession = "{{ Session::forget('leadData') }}";
-        window.location.href = "{{URL::to('stepOne')}}";
-    });
-
+$("#exampleModal button.close").on('click', function(){
+    window.location.href = "{{URL::to('closeSteps')}}"
+});
+  
 
     
     </script>
+
+    <script>
+        $('#exampleModal input').keyup(function(){
+            $(this).next('.text-muted').hide();
+        });
+        </script>
 
 </body>
     </body>

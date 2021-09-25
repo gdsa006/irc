@@ -23,42 +23,46 @@ class LeadsController extends Controller
     public function stepOneProcess(Request $request){
             $fname = $request->fname;
             $lname = $request->lname;
-            if($fname && $lname){
+            $validator = \Validator::make($request->all(), [ 
+                'fname' => 'required|regex:/^[a-zA-Z]+$/u',
+                'lname' => 'required|regex:/^[a-zA-Z]+$/u',
+            ]);
+            if($validator->fails()){
+                return response()->json($validator->errors());
+            } 
+            else{
                 $data = $request->session()->get('leadData');
                 $transferData = $fname . ':' . $lname . ':' . $data;
                 $request->session()->put('leadData', $transferData);
                 return response()->json(array('status' => 's2'));
-            }else{
-                return response()->json(array('status' => 'false'));
-            }
-        
+            }        
     }
 
     public function stepTwoProcess(Request $request){
 
         $email = $request->query('email');
-        if($email){
-            $data = $request->session()->get('leadData');
+
+        $validator = \Validator::make($request->all(), [ 
+            'email' => 'required|email',
+        ]);
+        if($validator->fails()){
+            return response()->json($validator->errors());
+        } 
+        else{
+        $data = $request->session()->get('leadData');
             $transferData = $email . ':' . $data;
             $request->session()->put('leadData', $transferData);
             return response()->json(array('status' => 's3'));
         }
-    else{
-        return response()->json(array('status' => 'false'));
-    }
     }
 
     public function stepThreeProcess(Request $request){
         $mobile = $request->query('mobile');
-        if($mobile){
             $data = $request->session()->get('leadData');
             $transferData = $mobile . ':' . $data;
             $request->session()->put('leadData', $transferData);
             $data = $request->session()->get('leadData');
             return response()->json(array('status' => 'success', 'leadData' => $data));
-        }else{
-            return response()->json(array('status' => 'false'));
-        }
     }
 
     public function stepOne(Request $request){
@@ -83,6 +87,11 @@ class LeadsController extends Controller
         }else{
             return redirect()->route('home');
         }
+    }
+
+    public function closeSteps(Request $request){
+        $request->session()->flush();
+        return redirect()->route('home');
     }
 
 }

@@ -41,13 +41,17 @@ $('#stepTwo').on('click',function(){
                 console.log(data);
                 if(data.status == "s2"){
                     window.location.href = "{{URL::to('stepTwo')}}"
-                }else{
-                    $('#formular').modal('show');
-                    $('#formular').css('z-index', '9999999');
-                    $('#formular p').text('please check the inputs');                }
+                }
+                if(data.fname){
+                    $('#fname').next('.text-muted').show().text(data.fname);
+                }
+                if(data.lname){
+                    $('#lname').next('.text-muted').show().text(data.lname);
+                }
             }
         });
     })
 </script>
+
 @endpush
 

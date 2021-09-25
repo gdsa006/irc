@@ -37,10 +37,6 @@ $('#finalStep').on('click',function(){
                     $('#exampleModal').modal('hide');
                     $('#emailsent').modal('show');
                     $('#emailsent').css('z-index', '9999999');
-                }else{
-                    $('#formular').modal('show');
-                    $('#formular').css('z-index', '9999999');
-                    $('#formular p').text('please check the inputs');     
                 }
             }
         });
