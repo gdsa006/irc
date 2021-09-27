@@ -8,8 +8,8 @@
                             </div>
                          
                             <div class="form-group">
-                                <input type="button" value="Next" id="stepThree" class="btn custom-btn float-right">
-                                <input type="button" value="back" id="back" class="btn custom-btn float-left" onclick="window.location='{{ route('stepOne') }}'">
+                                <input type="button" value="Next" id="mobileNumber" class="btn custom-btn float-right">
+                                <input type="button" value="back" id="back" class="btn custom-btn float-left" onclick="window.location='{{ route('fullName') }}'">
                             </div>
 
 
@@ -17,7 +17,7 @@
 
     <!-- email<input type="text" id="email" class="form-control">
     <br>
-    <input type="button" value="next" id="stepThree">
+    <input type="button" value="next" id="mobileNumber">
     <input type="button" value="back" id="stepTwoBack">    -->
 @endsection
 
@@ -29,7 +29,7 @@
 
 @push('script')
 <script>
-$('#stepThree').on('click',function(){
+$('#mobileNumber').on('click',function(){
         $email = $("#email").val();
         $.ajax({
             type : 'get',
@@ -38,7 +38,7 @@ $('#stepThree').on('click',function(){
             success:function(data){
                 console.log(data);
                 if(data.status == "s3"){
-                    window.location.href = "{{URL::to('stepThree')}}"
+                    window.location.href = "{{URL::to('mobileNumber')}}"
                 }
                 if(data.email){
                     $('#email').next('.text-muted').show().text(data.email);

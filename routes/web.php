@@ -13,24 +13,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+// new 
+
 Route::get('/', function () {
-    return view('welcome');
-})->name('home');
-
-Route::get('/search', 'App\Http\Controllers\LocationFinderController@searchAddress');
-Route::get('/steps', [App\Http\Controllers\LeadsController::class,'Steps'])->name('steps');
-Route::get('/stepOneProcess', [App\Http\Controllers\LeadsController::class,'StepOneProcess'])->name('stepOneProcess');
-Route::get('/stepTwoProcess', [App\Http\Controllers\LeadsController::class,'stepTwoProcess'])->name('stepTwoProcess');
-Route::get('/stepThreeProcess', [App\Http\Controllers\LeadsController::class,'stepThreeProcess'])->name('stepThreeProcess');
-Route::get('/stepOne', [App\Http\Controllers\LeadsController::class,'StepOne'])->name('stepOne');
-Route::get('/stepTwo', [App\Http\Controllers\LeadsController::class,'StepTwo'])->name('stepTwo');
-Route::get('/stepThree', [App\Http\Controllers\LeadsController::class,'StepThree'])->name('stepThree');
-Route::get('/closeSteps', [App\Http\Controllers\LeadsController::class,'closeSteps'])->name('closeSteps');
+    return view('new.home');
+})->name('homepage');
 
 
-Route::get('test', function () {
-    return 'test success';
-});
+
+
+// Route::get('/', function () {
+//     return view('homepage');
+// })->name('home');
+
+// Route::get('/search', 'App\Http\Controllers\LocationFinderController@searchAddress');
+// Route::get('/steps', [App\Http\Controllers\LeadsController::class,'Steps'])->name('steps');
+// Route::get('/stepOneProcess', [App\Http\Controllers\LeadsController::class,'StepOneProcess'])->name('stepOneProcess');
+// Route::get('/stepTwoProcess', [App\Http\Controllers\LeadsController::class,'stepTwoProcess'])->name('stepTwoProcess');
+// Route::get('/stepThreeProcess', [App\Http\Controllers\LeadsController::class,'stepThreeProcess'])->name('stepThreeProcess');
+// Route::get('/fullName', [App\Http\Controllers\LeadsController::class,'fullName'])->name('fullName');
+// Route::get('/emailAddress', [App\Http\Controllers\LeadsController::class,'emailAddress'])->name('emailAddress');
+// Route::get('/mobileNumber', [App\Http\Controllers\LeadsController::class,'mobileNumber'])->name('mobileNumber');
+// Route::get('/closeSteps', [App\Http\Controllers\LeadsController::class,'closeSteps'])->name('closeSteps');
+
+
+// Route::get('about', [App\Http\Controllers\OtherPagesController::class,'about'])->name('about');
+// Route::get('terms-and-conditons', [App\Http\Controllers\OtherPagesController::class,'termsConditions'])->name('terms-and-conditons');
+
+
+
 
 Route::get('ircfileimportexport', [App\Http\Controllers\LocationFinderController::class, 'fileImportExport']);
 Route::post('file-import', [App\Http\Controllers\LocationFinderController::class, 'fileImport'])->name('file-import');
@@ -48,3 +61,16 @@ Route::get('send-mail', function () {
    
     dd("Email is Sent.");
 });
+
+
+
+
+
+
+
+
+
+
+
+
+

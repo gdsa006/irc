@@ -8,7 +8,7 @@
                          
                             <div class="form-group">
                                 <input type="button" value="Submit" id="finalStep" class="btn custom-btn float-right">
-                                <input type="button" value="back" id="stepTwoBack" class="btn custom-btn float-left" onclick="window.location='{{ route('stepTwo') }}'">
+                                <input type="button" value="back" id="stepTwoBack" class="btn custom-btn float-left" onclick="window.location='{{ route('emailAddress') }}'">
                             </div>
 
     <!-- mobile<input type="text" id="mobile" class="form-control">

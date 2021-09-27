@@ -11,14 +11,14 @@
                                 <small id="emailHelp" class="form-text text-muted">display error</small>
                             </div>
                             <div class="form-group">
-                                <input type="button" value="Next" id="stepTwo" class="btn custom-btn float-right">
+                                <input type="button" value="Next" id="emailAddress" class="btn custom-btn float-right">
                             </div>
 
     <!-- fname<input type="text" id="fname" class="form-control">
     <br>
     lname<input type="text" id="lname" class="form-control">
     <br>
-    <input type="button" value="next" id="stepTwo">
+    <input type="button" value="next" id="emailAddress">
     <input type="button" value="exit" id="exit">    -->
 @endsection
 
@@ -30,7 +30,7 @@
 
 @push('script')
 <script>
-$('#stepTwo').on('click',function(){
+$('#emailAddress').on('click',function(){
         $fname = $("#fname").val();
         $lname = $("#lname").val();
         $.ajax({
@@ -40,7 +40,7 @@ $('#stepTwo').on('click',function(){
             success:function(data){
                 console.log(data);
                 if(data.status == "s2"){
-                    window.location.href = "{{URL::to('stepTwo')}}"
+                    window.location.href = "{{URL::to('emailAddress')}}"
                 }
                 if(data.fname){
                     $('#fname').next('.text-muted').show().text(data.fname);

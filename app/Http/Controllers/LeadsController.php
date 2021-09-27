@@ -65,7 +65,7 @@ class LeadsController extends Controller
             return response()->json(array('status' => 'success', 'leadData' => $data));
     }
 
-    public function stepOne(Request $request){
+    public function fullName(Request $request){
         if($request->session()->has('leadData')){
         return View('form.step.one');
     }else{  
@@ -73,7 +73,7 @@ class LeadsController extends Controller
     }
     }
 
-    public function stepTwo(Request $request){
+    public function emailAddress(Request $request){
         if($request->session()->has('leadData')){
         return View('form.step.two');
         }else{
@@ -81,7 +81,7 @@ class LeadsController extends Controller
         }
     }
 
-    public function stepThree(Request $request){
+    public function mobileNumber(Request $request){
         if($request->session()->has('leadData')){
         return View('form.step.three');
         }else{

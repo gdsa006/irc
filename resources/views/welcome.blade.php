@@ -810,8 +810,6 @@ footer #logo{
 
 input[type="text"], textarea {
     outline: none;
-    box-shadow:none !important;
-    border:1px solid #ccc !important;
 }
 
 
@@ -1046,255 +1044,248 @@ input[type="text"], textarea {
     /* width: 100%; */
     background-image: linear-gradient(135deg,#fc600c,#ee4055);
     }
+
+    .breadcrumb{
+        background-color: #ffffff;
+        padding: 40px 80px 10px
+    }
+
+    .breadcrumb ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .breadcrumb ul li{
+        display: inline-block;
+        padding-right: 20px;
+        position: relative;
+    }
+
+    .breadcrumb ul li::before{
+        content: '>';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        font-size: 12px;
+        transform: translateY(-50%);
+        margin-top: 2px;
+    }
+
+    .breadcrumb ul li:last-child{
+        padding-left:10px;
+        padding-right: 0;
+    }
+
+
+    .breadcrumb ul li:last-child::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        font-size: 11px;
+        transform: translateY(-50%);
+        display: none;
+    }
+
+    .breadcrumb ul li.active a{
+        color: #fc600c
+    }
+
+    .breadcrumb ul li.active::before{
+        color: #fc600c
+    }
+    .breadcrumb ul li a{
+        font-size: 12px
+    }
+
+ 
+
+    section#about{
+        padding: 20px 90px 30px
+    }
+
+    section#about *{
+        color: #1e1e2a
+    }
+
+    section#about p{
+        letter-spacing: 0.04rem;
+    line-height: 27px;
+    }
+
+    section#about h3{
+        font-weight: bolder
+    }
+
+    section#about h4{
+        font-weight: 700
+    }
+
+    section#about .blog{
+        padding: 40px 0
+    }
+    
+
+    section#about .blog h4 {
+        padding-bottom: 10px
+    }
+
+    section#about .blog .post{
+        border: 1px solid #d2d6dc;
+        transition: 500ms all ease;
+        border-radius: 8px;
+    }
+
+    section#about .blog .post:hover{
+        cursor: pointer;
+        box-shadow: 0 10px 20px rgb(0 0 0 / 30%);
+        transition: 500ms all ease;
+        border: 1px solid transparent
+    }
+
+    section#about .blog .post:hover .wrapper h4.title{
+        color: #f89991;
+        transition: 500ms all ease;
+    }
+
+    section#about .blog .post img{
+        height: 210px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    }
+
+    section#about .blog .post .wrapper h4.title{
+        font-weight: bold;
+        margin: 0;
+        padding: 0
+    }
+
+
+    section#about .blog .post .wrapper{
+        padding: 18px 20px
+    }
+
+    section#about .blog .post .wrapper span.meta{
+        font-weight: 200;
+        font-size: 12px;
+        color: #bababa
+    }
+
+    section#about .blog .post .wrapper p.desc{
+        font-size:16px;
+        margin: 0
+    }
+
+
+    #sidebar{
+
+    }
+
+    #sidebar #search{
+        padding: 13px 10px;
+        box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 6%)
+    }
+
+    #sidebar h4{
+        padding-bottom: 10px
+    }
+
+    #sidebar .wrapper{
+        margin-bottom: 60px;
+    }
+
+    #sidebar .post{
+        margin-bottom: 1.04rem;
+        float: left;
+    width: 100%;
+    transition: 500ms all ease;
+    }
+
+    
+    #sidebar .post:hover{
+        box-shadow: 0 10px 20px rgb(0 0 0 / 30%);
+        transition: 500ms all ease;
+        cursor: pointer;
+    }
+
+    #sidebar .post:hover .wrapper-inside h5.title{
+        color: #f89991;
+        transition: 500ms all ease;
+    }
+
+    #sidebar .post .image{
+        height: 100%;
+        position: relative;
+        border-radius: 8px;
+    }
+
+    #sidebar .post .image img{
+        position: absolute;
+        left:0;
+        top:0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+    #sidebar .post .col-md-3{
+        padding: 0
+    }
+
+    #sidebar .post .wrapper-inside{
+        padding: 15px 5px
+    }
+
+    #sidebar .post .wrapper-inside h5.title{
+        font-weight: bold
+    }
+
+    #sidebar .post .wrapper-inside .meta{
+        font-weight: 200;
+        font-size: 12px;
+        color: #bababa
+    }
+
+    .modal-backdrop.show{
+
+        opacity: 0.9;
+    }
+
+
         </style>
     </head>
     <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div id="top-bar">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 col-xs-12" id="contact">
-                    <ul class="list-inline float-left mb-0">
-                        <li class="list-inline-item">
-                            <a href="#">
-                                <i class="far fa-calendar-check"></i>&nbsp; Mon-Sat: 09am to 07.30pm
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#">
-                                <i class="fas fa-envelope"></i>&nbsp; needhelp@shelder.com
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6 col-xs-12" id="social">
-                    <ul class="list-inline mb-0">
-                        <!-- <li class="list-inline-item">
-                            <a href="#">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li> -->
-                        <li class="list-inline-item">
-                            <a href="#">
-                                <i class="fas fa-phone-alt"></i>&nbsp; +1 999 2122 343
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <header id="header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-2 ml-auto d-flex align-items-center">
-                    <div class="logo">
-                        <img src="{{ asset('images/logo.png') }}" width="150">
-                    </div>
-                </div>
-                <div class="col-md-10">
-                    <ul class="nav col-md-12 d-table">
-                        <!-- <li class="nav-item col-md-4 mr-0 text-center info"><a href="#" class="row"><span class="col-md-2 image"><img src="images/clock.png" width="48"></span><span class="col-md-10 text">Timings<br><b>Mon-Sat: 09am to 07.30pm</b></span></a></li>
-                        <li class="nav-item col-md-4 mr-0 text-center info"><a href="#" class="row"><span class="col-md-2 image"><img src="images/mail.png" width="48"></span><span class="col-md-10 text">Contact<br><b>needhelp@shelder.com</b></span></a></li> -->
-                        <li class="nav-item offset-md-9 col-md-10 mr-0 text-right d-table-cell align-middle"><a href="#" class="btn btn-custom-main" id="startHere">Start
-                                Here <i class="icon-arrow-right-circle icons"></i></a></li>
-                        <li class="nav-item col-md-1 mr-0 text-right d-table-cell align-middle">
-
-                            <nav id="navbar" class="navigation" role="navigation">
-                                <input id="toggle1" type="checkbox" />
-                                <label class="hamburger1 mb-0" for="toggle1">
-                                  <div class="top"></div>
-                                  <div class="meat"></div>
-                                  <div class="bottom"></div>
-                                </label>
-                              
-                                <nav class="menu1">
-                                  <a class="link1" href="">About</a>
-                                  <a class="link1" href="">Terms & Conditions</a>
-                                </nav>
-                            </nav>
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main id="hero" style="position: relative;">
-        <div class="container-fluid">
-            <div class="row row-eq-height">
-                <div class="col-md-6 col-sm-12 col-xs-12 px-0">
-                    <div class="image-wrapper">
-                        <div class="pattern-layer" style="background-image: url(https://smartdemowp.com/shelder/wp-content/uploads/2020/06/shape-1.png);"></div>
-                    <div class="image image1">
-                        <img src={{ asset('images/ho4_slide01.jpg') }} id="back1">
-                    </div>
-                    <div class="image image2">
-                        <img src={{ asset('images/about-2.jpg') }} id="back2">
-                    </div>
-                    <div class="image image3">
-                        <img src={{ asset('images/badge.png') }} id="back3" class="rotateme">
-                        <span id="roof">IRC</span>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 co-xs-12 px-0 align-self-center">
-                    <div class="content">
-                        <h1>Idaho Roofing </h1>
-                        <h3>Cost Calculator</h3>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                        </p>
-                        <form action="{{ route('stepOne') }}" method="get" class="row col-md-9">
-                            <div class="input-group" style="position: relative">
-                            <span id="location-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                            </span>
-                                <input type="text" class="form-control shadow-none" id="address" placeholder="Enter address...">
-                                <button class="btn btn-outline-secondary btn-custom-submit" id="stepOne" type="button"><i class="fas fa-calculator"></i></button>
-                                <div id="search-results">
-                                    <!-- populate results -->
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="floating-menu" style="display: none; position: absolute; top: 0; background-color: #fffffff0; left: 50%; width: 70%; transform: translate(-50%, 0%); padding: 10px 0; border-radius: 0 0 3px 3px;">
-        <div class="container">
-            <div class="row d-flex justify-content-center">
-                <ul class="nav nav-justified" style="width: 100%;">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="#">Active</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                </ul>
-            </div>
-            </div>
-            </div>
-            <!-- <img src={{ asset('images/services1 (1).png') }} style="position: absolute; top: 0; right: -200px; transform: scaleX(-1); opacity: 0.5;"> -->
-    </main>
-
-    <section id="process">
-        <div class="container" style="position: relative; z-index: 999999">
-            <h1>Our Working Process</h1>
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <div class="block">
-                        <div class="circle" id="one">
-                            <img src={{ asset('images/4882187.jpg') }} width="222" class="rounded-circle">
-                        </div>
-                        <div class="content">
-                            <h5>Enter address</h5>
-                            <p>The class is a container to enhance an input by adding an icon, text or a button. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="block">
-                        <div class="circle" id="one">
-                            <img src={{ asset('images/2661175.jpg') }} width="222" class="rounded-circle">
-                        </div>
-                        <div class="content">
-                            <h5>Fill Contact details</h5>
-                            <p>The class is a container to enhance an input by adding an icon, text or a button. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="block">
-                        <div class="circle" id="one">
-                            <img src={{ asset('images/5545622.jpg') }} width="222" class="rounded-circle">
-                        </div>
-                        <div class="content">
-                            <h5>Get Detailed Report</h5>
-                            <p>The class is a container to enhance an input by adding an icon, text or a button. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img src={{ asset('images/trail-bg.png') }} id="trail-bg">
-    </section>
-
-    <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 col-xs-12" id="copyright">
-                    <p>&#169; website.com. All rights reserved.</p>
-                </div>
-                <div class="col-md-6" id="logo">
-                    <img src={{ asset('images/footer-logo.png') }} width="130">
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    @include('header')
+        @yield('site-content')
+    @include('footer')
     <!-- modal -->
     <div class="modal bd-example-modal-lg leads" id="exampleModal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-
-
-
             <div class="title text-center">
                 <h1>Enter Details</h1>
                 <p>The class is a container to enhance an input by adding an icon, text or a button. </p>
             </div>
-
-
                 <div class="status">
                   <div class="row">
-                  <div id="step1" class="col-md-4 col-4 text-center progress-step {{ Request::is('stepOne') ? 'green' : '' }} {{ Request::is('stepTwo') ? 'green' : '' }} {{ Request::is('stepThree') ? 'green' : '' }}">
+                  <div id="step1" class="col-md-4 col-4 text-center progress-step {{ Request::is('fullName') ? 'green' : '' }} {{ Request::is('emailAddress') ? 'green' : '' }} {{ Request::is('mobileNumber') ? 'green' : '' }}">
                     <i class="far fa-dot-circle"></i>
                   </div>
-                  <div id="step2" class="col-md-4 col-4 text-center progress-step {{ Request::is('stepTwo') ? 'green' : '' }} {{ Request::is('stepThree') ? 'green' : '' }}">
+                  <div id="step2" class="col-md-4 col-4 text-center progress-step {{ Request::is('emailAddress') ? 'green' : '' }} {{ Request::is('mobileNumber') ? 'green' : '' }}">
                     <i class="far fa-dot-circle"></i>
                   </div>
-                  <div id="step3" class="col-md-4 col-4 text-center progress-step {{ Request::is('stepThree') ? 'green' : '' }}">
+                  <div id="step3" class="col-md-4 col-4 text-center progress-step {{ Request::is('mobileNumber') ? 'green' : '' }}">
                     <i class="far fa-dot-circle"></i>
                   </div>
                 </div>
                 <img src="https://smartdemowp.com/shelder/wp-content/uploads/2020/06/shape-1.png" id="status-image">
               </div>
-
               <div class="data">
                   <div class="row row-eq-height">
                       <div class="col-md-6">
@@ -1310,14 +1301,9 @@ input[type="text"], textarea {
                       </div>
                   </div>
               </div>
-
-
           </div>
         </div>
       </div>
-
-
-
 
 
       <div class="modal fade" id="formular">
@@ -1350,9 +1336,9 @@ input[type="text"], textarea {
 </div>
 
 
-        <!-- <form action="{{ route('stepOne') }}" method="get">
+        <!-- <form action="{{ route('fullName') }}" method="get">
     Address <input type="text" id="address" class="form-control">
-            <input type="button" value="submit" id="stepOne"> -->
+            <input type="button" value="submit" id="fullName"> -->
             <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Launch demo modal
 </button> -->
@@ -1378,10 +1364,6 @@ input[type="text"], textarea {
     </div>
   </div>
 </div>
-
-
-
-        
 
         <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -1459,7 +1441,7 @@ $( "#address" ).keyup(function() {
 
 
 <script type="text/javascript">
-    $('#stepOne').on('click',function(){
+    $('#fullName').on('click',function(){
         $value=$("#address").val();
         console.log($value);
         $('#hidden-address').val('000');
@@ -1470,7 +1452,7 @@ $( "#address" ).keyup(function() {
             success:function(data){
                 console.log(data);
                 if(data.status != "not found"){
-                    window.location.href = "{{URL::to('stepOne')}}";
+                    window.location.href = "{{URL::to('fullName')}}";
                 }else{
                     $('#formular').modal('show');
                     $('#formular').css('z-index', '9999999');
