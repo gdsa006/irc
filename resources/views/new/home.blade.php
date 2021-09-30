@@ -204,8 +204,6 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 Select one or more contractors to prepare a formal quote, then hire the best roofer for the job!</p>
 </div>
 </div>
-
-
 <div class="col-md-3">
         <div class="d-flex justify-content-center wrapper">
             <div class="icon">
@@ -216,21 +214,25 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
     Step1</span>
     <br>
     Free estimates
-
 </h3>
 <p>
 Select one or more contractors to prepare a formal quote, then hire the best roofer for the job!</p>
 </div>
 </div>
-
-
-
-
-</div>
-
-
-
 </div>
 </div>
+</div>
+</section>
+
+<section id="estimate">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center wrapper">
+        <h2>Get your <span class="vivid">free estimate</span> in less than 30 seconds</h2>
+        <a href="#" class="custom-main-btn">Get an estimate</a>
+    </div>
+</div>
+</div>
+<img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/60b8ce130115709db7edbac1_6065f6e2f474d565d99bb280_roof1.png" loading="lazy" width="1440" sizes="100vw" srcset="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/60b8ce130115709db7edbac1_6065f6e2f474d565d99bb280_roof1-p-500.png 500w, https://assets-global.website-files.com/606477f876b285d1aaa0ea55/60b8ce130115709db7edbac1_6065f6e2f474d565d99bb280_roof1-p-800.png 800w, https://assets-global.website-files.com/606477f876b285d1aaa0ea55/60b8ce130115709db7edbac1_6065f6e2f474d565d99bb280_roof1-p-1080.png 1080w, https://assets-global.website-files.com/606477f876b285d1aaa0ea55/60b8ce130115709db7edbac1_6065f6e2f474d565d99bb280_roof1-p-1600.png 1600w, https://assets-global.website-files.com/606477f876b285d1aaa0ea55/60b8ce130115709db7edbac1_6065f6e2f474d565d99bb280_roof1.png 2880w" alt="" class="roof-image">
 </section>
 @endsection

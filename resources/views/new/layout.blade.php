@@ -343,6 +343,26 @@ section#services .threeCols .wrapper p{
     color: #74838b;
 }
 
+
+section#estimate{
+    padding-top: 120px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#edf0f2), to(#fff));
+    background-image: linear-gradient(180deg, #edf0f2, #fff);
+}
+
+section#estimate h2{
+}
+
+section#estimate .wrapper{
+    padding: 0 210px;
+}
+
+section#estimate .roof-image{
+    width: 100%;
+    max-width: none;
+    margin-top: 120px;
+}
+
     </style>
   </head>
   <body>
