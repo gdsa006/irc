@@ -13,6 +13,7 @@
         body{
             background-color: #ffffff;
             font-family: Circular, sans-serif;
+            margin-top: 40px;
         }
 
         @font-face {
@@ -58,7 +59,6 @@
         }
 
         nav{
-            margin-top: 40px;
             background: rgba(237, 240, 242, 0.9);
             }
 
@@ -70,6 +70,7 @@
     padding-right: 8px;
     padding-left: 8px;
 }
+
 
         .custom-main-btn{
             margin-bottom: 20px;
@@ -375,5 +376,25 @@ section#estimate .roof-image{
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        //store the element
+var $cache = $('nav');
+
+//store the initial position of the element
+var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/auto/, 0));
+  $(window).scroll(function (event) {
+    // what the y position of the scroll is
+    var y = $(this).scrollTop();
+
+    // whether that's below the form
+    if (y >= vTop) {
+      // if so, ad the fixed class
+      $cache.addClass('fixed-top');
+    } else {
+      // otherwise remove it
+      $cache.removeClass('fixed-top');
+    }
+  });
+        </script>
   </body>
 </html>
