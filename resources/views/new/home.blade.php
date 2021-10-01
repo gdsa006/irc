@@ -18,7 +18,8 @@
     </div>
 </div>
 <div class="col-md-6">
-    <div class="hero-left">
+    <div class="hero-left text-center">
+        <h4>Find today's best prices on a new roof!</h4>
         <img src="{{ asset('images/6071cea635c4a2c1f272e8b0_estimates-p-800.png') }}" style="width: 100%; max-width: 480px">
     </div>
 </div>
@@ -115,7 +116,7 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 
 
 <div class="col text-center">
-        <blockquote>“It’s not often you come across true 5-star customer experiences, but Roofr really delivers. Honest advice, deep expertise and quick follow-ups.”</blockquote>
+        <blockquote>“It’s not often you come across a true 5-star roofing experience! Idaho Roofing Cost really came through. We received information quickly from experienced local Idaho roofing companies with the best price we could find anywhere.”</blockquote>
 </div>
 
 

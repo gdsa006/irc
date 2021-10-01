@@ -502,9 +502,27 @@ section#estimate .roof-image{
     margin-top: 120px;
 }
 
+
+footer{
+    padding: 34px 5% 34px;
+    background-color: #0b0f12;
+    text-align: center
+}
+
+
+footer *{
+    color:#ffffff;
+    margin: 0;
+    text-align: center
+}
+
 /* Equal Heights for OwlCarousel 2 */
+.owl-carousel .owl-item{
+    padding: 10px;
+    padding-top: 45px;
+}
 .owl-carousel {
-    margin-top: 56px;
+    margin-top: -10px;
 	.owl-stage {
 		display: flex;
 	}
@@ -526,6 +544,10 @@ section#estimate .roof-image{
 		}
 	}
 }
+
+
+}
+
 
     </style>
   </head>
@@ -614,6 +636,7 @@ jQuery(document).ready(function ($) {
 		smartSpeed: 250,
 		fluidSpeed: false,
 		dragEndSpeed: false,
+        dots:false,
 		responsive: {
 			0: {
 				items: 1
