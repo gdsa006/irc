@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">FAQ</a>
+        <a class="nav-link" href="javascript:void(0)" style="cursor: default;">See how much you can save on a new roof!</a>
 </li>
     </ul>
   </div>

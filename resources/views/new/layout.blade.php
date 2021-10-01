@@ -7,15 +7,21 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.theme.default.min.css">
+
 
     <title>Hello, world!</title>
     <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+
         body{
             background-color: #ffffff;
             font-family: Circular, sans-serif;
             margin-top: 40px;
         }
-
+                
         @font-face {
   font-family: 'Circular';
   src: url('https://assets.website-files.com/606477f876b285d1aaa0ea55/6064805857784409c85da006_CircularStd-Medium.woff2') format('woff2'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/60648058a6a393a22925414f_CircularStd-Medium.eot') format('embedded-opentype'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/60648058a5870e9ad62b6dc0_CircularStd-Medium.woff') format('woff'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/60648058c1435b2b27429844_CircularStd-Medium.ttf') format('truetype'), url('https://assets.website-files.com/606477f876b285d1aaa0ea55/606480e6481fbc6e8cbb23f9_CircularStd-Medium.otf') format('opentype');
@@ -220,6 +226,7 @@ section#review{
     padding-bottom: 120px;
 }
 
+
 section#review blockquote{
     max-width: 24ch;
     margin: 40px auto;
@@ -231,6 +238,137 @@ section#review blockquote{
     text-align: center;
     letter-spacing: -0.04em;
 }
+
+
+section#review .thumbnail.item{
+    padding: 10px;
+}
+
+section#review h2{
+    display: block;
+    font-size: 48px;
+    text-align: center
+}
+
+section#review h2 span{
+    color: #269bd6
+}
+
+section#review p {
+    max-width: 48ch;
+    margin: 0 auto;
+}
+
+section#review .owl-carousel .avatar{
+    width: 270px;
+  height: 320px;
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100px;
+    content: "";
+    height: 73px;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: -40px;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    width: 73px;
+}
+
+section#review .owl-carousel .rating{
+    /* margin-top: 45px; */
+}
+
+section#review .owl-carousel .rating .star-rating--sm .star-rating__stars {
+    height: 20px;
+    line-height: 20px;
+    margin-right: 5px;
+    position: relative;
+    display: inline-block;
+}
+
+section#review .owl-carousel .rating .star-rating--sm .star-rating__stars.star-rating__stars--50::after{
+    width: 50%;
+}
+
+
+section#review .owl-carousel .star-rating__stars::after, section#review .owl-carousel .star-rating__stars::before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font: 14px/1 modicons-fill;
+    text-rendering: auto;
+    content: '\f005\f005\f005\f005\f005';
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    font-size: 24px;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.star-rating__stars::before {
+    color: #f6f5f1;
+    position: relative;
+    z-index: 1;
+}
+
+
+.star-rating__stars::after {
+    color: #fec14b;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 0;
+}
+
+section#review .owl-carousel .comment{
+
+}
+
+section#review .owl-carousel .comment p{
+    font-style: italic;
+    margin: 15px 0;
+    text-align: left;
+    font-size: 17px;
+    color: #545253;
+    font-family: sans-serif;
+}
+
+.owl-carousel .owl-stage-outer{
+    
+}
+
+
+section#review  .thumbnail.item{
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 10%);
+    min-height: 290px;
+    padding: 50px 25px 30px;
+    position: relative;
+    text-align: center;
+}
+
+section#review .name{
+
+}
+
+section#review .name h6{
+    font-size: 17px;
+    margin: 0
+}
+
+section#review .name p{
+    font-size: 17px;
+    font-family: sans-serifw
+}
+    
 
 .vivid {
     display: inline-block;
@@ -364,6 +502,31 @@ section#estimate .roof-image{
     margin-top: 120px;
 }
 
+/* Equal Heights for OwlCarousel 2 */
+.owl-carousel {
+    margin-top: 56px;
+	.owl-stage {
+		display: flex;
+	}
+	.owl-item {
+		display: flex;
+		flex: 1 0 auto;
+	}
+	.thumbnail {
+		display: flex;
+		flex-direction: column;
+		margin: 0 15px;
+		.caption {
+			display: flex;
+			flex: 1 0 auto;
+			flex-direction: column;
+			.flex-text {
+				flex-grow: 1;
+			}
+		}
+	}
+}
+
     </style>
   </head>
   <body>
@@ -371,11 +534,138 @@ section#estimate .roof-image{
     <div id="background-gradient"></div>
         @yield('content')
     @include('new.footer')
+
+
+    <div class="modal bd-example-modal-lg leads" id="exampleModal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            <div class="title text-center">
+                <h1>Enter Details</h1>
+                <p>The class is a container to enhance an input by adding an icon, text or a button. </p>
+            </div>
+                <div class="status">
+                  <div class="row">
+                  <div id="step1" class="col-md-4 col-4 text-center progress-step {{ Request::is('fullName') ? 'green' : '' }} {{ Request::is('emailAddress') ? 'green' : '' }} {{ Request::is('mobileNumber') ? 'green' : '' }}">
+                    <i class="far fa-dot-circle"></i>
+                  </div>
+                  <div id="step2" class="col-md-4 col-4 text-center progress-step {{ Request::is('emailAddress') ? 'green' : '' }} {{ Request::is('mobileNumber') ? 'green' : '' }}">
+                    <i class="far fa-dot-circle"></i>
+                  </div>
+                  <div id="step3" class="col-md-4 col-4 text-center progress-step {{ Request::is('mobileNumber') ? 'green' : '' }}">
+                    <i class="far fa-dot-circle"></i>
+                  </div>
+                </div>
+                <img src="https://smartdemowp.com/shelder/wp-content/uploads/2020/06/shape-1.png" id="status-image">
+              </div>
+              <div class="data">
+                  <div class="row row-eq-height">
+                      <div class="col-md-6">
+                          <div class="image">
+                              <img src={{ asset('images/about-2.jpg') }}>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                        <form>
+                            @csrf
+                            @yield('content')
+                        </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+    <script>
+
+jQuery(document).ready(function ($) {
+	var owl = $("#owl-demo-2");
+	owl.owlCarousel({
+		autoplay: true,
+		autoplayTimeout: 1000,
+		autoplayHoverPause: true,
+		items: 3,
+		loop: true,
+		center: false,
+		rewind: false,
+		mouseDrag: true,
+		touchDrag: true,
+		pullDrag: true,
+		freeDrag: false,
+		margin: 0,
+		stagePadding: 0,
+		merge: false,
+		mergeFit: true,
+		autoWidth: false,
+		startPosition: 0,
+		rtl: false,
+		smartSpeed: 250,
+		fluidSpeed: false,
+		dragEndSpeed: false,
+		responsive: {
+			0: {
+				items: 1
+				// nav: true
+			},
+			480: {
+				items: 2,
+				nav: false
+			},
+			768: {
+				items: 3,
+				// nav: true,
+				loop: false
+			},
+			992: {
+				items: 4,
+				// nav: true,
+				loop: false
+			}
+		},
+		responsiveRefreshRate: 200,
+		responsiveBaseElement: window,
+		fallbackEasing: "swing",
+		info: false,
+		nestedItemSelector: false,
+		itemElement: "div",
+		stageElement: "div",
+		refreshClass: "owl-refresh",
+		loadedClass: "owl-loaded",
+		loadingClass: "owl-loading",
+		rtlClass: "owl-rtl",
+		responsiveClass: "owl-responsive",
+		dragClass: "owl-drag",
+		itemClass: "owl-item",
+		stageClass: "owl-stage",
+		stageOuterClass: "owl-stage-outer",
+		grabClass: "owl-grab",
+		autoHeight: false,
+		lazyLoad: false
+	});
+
+	$(".next").click(function () {
+		owl.trigger("owl.next");
+	});
+	$(".prev").click(function () {
+		owl.trigger("owl.prev");
+	});
+});
+
+
+</script>
+    
     <script>
         //store the element
 var $cache = $('nav');
@@ -396,5 +686,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
     }
   });
         </script>
+
+
   </body>
 </html>
