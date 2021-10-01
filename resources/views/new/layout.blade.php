@@ -51,6 +51,13 @@
   font-display: swap;
 }
 
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1440px;
+    }
+}
+
+
         #background-gradient{
             position: absolute;
             left: 0%;
@@ -64,8 +71,10 @@
         180deg, #edf0f2 20%, #fff);
         }
 
-        nav{
+        nav.navbar{
             background: rgba(237, 240, 242, 0.9);
+            padding-left: 35px;
+            padding-right: 35px;
             }
 
             nav .nav-item {
@@ -136,6 +145,11 @@ margin-top: 0px;
 section#hero{
     padding-top: 80px;
     padding-bottom: 120px;
+}
+
+section#hero .hero-left{
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
 section#hero p{
@@ -516,7 +530,20 @@ footer *{
     text-align: center
 }
 
+
+
+@media screen and (max-width: 767px){
+    section#hero .hero-left h1{
+        font-size: 48px !important
+    }
+
+    #estimate{
+        display: none
+    }
+}
+
 /* Equal Heights for OwlCarousel 2 */
+
 .owl-carousel .owl-item{
     padding: 10px;
     padding-top: 45px;
@@ -547,6 +574,8 @@ footer *{
 
 
 }
+
+
 
 
     </style>
@@ -644,7 +673,7 @@ jQuery(document).ready(function ($) {
 			},
 			480: {
 				items: 2,
-				nav: false
+				nav: true
 			},
 			768: {
 				items: 3,

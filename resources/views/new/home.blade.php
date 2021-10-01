@@ -4,7 +4,7 @@
 <section id="hero">
 <div class="container">
 <div class="row">
-<div class="col-md-6">
+<div class="col-md-6 col-xs-12">
     <div class="hero-left">
         <h1>
             Roof repair and replacement made easy
@@ -17,10 +17,10 @@
 </div>
     </div>
 </div>
-<div class="col-md-6">
+<div class="col-md-6 col-xs-12">
     <div class="hero-left text-center">
         <h4>Find today's best prices on a new roof!</h4>
-        <img src="{{ asset('images/6071cea635c4a2c1f272e8b0_estimates-p-800.png') }}" style="width: 100%; max-width: 480px">
+        <img src="{{ asset('images/Price2-01.png') }}" style="width: 100%; max-width: 480px">
     </div>
 </div>
 </div>
