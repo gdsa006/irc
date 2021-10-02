@@ -10,7 +10,7 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.theme.default.min.css">
-
+    <link rel="icon" type="image/png" href="{{ asset('images/Favicon-01.png') }}"><!-- Major Browsers -->
 
     <title>Hello, world!</title>
     <style>
@@ -20,6 +20,7 @@
             background-color: #ffffff;
             font-family: Circular, sans-serif;
             margin-top: 40px;
+            color: #28373e !important;
         }
                 
         @font-face {
@@ -86,6 +87,10 @@
     padding-left: 8px;
 }
 
+nav.navbar .navbar-brand img{
+    display: block;
+    height: 42px;
+}
 
         .custom-main-btn{
             margin-bottom: 20px;
@@ -233,6 +238,10 @@ section#process .threeCols .wrapper p{
     font-size: 16px;
     line-height: 1.3em;
     color: #74838b;
+}
+
+section#logos{
+    padding: 0px 4% 80px;
 }
 
 section#review{
@@ -533,13 +542,67 @@ footer *{
 
 
 @media screen and (max-width: 767px){
-    section#hero .hero-left h1{
-        font-size: 48px !important
+    .container{
+        max-width: none;
     }
+    section#hero .hero-left h1{
+        font-size: 48px !important;
+        text-align: center;
+    }
+
+    section#hero p {
+    padding-right: 0;
+    text-align: center;
+}
+
+section#hero .action-area{
+    text-align: center
+}
+
+section#hero .hero-right{
+    margin-top: 50px
+}
+
+
+section#hero .hero-left{
+    margin-top: 5px
+}
 
     #estimate{
         display: none
     }
+
+    nav.navbar .navbar-toggler{
+        display: none
+    }
+
+    section#process h2 {
+    font-size: 32px;
+}
+
+section#hero {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+section#review h2 {
+    font-size: 32px;
+
+}
+section#process{
+    padding: 0
+}
+
+section#review {
+    padding-top: 40px;
+    padding-bottom: 120px;
+}
+
+
+section#review blockquote{
+    font-size: 32px
+}
+
 }
 
 /* Equal Heights for OwlCarousel 2 */
@@ -678,12 +741,12 @@ jQuery(document).ready(function ($) {
 			768: {
 				items: 3,
 				// nav: true,
-				loop: false
+				loop: true
 			},
 			992: {
-				items: 4,
+				items: 3,
 				// nav: true,
-				loop: false
+				loop: true
 			}
 		},
 		responsiveRefreshRate: 200,
@@ -732,9 +795,11 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
     if (y >= vTop) {
       // if so, ad the fixed class
       $cache.addClass('fixed-top');
+      $('body').attr('style','padding-top: 68px');
     } else {
       // otherwise remove it
       $cache.removeClass('fixed-top');
+      $('body').removeAttr('style');
     }
   });
         </script>

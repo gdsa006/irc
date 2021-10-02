@@ -18,9 +18,9 @@
     </div>
 </div>
 <div class="col-md-6 col-xs-12">
-    <div class="hero-left text-center">
+    <div class="hero-right text-center">
         <h4>Find today's best prices on a new roof!</h4>
-        <img src="{{ asset('images/Price2-01.png') }}" style="width: 100%; max-width: 480px">
+        <img src="{{ asset('images/Price2-01.jpg') }}" style="width: 100%; max-width: 480px">
     </div>
 </div>
 </div>
@@ -306,12 +306,14 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 <section id="logos">
     <div class="container">
         <div class="row">
-    <a href="#" target="_blank" class="press-link w-inline-block"><img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/6072e2397d7f7c99dde79ba8_forbes.png" width="155" alt=""></a>
-<a href="#" target="_blank" class="press-link w-inline-block"><img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/6072e2c66cf6c0100fd4fc40_yahoo.png" loading="lazy" width="155" alt=""></a>
-<a href="#" target="_blank" class="press-link w-inline-block"><img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/6072e2cf8512bb20921df554_venturebeat.png" loading="lazy" width="155" alt=""></a>
-<a href="#" target="_blank" class="press-link w-inline-block"><img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/6072e2d97d7f7cf3b1e79da7_digitaltrends.png" loading="lazy" width="155" alt="Digital Trends Logo"></a>
-<a href="#" target="_blank" class="press-link w-inline-block"><img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/6072e2e435c4a2e40477ac00_ycombinator.png" loading="lazy" width="155" alt="Y Combinator Logo"></a>
-<a href="#" target="_blank" class="press-link w-inline-block"><img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/6072e2ed181b247767d112e1_techcrunch-logo.png" loading="lazy" width="155" alt="TechCrunch Logo"></a>
+    <a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/1year.png') }}" width="90" alt=""></a>
+<a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/20reviews.png') }}" loading="lazy" width="90" alt=""></a>
+<a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/AngiesList.png') }}" loading="lazy" width="90" alt=""></a>
+<a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/boha-2021.png') }}" loading="lazy" width="90" alt=""></a>
+<a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/elite.png') }}" loading="lazy" width="90" alt=""></a>
+<a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/google-guaranteed-badge.png') }}" loading="lazy" width="90" alt=""></a>
+<a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/soap.png') }}" loading="lazy" width="90" alt=""></a>
+<a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/toprated.png') }}" loading="lazy" width="90" alt=""></a>
 </div>
 </section>
 

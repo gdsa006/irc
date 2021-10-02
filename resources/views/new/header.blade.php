@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#"><img src="{{ asset('images/Final Logo-01.png') }}"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,6 +11,6 @@
 </li>
     </ul>
   </div>
-  <a href="#" class="custom-main-btn medium d-none d-sm-block ml-auto">Get Estimate</a>
+  <a href="#" class="custom-main-btn medium ml-auto">Get Estimate</a>
 </div>
 </nav>
