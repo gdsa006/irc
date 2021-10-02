@@ -344,7 +344,7 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 </div>
 <h3>
 <span class="vivid">
-    Step1</span>
+    Step2</span>
     <br>
     Free estimates
 
@@ -364,7 +364,7 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 </div>
 <h3>
 <span class="vivid">
-    Step1</span>
+    Step3</span>
     <br>
     Free estimates
 
@@ -384,7 +384,7 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 </div>
 <h3>
 <span class="vivid">
-    Step1</span>
+    Step4</span>
     <br>
     Free estimates
 
@@ -400,7 +400,7 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 </div>
 <h3>
 <span class="vivid">
-    Step1</span>
+    Step5</span>
     <br>
     Free estimates
 </h3>

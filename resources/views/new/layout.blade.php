@@ -366,6 +366,9 @@ section#review .owl-carousel .comment p{
     
 }
 
+#owl-demo-2{
+    padding: 0 100px
+}
 
 section#review  .thumbnail.item{
     background: #fff;
@@ -725,7 +728,8 @@ jQuery(document).ready(function ($) {
 		autoWidth: false,
 		startPosition: 0,
 		rtl: false,
-		smartSpeed: 250,
+		smartSpeed: false,
+        autoplaySpeed: 3000,
 		fluidSpeed: false,
 		dragEndSpeed: false,
         dots:false,
