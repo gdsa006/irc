@@ -92,7 +92,7 @@
 
 nav.navbar .navbar-brand img{
     display: block;
-    height: 42px;
+    height: 48px;
 }
 
         .custom-main-btn{
@@ -615,6 +615,9 @@ footer ul li:last-child a::before{
 
 
 @media screen and (max-width: 767px){
+    #owl-demo-2{
+        padding: 0
+    }
     .container{
         max-width: none;
     }
