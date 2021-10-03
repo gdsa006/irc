@@ -390,14 +390,14 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 <section id="logos">
     <div class="container">
         <div class="row">
-    <a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/1year.png') }}" width="90" alt=""></a>
-<a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/20reviews.png') }}" loading="lazy" width="90" alt=""></a>
-<a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/AngiesList.png') }}" loading="lazy" width="90" alt=""></a>
-<a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/boha-2021.png') }}" loading="lazy" width="90" alt=""></a>
-<a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/elite.png') }}" loading="lazy" width="90" alt=""></a>
-<a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/google-guaranteed-badge.png') }}" loading="lazy" width="90" alt=""></a>
-<a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/soap.png') }}" loading="lazy" width="90" alt=""></a>
-<a href="#" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/toprated.png') }}" loading="lazy" width="90" alt=""></a>
+    <a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/1year.png') }}" width="90" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/20reviews.png') }}" loading="lazy" width="90" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/AngiesList.png') }}" loading="lazy" width="90" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/boha-2021.png') }}" loading="lazy" width="90" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/elite.png') }}" loading="lazy" width="90" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/google-guaranteed-badge.png') }}" loading="lazy" width="90" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/soap.png') }}" loading="lazy" width="90" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/toprated.png') }}" loading="lazy" width="90" alt=""></a>
 </div>
 </section>
 

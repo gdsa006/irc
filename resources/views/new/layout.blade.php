@@ -96,22 +96,7 @@ nav.navbar .navbar-brand img{
     height: 48px;
 }
 
-footer{
-    padding:20px 5% 20px !important
-}
 
-footer p{
- margin: 0 auto;
- font-size: 13px;
-}
-
-footer ul{
- margin: 0 auto
-}
-
-footer ul li a{
-    font-size: 13px
-}
 
 
         .custom-main-btn{
@@ -636,6 +621,25 @@ footer ul li:last-child a::before{
 
 
 @media screen and (max-width: 767px){
+    footer{
+    padding:20px 5% 20px !important
+}
+
+footer p{
+ margin: 0 auto;
+ font-size: 13px;
+}
+
+footer ul{
+ margin: 0 auto
+}
+
+footer ul li a{
+    font-size: 13px
+}
+footer ul li a{
+    padding: 0 9px;
+}
     #owl-demo-2{
         padding: 0
     }
@@ -665,12 +669,22 @@ section#hero .hero-left{
     margin-top: 5px
 }
 
-    #estimate{
-        display: none
+    section#estimate{
+
+    }
+
+    section#estimate h2{
+        font-size: 36px;
     }
 
     nav.navbar .navbar-toggler{
         display: none
+    }
+
+    section#estimate .wrapper{
+        padding: 0;
+        padding-left: 4%;
+        padding-right: 4%;
     }
 
     section#process h2 {
@@ -828,7 +842,7 @@ jQuery(document).ready(function ($) {
 	owl.owlCarousel({
 		autoplay: false,
 		autoplayTimeout: 1000,
-		autoplayHoverPause: true,
+		autoplayHoverPause: false,
 		items: 3,
 		loop: true,
 		center: false,
@@ -850,8 +864,8 @@ jQuery(document).ready(function ($) {
         dots:false,
 		responsive: {
 			0: {
-				items: 1
-				// nav: true
+				items: 1,
+				nav: true
 			},
 			480: {
 				items: 1,
