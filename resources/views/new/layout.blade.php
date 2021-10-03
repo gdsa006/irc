@@ -95,6 +95,24 @@ nav.navbar .navbar-brand img{
     height: 48px;
 }
 
+footer{
+    padding:20px 5% 20px !important
+}
+
+footer p{
+ margin: 0 auto;
+ font-size: 13px;
+}
+
+footer ul{
+ margin: 0 auto
+}
+
+footer ul li a{
+    font-size: 13px
+}
+
+
         .custom-main-btn{
             margin-bottom: 20px;
     padding: 16px 32px;
