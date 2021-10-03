@@ -294,6 +294,90 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 
 			</article>
 
+
+
+
+
+
+
+
+
+
+
+            <article class="thumbnail item">
+				<div class="wrapper">
+                    <div class="avatar rounded-circle" style="background-image: url('https://modernize.com/quote/resources/assets/images/avatars/people/woman-at-the-office.jpg')">
+</div>
+
+<div class="rating">
+
+
+<span class="star-rating star-rating--sm">
+    <span class="star-rating__stars star-rating__stars--50">
+
+    </span>
+</span>
+
+
+</div>
+
+<div class="comment">
+    <p>"The pros did an excellent job for a reasonable price. Roofing crew was amazing. I would highly recommend this company."</p>
+</div>
+
+<div class="name">
+    <h6>Gagan A.</h6>
+    <p>Mohali, PB</p>
+</div>
+
+			</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <article class="thumbnail item">
+				<div class="wrapper">
+                    <div class="avatar rounded-circle" style="background-image: url('https://modernize.com/quote/resources/assets/images/avatars/people/woman-at-the-office.jpg')">
+</div>
+
+<div class="rating">
+
+
+<span class="star-rating star-rating--sm">
+    <span class="star-rating__stars star-rating__stars--50">
+
+    </span>
+</span>
+
+
+</div>
+
+<div class="comment">
+    <p>"The pros did an excellent job for a reasonable price. Roofing crew was amazing. I would highly recommend this company."</p>
+</div>
+
+<div class="name">
+    <h6>Gagan A.</h6>
+    <p>Mohali, PB</p>
+</div>
+
+			</article>
 		</div><!-- #owl-demo-2 -->
 
         

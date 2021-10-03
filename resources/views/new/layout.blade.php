@@ -11,10 +11,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.theme.default.min.css">
     <link rel="icon" type="image/png" href="{{ asset('images/Favicon-01.png') }}"><!-- Major Browsers -->
+    <link rel=“stylesheet” href=“https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css”>
 
     <title>Hello, world!</title>
     <style>
         @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css');
+
+        @import url('https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css');
 
         body{
             background-color: #ffffff;
@@ -251,11 +254,11 @@ section#review{
 
 
 section#review blockquote{
-    max-width: 24ch;
+    max-width: 46ch;
     margin: 40px auto;
     padding: 0px;
     border-left: 0px solid #000;
-    font-size: 48px;
+    font-size: 34px;
     line-height: 1.1em;
     font-weight: 900;
     text-align: center;
@@ -321,7 +324,6 @@ section#review .owl-carousel .rating .star-rating--sm .star-rating__stars.star-r
 section#review .owl-carousel .star-rating__stars::after, section#review .owl-carousel .star-rating__stars::before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font: 14px/1 modicons-fill;
     text-rendering: auto;
     content: '\f005\f005\f005\f005\f005';
     font-family: "Font Awesome 5 Free";
@@ -367,7 +369,23 @@ section#review .owl-carousel .comment p{
 }
 
 #owl-demo-2{
-    padding: 0 100px
+    padding: 0 110px
+}
+.owl-theme .owl-nav [class*=owl-]{
+    background-color: transparent;
+    border: 0;
+    color: black
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover{
+    background-color: transparent;
+    color: #4e73d1;
+    border: 0
+}
+
+.owl-theme .owl-nav [class*=owl-]:focus{
+    border: 0;
+    outline: none
 }
 
 section#review  .thumbnail.item{
@@ -430,6 +448,16 @@ section#review .name p{
     flex: 1;
     -webkit-filter: saturate(0%);
     filter: saturate(0%);
+    -webkit-transition: -webkit-filter 300ms ease;
+    transition: -webkit-filter 300ms ease;
+    transition: filter 300ms ease;
+    transition: filter 300ms ease, -webkit-filter 300ms ease;
+}
+
+
+.press-link:hover{
+    -webkit-filter: saturate(100%);
+    filter: saturate(100%);
     -webkit-transition: -webkit-filter 300ms ease;
     transition: -webkit-filter 300ms ease;
     transition: filter 300ms ease;
@@ -542,6 +570,48 @@ footer *{
     text-align: center
 }
 
+footer p{
+    margin-right: auto;
+}
+
+
+footer ul{
+    list-style: none;
+    padding: 0;
+margin-left: auto;
+    display: block
+}
+
+footer ul li{
+    display: inline
+}
+
+footer ul li a{
+    padding: 0 12px;
+    position: relative
+}
+
+
+footer ul li a:hover{
+    color: #ffffff;
+}
+
+
+footer ul li a::before{
+    content: '|';
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff; transform: translateY(0%);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+footer ul li:last-child a::before{
+    display: none
+}
+
+
 
 
 @media screen and (max-width: 767px){
@@ -592,18 +662,31 @@ section#review h2 {
     font-size: 32px;
 
 }
+
+section#services{
+    padding: 60px 5% 40px;
+}
+
+
+section#services h2 {
+    font-size: 32px;
+
+}
 section#process{
     padding: 0
 }
 
 section#review {
     padding-top: 40px;
-    padding-bottom: 120px;
+    padding-bottom: 60px;
 }
 
+section#logos{
+    padding: 0px 4% 0px;
+}
 
 section#review blockquote{
-    font-size: 32px
+    font-size: 20px
 }
 
 }
@@ -710,7 +793,7 @@ section#review blockquote{
 jQuery(document).ready(function ($) {
 	var owl = $("#owl-demo-2");
 	owl.owlCarousel({
-		autoplay: true,
+		autoplay: false,
 		autoplayTimeout: 1000,
 		autoplayHoverPause: true,
 		items: 3,
@@ -721,15 +804,14 @@ jQuery(document).ready(function ($) {
 		touchDrag: true,
 		pullDrag: true,
 		freeDrag: false,
-		margin: 0,
+		margin: 25,
 		stagePadding: 0,
 		merge: false,
 		mergeFit: true,
 		autoWidth: false,
 		startPosition: 0,
 		rtl: false,
-		smartSpeed: false,
-        autoplaySpeed: 3000,
+		smartSpeed: 250,
 		fluidSpeed: false,
 		dragEndSpeed: false,
         dots:false,
@@ -739,7 +821,7 @@ jQuery(document).ready(function ($) {
 				// nav: true
 			},
 			480: {
-				items: 2,
+				items: 1,
 				nav: true
 			},
 			768: {
@@ -771,7 +853,9 @@ jQuery(document).ready(function ($) {
 		stageOuterClass: "owl-stage-outer",
 		grabClass: "owl-grab",
 		autoHeight: false,
-		lazyLoad: false
+		lazyLoad: false,
+        nav    : true,
+        navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
 	});
 
 	$(".next").click(function () {
