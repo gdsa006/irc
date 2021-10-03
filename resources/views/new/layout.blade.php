@@ -930,7 +930,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
     if (y >= vTop) {
       // if so, ad the fixed class
       $cache.addClass('fixed-top');
-      $('body').attr('style','padding-top: 68px');
+      $('body').attr('style','padding-top: 74px');
     } else {
       // otherwise remove it
       $cache.removeClass('fixed-top');
