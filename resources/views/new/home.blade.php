@@ -5,7 +5,7 @@
 <div class="container">
 <div class="row">
 <div class="col-md-6 col-xs-12">
-    <div class="hero-left">
+    <div class="hero-left" data-aos="fade-up" data-aos-duration="1300">
         <h1>
             Roof repair and replacement made easy
         </h1>
@@ -17,10 +17,10 @@
 </div>
     </div>
 </div>
-<div class="col-md-6 col-xs-12">
+<div class="col-md-6 col-xs-12"  data-aos="fade-up" data-aos-duration="1300">
     <div class="hero-right text-center">
         <h4>Find today's best prices on a new roof!</h4>
-        <img src="{{ asset('images/Price2-01.jpg') }}" style="width: 100%; max-width: 480px">
+        <img src="{{ asset('images/Price2-01.jpg') }}" style="width: 100%; max-width: 480px" data-aos="fade-up" data-aos-duration="1800" data-aos-easing="ease-in-sine" data-aos-offset="-100">
     </div>
 </div>
 </div>
@@ -37,7 +37,7 @@
 </div>
 </div>
 <div class="row threeCols">
-    <div class="col-md-4">
+    <div class="col-md-4" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">
         <div class="d-flex justify-content-center wrapper">
             <div class="icon">
             <img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/606b48e0b94ec4a8763405f8_fi_map-pin.svg" alt="">
@@ -56,7 +56,7 @@ We measure your roof using satellite imagery and ask a few questions about your 
 </div>
 
 
-<div class="col-md-4">
+<div class="col-md-4" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="310">
         <div class="d-flex justify-content-center wrapper">
             <div class="icon">
             <img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/606b48e0b94ec4a8763405f8_fi_map-pin.svg" alt="">
@@ -75,7 +75,7 @@ Our software generates estimates from the best local contractors using their act
 </div>
 
 
-<div class="col-md-4">
+<div class="col-md-4" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="320">
         <div class="d-flex justify-content-center wrapper">
             <div class="icon">
             <img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/606b48e0b94ec4a8763405f8_fi_map-pin.svg" alt="">
@@ -501,8 +501,8 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
     <div class="container">
         <div class="row">
             <div class="col text-center wrapper">
-        <h2>Get your <span class="vivid">free estimate</span> in less than 30 seconds</h2>
-        <a href="#" class="custom-main-btn">Get an estimate</a>
+        <h2 data-aos="fade-up" data-aos-duration="1300">Get your <span class="vivid">free estimate</span> in less than 30 seconds</h2>
+        <a href="#" class="custom-main-btn" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">Get an estimate</a>
     </div>
 </div>
 </div>

@@ -94,4 +94,9 @@ class LeadsController extends Controller
         return redirect()->route('home');
     }
 
+
+
+    public function process(Request $request){
+        return response()->json(array('status' => 's3'));
+    }
 }

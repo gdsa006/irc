@@ -22,14 +22,11 @@ Route::get('/', function () {
 })->name('homepage');
 
 
-
-
 // Route::get('/', function () {
 //     return view('homepage');
 // })->name('home');
 
 // Route::get('/search', 'App\Http\Controllers\LocationFinderController@searchAddress');
-// Route::get('/steps', [App\Http\Controllers\LeadsController::class,'Steps'])->name('steps');
 // Route::get('/stepOneProcess', [App\Http\Controllers\LeadsController::class,'StepOneProcess'])->name('stepOneProcess');
 // Route::get('/stepTwoProcess', [App\Http\Controllers\LeadsController::class,'stepTwoProcess'])->name('stepTwoProcess');
 // Route::get('/stepThreeProcess', [App\Http\Controllers\LeadsController::class,'stepThreeProcess'])->name('stepThreeProcess');
@@ -41,6 +38,15 @@ Route::get('/', function () {
 
 // Route::get('about', [App\Http\Controllers\OtherPagesController::class,'about'])->name('about');
 // Route::get('terms-and-conditons', [App\Http\Controllers\OtherPagesController::class,'termsConditions'])->name('terms-and-conditons');
+
+
+
+
+
+ Route::get('/fullName', [App\Http\Controllers\LeadsController::class,'fullName'])->name('fullName');
+
+Route::get('/process', [App\Http\Controllers\LeadsController::class,'process'])->name('process');
+Route::post('/step1', [App\Http\Controllers\LeadsController::class,'step1'])->name('step1');
 
 
 
@@ -61,6 +67,8 @@ Route::get('send-mail', function () {
    
     dd("Email is Sent.");
 });
+
+
 
 
 

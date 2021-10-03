@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.theme.default.min.css">
     <link rel="icon" type="image/png" href="{{ asset('images/Favicon-01.png') }}"><!-- Major Browsers -->
     <link rel=“stylesheet” href=“https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css”>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Hello, world!</title>
     <style>
@@ -629,7 +630,9 @@ footer ul li:last-child a::before{
     display: none
 }
 
-
+.modal.leads .wrapper{
+    padding: 40px
+}
 
 
 @media screen and (max-width: 767px){
@@ -760,43 +763,43 @@ section#review blockquote{
     <div class="modal bd-example-modal-lg leads" id="exampleModal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-              </button>
-            <div class="title text-center">
-                <h1>Enter Details</h1>
-                <p>The class is a container to enhance an input by adding an icon, text or a button. </p>
-            </div>
-                <div class="status">
-                  <div class="row">
-                  <div id="step1" class="col-md-4 col-4 text-center progress-step {{ Request::is('fullName') ? 'green' : '' }} {{ Request::is('emailAddress') ? 'green' : '' }} {{ Request::is('mobileNumber') ? 'green' : '' }}">
-                    <i class="far fa-dot-circle"></i>
-                  </div>
-                  <div id="step2" class="col-md-4 col-4 text-center progress-step {{ Request::is('emailAddress') ? 'green' : '' }} {{ Request::is('mobileNumber') ? 'green' : '' }}">
-                    <i class="far fa-dot-circle"></i>
-                  </div>
-                  <div id="step3" class="col-md-4 col-4 text-center progress-step {{ Request::is('mobileNumber') ? 'green' : '' }}">
-                    <i class="far fa-dot-circle"></i>
-                  </div>
-                </div>
-                <img src="https://smartdemowp.com/shelder/wp-content/uploads/2020/06/shape-1.png" id="status-image">
-              </div>
-              <div class="data">
-                  <div class="row row-eq-height">
-                      <div class="col-md-6">
-                          <div class="image">
-                              <img src={{ asset('images/about-2.jpg') }}>
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                        <form>
-                            @csrf
-                            @yield('content')
-                        </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
+              </button> -->
+          
+
+
+
+
+
+<div class="wrapper">
+<div class="row">
+              
+    <div class="col-md-11 px-0">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+
+    <div class="col-md-1">
+      <p class="progress_title">1/10</p>
+    </div>
+</div>
+
+
+
+
+<div class="dynamic">
+    @include('new.steps')
+</div>
+
+
+</div>
+
+
+
+
+</div>
         </div>
       </div>
 
@@ -804,10 +807,19 @@ section#review blockquote{
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script type="text/javascript">
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+</script>
 
     <script>
 
@@ -912,6 +924,28 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
     }
   });
         </script>
+
+
+
+
+<script type="text/javascript">
+    $( ".userForm" ).click(function() {
+            $.ajax({
+                type : 'get',
+                url : '{{URL::to('process')}}',
+                data:{},
+                success:function(data){
+                    console.log(data);
+                    $('#exampleModal').modal('show');
+                }      
+    });
+});
+    </script>
+
+
+<script>
+  AOS.init();
+</script>
 
 
   </body>
