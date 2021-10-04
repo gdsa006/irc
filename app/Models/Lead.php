@@ -11,4 +11,6 @@ use Laravel\Sanctum\HasApiTokens;
 class Lead extends Authenticatable
 {
     protected $table = 'leads';
+    protected $fillable = ['fname', 'lname', 'email'];
+
 }

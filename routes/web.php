@@ -44,16 +44,36 @@ Route::get('/', function () {
 
 
  Route::get('/fullName', [App\Http\Controllers\LeadsController::class,'fullName'])->name('fullName');
+ Route::get('/search', 'App\Http\Controllers\LocationFinderController@searchAddress');
 
 Route::get('/process', [App\Http\Controllers\LeadsController::class,'process'])->name('process');
-Route::post('/step1', [App\Http\Controllers\LeadsController::class,'step1'])->name('step1');
-
+Route::post('/saveOne', [App\Http\Controllers\LeadsController::class,'saveOne'])->name('saveOne');
+Route::post('/saveTwo', [App\Http\Controllers\LeadsController::class,'saveTwo'])->name('saveTwo');
+Route::post('/saveThree', [App\Http\Controllers\LeadsController::class,'saveThree'])->name('saveThree');
+Route::post('/saveFour', [App\Http\Controllers\LeadsController::class,'saveFour'])->name('saveFour');
+Route::post('/saveFive', [App\Http\Controllers\LeadsController::class,'saveFive'])->name('saveFive');
 
 
 
 Route::get('ircfileimportexport', [App\Http\Controllers\LocationFinderController::class, 'fileImportExport']);
 Route::post('file-import', [App\Http\Controllers\LocationFinderController::class, 'fileImport'])->name('file-import');
 Route::get('file-export', [App\Http\Controllers\LocationFinderController::class, 'fileExport'])->name('file-export');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Route::get('send-mail', function () {

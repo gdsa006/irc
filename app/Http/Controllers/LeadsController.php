@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Location;
+use App\Models\Lead;
 
 class LeadsController extends Controller
 {
@@ -98,5 +99,102 @@ class LeadsController extends Controller
 
     public function process(Request $request){
         return response()->json(array('status' => 's3'));
+    }
+
+
+
+    public function saveOne(Request $request){
+        $address = $request->input('address');
+
+        $validator = \Validator::make($request->all(), [ 
+            'address' => 'required',
+        ]);
+
+        if($validator->fails()){
+            return response()->json($validator->errors());
+        } 
+        else{
+            $leads = new Lead();
+            $leads->address = $address;
+            $leads->save();
+            $current_id = $leads->id;
+            $request->session()->put('leadID', $current_id);
+            return response()->json(array('status' => true, 'gotostep' => '2', 'currentID' => '0'));
+        }
+
+    }
+
+
+
+    public function saveTwo(Request $request){
+        $leadID = $request->session()->get('leadID');
+
+        $sqft = $request->input('sqft');
+
+        $validator = \Validator::make($request->all(), [ 
+            'sqft' => 'required',
+        ]);
+
+        if($validator->fails()){
+            return response()->json($validator->errors());
+        } 
+        else{
+            $leadID = $request->session()->get('leadID');
+           
+            return response()->json(array('status' => true, 'gotostep' => ''));
+        }
+
+    }
+
+
+
+
+
+
+
+    public function saveThree(Request $request){
+
+        $sqft = $request->input('steep');
+
+        $validator = \Validator::make($request->all(), [ 
+            'steep' => 'required',
+        ]);
+
+        if($validator->fails()){
+            return response()->json($validator->errors());
+        } 
+        else{
+            $leadID = $request->session()->get('leadID');
+           
+            return response()->json(array('status' => true, 'gotostep' => ''));
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+    public function saveFour(Request $request){
+
+        $is_commercial = $request->input('existing_material');
+
+        $validator = \Validator::make($request->all(), [ 
+            'existing_material' => 'required',
+        ]);
+
+        if($validator->fails()){
+            return response()->json($validator->errors());
+        } 
+        else{
+           
+            return response()->json(array('status' => true, 'gotostep' => ''));
+        }
+
     }
 }

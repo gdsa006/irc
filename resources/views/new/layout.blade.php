@@ -4,6 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -808,6 +809,9 @@ section#review blockquote{
 </div>
 
 
+
+
+
 </div>
 
 
@@ -942,6 +946,13 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 
+
+<script>
+    $('form').hide();
+</script>
+
+
+
 <script type="text/javascript">
     $( ".userForm" ).click(function() {
             $.ajax({
@@ -951,16 +962,160 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                 success:function(data){
                     console.log(data);
                     $('#exampleModal').modal('show');
+                    $('form').hide();
+                    $('#frm-two').show();
                 }      
     });
 });
     </script>
 
 
+
+<script type="text/javascript">
+    $( "#frm-one" ).submit(function(e) {
+        e.preventDefault();
+        $address = $('#address').val();
+            $.ajax({
+                type : 'post',
+                url : '{{URL::to('saveOne')}}',
+                data:$('#frm-one').serialize(),
+                success:function(data){
+                    console.log(data);
+                    if(data.status){
+                        $('.progress-bar').css('width', '20%');
+                        $('.progress_title').text('2/10');
+                        $('form').hide();
+                        $('#frm-three').show();
+                    }
+                }      
+    });
+});
+    </script>
+
+
+
+
+<script type="text/javascript">
+    $( "#frm-two" ).submit(function(e) {
+        e.preventDefault();
+        $sqft = $('#sqft').val();
+            $.ajax({
+                type : 'post',
+                url : '{{URL::to('saveTwo')}}',
+                data:$('#frm-two').serialize(),
+                success:function(data){
+                    console.log(data);
+                    if(data.status){
+                        $('.progress-bar').css('width', '30%');
+                        $('.progress_title').text('3/10');
+                        $('form').hide();
+                        $('#frm-three').show();
+                    }
+                }      
+    });
+});
+    </script>
+
+
+
+
+<script type="text/javascript">
+    $( "#frm-three" ).submit(function(e) {
+        e.preventDefault();
+            $.ajax({
+                type : 'post',
+                url : '{{URL::to('saveThree')}}',
+                data:$('#frm-three').serialize(),
+                success:function(data){
+                    console.log(data);
+                    if(data.status){
+                        $('.progress-bar').css('width', '40%');
+                        $('.progress_title').text('4/10');
+                        $('form').hide();
+                        $('#frm-four').show();
+                    }
+                }      
+    });
+});
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $( "#frm-four" ).submit(function(e) {
+        e.preventDefault();
+            $.ajax({
+                type : 'post',
+                url : '{{URL::to('saveFour')}}',
+                data:$('#frm-four').serialize(),
+                success:function(data){
+                    console.log(data);
+                    if(data.status){
+                        $('.progress-bar').css('width', '50%');
+                        $('.progress_title').text('5/10');
+                        $('form').hide();
+                        $('#frm-five').show();
+                    }
+                }      
+    });
+});
+    </script>
+
+
+
+
+
+
+
+
+
+
 <script>
   AOS.init();
 </script>
+<script type="text/javascript">
+$( "#address" ).keyup(function() {
+        $value = $(this).val();
+        $("#search-results > ul").empty(); 
+            console.log($value.length); 
+        $.ajax({
+            type : 'get',
+            url : '{{URL::to('search')}}',
+            data:{'search':$value},
+            success:function(data){
+                $("#search-results > ul").empty();  
+                console.log(data.keyword);
+                if(data.keyword == null){
+                    console.log('null');
+                    $("#search-results > ul").remove();  
+                }
+                else{
+                var ul = $('<ul>').appendTo('#search-results');
+                $(data.search).each(function(index, Address) {
 
+                    var searchWord= Address.Address;
+                    var exists=$('#search-results ul li:contains('+searchWord+')').length;
+                    if( !exists){
+                            ul.append(
+                                $(document.createElement('li')).html('<span class="singleResult">' + Address.Address + '</span>')
+                            );
+                    }
+                    else{
+                    }
+                });     
+                }           
+            }
+        });
+    })
+    </script>
 
   </body>
 </html>
