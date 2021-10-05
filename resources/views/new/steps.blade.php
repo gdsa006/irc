@@ -79,24 +79,32 @@
 <input type="button" value="< back" onclick="goBack('#frm-three');" class="btn back">
 <div class="input-group">
         <div class="form-check col-3">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="existing_material" value="asphalt">Asphalt
-            </label>
+                <input type="radio" class="form-check-input" id="existing_material-asphalt" name="existing_material" value="asphalt">
+                <label class="radio text-center" for="existing_material-asphalt">
+                    <img src="{{ asset('images/asphalt.jpg') }}" width="100">
+                    <span>Asphalt</span>
+                </label>
         </div>
         <div class="form-check col-3">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="existing_material" value="metal">Metal
-            </label>
+                <input type="radio" class="form-check-input" id="existing_material-metal" name="existing_material" value="metal">
+                <label class="radio text-center" for="existing_material-metal">
+                    <img src="{{ asset('images/metal.jpg') }}" width="100">
+                    <span>Metal</span>
+                </label>
         </div>
         <div class="form-check col-3">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="existing_material" value="tile">Tile
-            </label>
+                <input type="radio" class="form-check-input" id="existing_material-tile" name="existing_material" value="tile">
+                <label class="radio text-center" for="existing_material-tile">
+                    <img src="{{ asset('images/tile.jpg') }}" width="100">
+                    <span>Tile</span>
+                </label>
         </div>
         <div class="form-check col-3">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="existing_material" value="other">Other
-            </label>
+                <input type="radio" class="form-check-input" id="existing_material-other" name="existing_material" value="other">
+                <label class="radio text-center" for="existing_material-other">
+                    <img src="{{ asset('images/other-2.png') }}" width="100">
+                    <span>Other</span>
+                </label>
         </div>
 </div>
     <div class="buttons w-100 text-center mt-4">
@@ -105,19 +113,23 @@
 </form>
 
 
-<form method="post" id="frm-five" name="frm-five" class="row col-md-9">
+<form method="post" id="frm-five" name="frm-five" class="row">
 <h4>Is this a residential or commercial roof?</h4>
 <input type="button" value="< back" onclick="goBack('#frm-four');" class="btn back">
 <div class="input-group">
         <div class="form-check col-6">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="is_commercial" value="residential">Residential
-            </label>
+                <input type="radio" class="form-check-input" id="is_commercial-residential" name="is_commercial" value="residential">
+                <label class="radio text-center" for="is_commercial-residential">
+                    <img src="{{ asset('images/steep.jpg') }}" width="100">
+                    <span>Residential</span>
+                </label>
         </div>
         <div class="form-check col-6">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="is_commercial" value="commercial">Commercial
-            </label>
+                <input type="radio" class="form-check-input" id="is_commercial-residential" name="is_commercial" value="commercial">
+                <label class="radio text-center" for="is_commercial-residential">
+                    <img src="{{ asset('images/flat.jpg') }}" width="100">
+                    <span>Commercial</span>
+                </label>
         </div>
 </div>
         <div class="buttons w-100 text-center mt-4">
@@ -127,7 +139,7 @@
 
 
 
-<form method="post" id="frm-six" name="frm-six" class="row col-md-9">
+<form method="post" id="frm-six" name="frm-six" class="row">
 <h4>How urgent is this project?</h4>
 <input type="button" value="< back" onclick="goBack('#frm-five');" class="btn back">
 <div class="input-group">
@@ -154,7 +166,7 @@
 
 
 
-<form method="post" id="frm-seven" name="frm-seven" class="row col-md-9">
+<form method="post" id="frm-seven" name="frm-seven" class="row">
 <h4>Are you using insurance to repair your roof?</h4>
 <input type="button" value="< back" onclick="goBack('#frm-six');" class="btn back">
 <div class="input-group">
@@ -183,7 +195,7 @@
 
 
 
-<form method="post" id="frm-eight" name="frm-eight" class="row col-md-9">
+<form method="post" id="frm-eight" name="frm-eight" class="row">
 <h4>What would you like on your roof?</h4>
 <input type="button" value="< back" onclick="goBack('#frm-seven');" class="btn back">
     <div class="input-group" style="position: relative">

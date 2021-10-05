@@ -704,6 +704,12 @@ footer ul li:last-child a::before{
     border: 0
 }
 
+.modal.leads button.close{
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
 .radio {
     display: inline-block;
     cursor: pointer;
@@ -957,9 +963,9 @@ section#review blockquote{
     <div class="modal bd-example-modal-lg leads" id="exampleModal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-              </button> -->
+              </button>
           
 
 
@@ -1432,6 +1438,12 @@ $( "#address" ).keyup(function() {
     });
     </script>
 
+
+<script>
+$("#exampleModal button.close").on('click', function(){
+    $("#exampleModal").modal('close');
+});
+</script>
 
   </body>
 </html>
