@@ -1359,7 +1359,6 @@ $( "#address" ).keyup(function() {
                         $percentage = $progressLevel.replace('%', '');
                         $semicolon = $percentage.replace(';', '');
                         $convert_to_number = $semicolon.replace('width:', '');
-                        alert($convert_to_number);
                         $('.progress .progress-bar').css('width', (Number($convert_to_number) - 10) + '%');
 
 
