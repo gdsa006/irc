@@ -20,7 +20,8 @@
 
 
 <form method="post" id="frm-two" name="frm-two" class="row">
-<h4>Enter your address to begin!</h4>
+<h4>Enter your homes square footage</h4>
+<input type="button" value="< back" onclick="goBack('#frm-one');" class="btn back">
 <div class="col-md-10 offset-md-1">
     <div class="input-group" style="position: relative">
     <div class="input-group-prepend">
@@ -29,7 +30,6 @@
         <input type="text" class="form-control new-custom-input" id="sqft" placeholder="Home SqFt" value="" name="sqft">
         <div class="buttons">
             <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
-            <input type="button" value="Back" onclick="goBack('#frm-one');" class="btn back new-custom-btn">
         </div>
     </div>
 </div>   
@@ -37,37 +37,46 @@
 
 
 <form method="post" id="frm-three" name="frm-three" class="row">
-<h4>Enter your address to begin!</h4>
+<h4>How steep is your roof?</h4>
+<input type="button" value="< back" onclick="goBack('#frm-two');" class="btn back">
 <div class="input-group">
         <div class="form-check col-3">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="steep" value="flat">Flat
-            </label>
+                <input type="radio" class="form-check-input" id="steep-flat" name="steep" value="flat">
+                <label class="radio text-center" for="steep-flat">
+                    <img src="{{ asset('images/flat.jpg') }}" width="100">
+                    <span>Flat</span>
+                </label>
         </div>
         <div class="form-check col-3">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="steep" value="mellow">Mellow
-            </label>
+                <input type="radio" class="form-check-input" name="steep" id="steep-mellow" value="mellow">
+                <label class="radio text-center" for="steep-mellow">
+                    <img src="{{ asset('images/mellow.jpg') }}" width="100">
+                    <span>Mellow</span>
+                </label>
         </div>
         <div class="form-check col-3">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="steep" value="steep">Steep
-            </label>
+                <input type="radio" class="form-check-input" name="steep" id="steep-steep" value="steep">
+                <label class="radio text-center" for="steep-steep">
+                    <img src="{{ asset('images/steep.jpg') }}" width="100">
+                    <span>Steep</span>
+                </label>
         </div>
         <div class="form-check col-3">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="steep" value="unsure">Unsure
-            </label>
+                <input type="radio" class="form-check-input" name="steep" id="steep-unsure" value="unsure">
+                <label class="radio text-center" for="steep-unsure">
+                    <img src="{{ asset('images/other.jpg') }}" width="100">
+                    <span>Unsure</span>
+                </label>
         </div>
 </div>
     <div class="buttons w-100 text-center mt-4">
         <input type="submit" value="next" class="btn new-custom-btn">
-        <input type="button" value="Back" onclick="goBack('#frm-two');" class="btn back new-custom-btn">
     </div>
 </form>
 
 <form method="post" id="frm-four" name="frm-four" class="row">
-<h4>Enter your address to begin!</h4>
+<h4>What's currently on your roof?</h4>
+<input type="button" value="< back" onclick="goBack('#frm-three');" class="btn back">
 <div class="input-group">
         <div class="form-check col-3">
             <label class="form-check-label">
@@ -92,13 +101,13 @@
 </div>
     <div class="buttons w-100 text-center mt-4">
         <input type="submit" value="next" class="btn new-custom-btn">
-        <input type="button" value="Back" onclick="goBack('#frm-three');" class="btn back new-custom-btn">
     </div>
 </form>
 
 
 <form method="post" id="frm-five" name="frm-five" class="row col-md-9">
-<h4>Enter your address to begin!</h4>
+<h4>Is this a residential or commercial roof?</h4>
+<input type="button" value="< back" onclick="goBack('#frm-four');" class="btn back">
 <div class="input-group">
         <div class="form-check col-6">
             <label class="form-check-label">
@@ -113,14 +122,14 @@
 </div>
         <div class="buttons w-100 text-center mt-4">
             <input type="submit" value="next" class="btn new-custom-btn">
-            <input type="button" value="Back" onclick="goBack('#frm-four');" class="btn back new-custom-btn">
         </div>
 </form>
 
 
 
 <form method="post" id="frm-six" name="frm-six" class="row col-md-9">
-<h4>Enter your address to begin!</h4>
+<h4>How urgent is this project?</h4>
+<input type="button" value="< back" onclick="goBack('#frm-five');" class="btn back">
 <div class="input-group">
         <div class="form-check col-4">
             <label class="form-check-label">
@@ -140,14 +149,14 @@
 </div>
         <div class="buttons w-100 text-center mt-4">
             <input type="submit" value="next" class="btn new-custom-btn">
-            <input type="button" value="Back" onclick="goBack('#frm-five');" class="btn back new-custom-btn">
         </div>
 </form>
 
 
 
 <form method="post" id="frm-seven" name="frm-seven" class="row col-md-9">
-<h4>Enter your address to begin!</h4>
+<h4>Are you using insurance to repair your roof?</h4>
+<input type="button" value="< back" onclick="goBack('#frm-six');" class="btn back">
 <div class="input-group">
         <div class="form-check col-4">
             <label class="form-check-label">
@@ -168,7 +177,6 @@
     
         <div class="buttons w-100 text-center mt-4">
             <input type="submit" value="next" class="btn new-custom-btn">
-            <input type="button" value="Back" onclick="goBack('#frm-six');" class="btn back new-custom-btn">
         </div>
 </form>
 
@@ -176,7 +184,8 @@
 
 
 <form method="post" id="frm-eight" name="frm-eight" class="row col-md-9">
-<h4>Enter your address to begin!</h4>
+<h4>What would you like on your roof?</h4>
+<input type="button" value="< back" onclick="goBack('#frm-seven');" class="btn back">
     <div class="input-group" style="position: relative">
         <div class="form-check col-3">
             <label class="form-check-label">
@@ -200,7 +209,6 @@
         </div>
 </div>
         <div class="buttons w-100 text-center mt-4">
-            <!-- <input type="submit" value="next" class="btn new-custom-btn"> -->
-            <input type="button" value="Back" onclick="goBack('#frm-seven');" class="btn back new-custom-btn">
+            <input type="submit" value="next" class="btn new-custom-btn">
         </div>
 </form>

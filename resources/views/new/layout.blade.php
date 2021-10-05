@@ -687,6 +687,53 @@ footer ul li:last-child a::before{
     position: absolute; top: 55px; left: 0; background: transparent; border: solid 1px transparent; margin: 0; width: 100%; transform: translateX(0); z-index: 999999999999999999999; list-style: none; padding: 0;
 }
 
+.modal.leads .back{
+    position: absolute;
+    top: 0;
+    background: #0000;
+    color: #000;
+    /* font-weight: bolder; */
+    width: 80px;
+    padding: 12px;
+    height: 30px;
+    font-size: 15px;
+    line-height: 1px;
+}
+
+.modal.leads .modal-content{
+    border: 0
+}
+
+.radio {
+    display: inline-block;
+    cursor: pointer;
+    border: solid 2px #eee;
+    padding: 18px;
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.radio:hover{
+    box-shadow: 0 0 0 3px #269bd6;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.radio span{
+    border: solid 2px #eee;
+    padding: 3px 6px
+}
+
+
+
+input[type=radio] {
+    display: none;
+}
+
+
+input[type=radio]:checked + .radio {
+    border: solid #269bd6 2px;
+}
+
 
 #search-results ul{
     display: none;
@@ -741,6 +788,16 @@ footer ul li:last-child a::before{
     cursor: pointer;
     color: #000
 }
+
+
+
+
+.modal-backdrop.show{
+    background-color: #ffffff;
+    opacity: 1;
+}
+
+
 
 
 @media screen and (max-width: 767px){
