@@ -200,7 +200,7 @@
         </div>
 </div>
         <div class="buttons w-100 text-center mt-4">
-            <input type="submit" value="next" class="btn new-custom-btn">
+            <!-- <input type="submit" value="next" class="btn new-custom-btn"> -->
             <input type="button" value="Back" onclick="goBack('#frm-seven');" class="btn back new-custom-btn">
         </div>
 </form>
