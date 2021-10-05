@@ -919,7 +919,7 @@ section#review blockquote{
     </div>
 
     <div class="col-md-1">
-      <p class="progress_title">1/10</p>
+      <p class="progress_title"><span>1</span>/10</p>
     </div>
 </div>
 
@@ -1104,8 +1104,13 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                 success:function(data){
                     console.log(data);
                     if(data.status){
-                        $('.progress-bar').css('width', '20%');
-                        $('.progress_title').text('2/10');
+                        $progressLevel = $('.progress .progress-bar').attr("style");
+                        $percentage = $progressLevel.replace('%', '');
+                        $semicolon = $percentage.replace(';', '');
+                        $convert_to_number = $semicolon.replace('width:', '');
+                        $('.progress .progress-bar').css('width', (Number($convert_to_number) + 10) + '%');
+                        $stepCount = $('.progress_title span').text();
+                        $('.progress_title span').text(Number($stepCount) + 1);
                         $('form').hide();
                         $('#frm-two').show();
                     }
@@ -1128,8 +1133,12 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                 success:function(data){
                     console.log(data);
                     if(data.status){
-                        $('.progress-bar').css('width', '30%');
-                        $('.progress_title').text('3/10');
+                        $progressLevel = $('.progress .progress-bar').attr("style");
+                        $percentage = $progressLevel.replace('%', '');
+                        $semicolon = $percentage.replace(';', '');
+                        $convert_to_number = $semicolon.replace('width:', '');
+                        $('.progress .progress-bar').css('width', (Number($convert_to_number) + 10) + '%');                        $stepCount = $('.progress_title span').text();
+                        $('.progress_title span').text(Number($stepCount) + 1);
                         $('form').hide();
                         $('#frm-three').show();
                     }
@@ -1152,8 +1161,13 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                 success:function(data){
                     console.log(data);
                     if(data.status){
-                        $('.progress-bar').css('width', '40%');
-                        $('.progress_title').text('4/10');
+                        $progressLevel = $('.progress .progress-bar').attr("style");
+                        $percentage = $progressLevel.replace('%', '');
+                        $semicolon = $percentage.replace(';', '');
+                        $convert_to_number = $semicolon.replace('width:', '');
+                        $('.progress .progress-bar').css('width', (Number($convert_to_number) + 10) + '%');
+                        $stepCount = $('.progress_title span').text();
+                        $('.progress_title span').text(Number($stepCount) + 1);
                         $('form').hide();
                         $('#frm-four').show();
                     }
@@ -1182,8 +1196,13 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                 success:function(data){
                     console.log(data);
                     if(data.status){
-                        $('.progress-bar').css('width', '50%');
-                        $('.progress_title').text('5/10');
+                        $progressLevel = $('.progress .progress-bar').attr("style");
+                        $percentage = $progressLevel.replace('%', '');
+                        $semicolon = $percentage.replace(';', '');
+                        $convert_to_number = $semicolon.replace('width:', '');
+                        $('.progress .progress-bar').css('width', (Number($convert_to_number) + 10) + '%');
+                        $stepCount = $('.progress_title span').text();
+                        $('.progress_title span').text(Number($stepCount) + 1);
                         $('form').hide();
                         $('#frm-five').show();
                     }
@@ -1206,8 +1225,13 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                 success:function(data){
                     console.log(data);
                     if(data.status){
-                        $('.progress-bar').css('width', '60%');
-                        $('.progress_title').text('6/10');
+                        $progressLevel = $('.progress .progress-bar').attr("style");
+                        $percentage = $progressLevel.replace('%', '');
+                        $semicolon = $percentage.replace(';', '');
+                        $convert_to_number = $semicolon.replace('width:', '');
+                        $('.progress .progress-bar').css('width', (Number($convert_to_number) + 10) + '%');
+                        $stepCount = $('.progress_title span').text();
+                        $('.progress_title span').text(Number($stepCount) + 1);
                         $('form').hide();
                         $('#frm-six').show();
                     }
@@ -1232,8 +1256,13 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                 success:function(data){
                     console.log(data);
                     if(data.status){
-                        $('.progress-bar').css('width', '70%');
-                        $('.progress_title').text('7/10');
+                        $progressLevel = $('.progress .progress-bar').attr("style");
+                        $percentage = $progressLevel.replace('%', '');
+                        $semicolon = $percentage.replace(';', '');
+                        $convert_to_number = $semicolon.replace('width:', '');
+                        $('.progress .progress-bar').css('width', (Number($convert_to_number) + 10) + '%');
+                        $stepCount = $('.progress_title span').text();
+                        $('.progress_title span').text(Number($stepCount) + 1);
                         $('form').hide();
                         $('#frm-seven').show();
                     }
@@ -1255,8 +1284,13 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                 success:function(data){
                     console.log(data);
                     if(data.status){
-                        $('.progress-bar').css('width', '80%');
-                        $('.progress_title').text('8/10');
+                        $progressLevel = $('.progress .progress-bar').attr("style");
+                        $percentage = $progressLevel.replace('%', '');
+                        $semicolon = $percentage.replace(';', '');
+                        $convert_to_number = $semicolon.replace('width:', '');
+                        $('.progress .progress-bar').css('width', (Number($convert_to_number) + 10) + '%');
+                        $stepCount = $('.progress_title span').text();
+                        $('.progress_title span').text(Number($stepCount) + 1);
                         $('form').hide();
                         $('#frm-eight').show();
                     }
@@ -1316,9 +1350,19 @@ $( "#address" ).keyup(function() {
 <script>
     function goBack(hash){
         if (hash) {
-            alert(hash);
             $('form').hide();
             $(hash).show();
+            $stepCount = $('.progress_title span').text();
+            $('.progress_title span').text(Number($stepCount) - 1);
+
+            $progressLevel = $('.progress .progress-bar').attr("style");
+                        $percentage = $progressLevel.replace('%', '');
+                        $semicolon = $percentage.replace(';', '');
+                        $convert_to_number = $semicolon.replace('width:', '');
+                        alert($convert_to_number);
+                        $('.progress .progress-bar').css('width', (Number($convert_to_number) - 10) + '%');
+
+
         }
     }
 </script>
@@ -1332,6 +1376,6 @@ $( "#address" ).keyup(function() {
     });
     </script>
 
-    
+
   </body>
 </html>
