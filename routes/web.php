@@ -52,6 +52,9 @@ Route::post('/saveTwo', [App\Http\Controllers\LeadsController::class,'saveTwo'])
 Route::post('/saveThree', [App\Http\Controllers\LeadsController::class,'saveThree'])->name('saveThree');
 Route::post('/saveFour', [App\Http\Controllers\LeadsController::class,'saveFour'])->name('saveFour');
 Route::post('/saveFive', [App\Http\Controllers\LeadsController::class,'saveFive'])->name('saveFive');
+Route::post('/saveSix', [App\Http\Controllers\LeadsController::class,'saveSix'])->name('saveSix');
+Route::post('/saveSeven', [App\Http\Controllers\LeadsController::class,'saveSeven'])->name('saveSeven');
+Route::post('/saveEight', [App\Http\Controllers\LeadsController::class,'saveEight'])->name('saveEight');
 
 
 

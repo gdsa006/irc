@@ -197,4 +197,103 @@ class LeadsController extends Controller
         }
 
     }
+
+
+
+
+
+
+
+
+
+    public function saveFive(Request $request){
+
+        $is_commercial = $request->input('is_commercial');
+
+        $validator = \Validator::make($request->all(), [ 
+            'is_commercial' => 'required',
+        ]);
+
+        if($validator->fails()){
+            return response()->json($validator->errors());
+        } 
+        else{
+           
+            return response()->json(array('status' => true, 'gotostep' => ''));
+        }
+
+    }
+
+
+
+
+
+
+
+
+    public function saveSix(Request $request){
+
+        $urgency = $request->input('urgency');
+
+        $validator = \Validator::make($request->all(), [ 
+            'urgency' => 'required',
+        ]);
+
+        if($validator->fails()){
+            return response()->json($validator->errors());
+        } 
+        else{
+           
+            return response()->json(array('status' => true, 'gotostep' => ''));
+        }
+
+    }
+
+
+
+
+    public function saveSeven(Request $request){
+
+        $urgency = $request->input('true');
+
+        $validator = \Validator::make($request->all(), [ 
+            'true' => 'required',
+        ]);
+
+        if($validator->fails()){
+            return response()->json($validator->errors());
+        } 
+        else{
+           
+            return response()->json(array('status' => true, 'gotostep' => ''));
+        }
+
+    }
+
+
+
+
+
+
+
+    public function saveEight(Request $request){
+
+        $urgency = $request->input('true');
+
+        $validator = \Validator::make($request->all(), [ 
+            'true' => 'required',
+        ]);
+
+        if($validator->fails()){
+            return response()->json($validator->errors());
+        } 
+        else{
+           
+            return response()->json(array('status' => true, 'gotostep' => ''));
+        }
+
+    }
+
+
+
 }

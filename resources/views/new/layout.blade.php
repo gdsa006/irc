@@ -620,6 +620,128 @@ footer ul li:last-child a::before{
     padding: 40px
 }
 
+.modal.leads .progress_title{
+    color: #259ad7;
+    min-width: 90px;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    font-weight: 700;
+}
+
+.modal.leads .progress{
+    height: 1.4rem;
+}
+
+.modal.leads .progress-bar{
+    background-color: #259ad7
+}
+
+.modal.leads h4{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.modal.leads .new-custom-btn{
+    background-color: #259ad7;
+    border-color: #259ad7;
+    transition: all .3s;
+    line-height: 1.25rem;
+    margin-bottom: 0;
+    height: 4rem!important;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: .3rem;
+    font-family: sans-serif;
+}
+
+.modal.leads .new-custom-btn:hover{
+    background-color: #6ac7f8;
+    border-color: #6ac7f8;
+    transition: all .3s;
+}
+
+.modal.leads .new-custom-input{
+    line-height: 1.25rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 0;
+    height: 4rem!important;
+    border: 1px solid #eee!important;
+    background-color: #fff;
+    font-size: 1rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.modal.leads #frm-one .new-custom-input{
+    margin-right: 10px
+}
+
+.modal.leads #frm-two .new-custom-input{
+    margin-right: 10px
+}
+
+.modal.leads #search-results{
+    position: absolute; top: 55px; left: 0; background: transparent; border: solid 1px transparent; margin: 0; width: 100%; transform: translateX(0); z-index: 999999999999999999999; list-style: none; padding: 0;
+}
+
+
+#search-results ul{
+    display: none;
+}
+
+#search-results ul:last-child{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 3px 5px rgb(57 63 72 / 30%);
+    max-height: 300px;
+    overflow-y: scroll;
+    display: block;
+}
+
+
+#search-results ul::-webkit-scrollbar {
+  width: 0.3em; 
+}
+ 
+#search-results ul::-webkit-scrollbar-track {
+  display: none;
+}
+
+#search-results:hover ul::-webkit-scrollbar-track{
+    display: block;
+} 
+
+
+#search-results:hover ul::-webkit-scrollbar-thumb{
+    display: block;
+} 
+ 
+#search-results ul::-webkit-scrollbar-thumb {
+  background-color: #fc600c;
+  display: none;
+}
+
+#search-results li{
+    background: #ffffff;
+    padding: 9px 10px;
+    color: #555;
+    font-size: 13px;
+    border-bottom: solid 1px #dfdfdf;
+}
+
+#search-results li .singleResult{
+    position: relative;
+}
+
+#search-results li:hover{
+    cursor: pointer;
+    color: #000
+}
+
 
 @media screen and (max-width: 767px){
     footer{
@@ -963,7 +1085,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                     console.log(data);
                     $('#exampleModal').modal('show');
                     $('form').hide();
-                    $('#frm-two').show();
+                    $('#frm-one').show();
                 }      
     });
 });
@@ -985,7 +1107,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('.progress-bar').css('width', '20%');
                         $('.progress_title').text('2/10');
                         $('form').hide();
-                        $('#frm-three').show();
+                        $('#frm-two').show();
                     }
                 }      
     });
@@ -1022,6 +1144,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 <script type="text/javascript">
     $( "#frm-three" ).submit(function(e) {
         e.preventDefault();
+        $steep = 'metal';
             $.ajax({
                 type : 'post',
                 url : '{{URL::to('saveThree')}}',
@@ -1073,6 +1196,76 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 
+<script type="text/javascript">
+    $( "#frm-five" ).submit(function(e) {
+        e.preventDefault();
+            $.ajax({
+                type : 'post',
+                url : '{{URL::to('saveFive')}}',
+                data:$('#frm-five').serialize(),
+                success:function(data){
+                    console.log(data);
+                    if(data.status){
+                        $('.progress-bar').css('width', '60%');
+                        $('.progress_title').text('6/10');
+                        $('form').hide();
+                        $('#frm-six').show();
+                    }
+                }      
+    });
+});
+    </script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $( "#frm-six" ).submit(function(e) {
+        e.preventDefault();
+            $.ajax({
+                type : 'post',
+                url : '{{URL::to('saveSix')}}',
+                data:$('#frm-six').serialize(),
+                success:function(data){
+                    console.log(data);
+                    if(data.status){
+                        $('.progress-bar').css('width', '70%');
+                        $('.progress_title').text('7/10');
+                        $('form').hide();
+                        $('#frm-seven').show();
+                    }
+                }      
+    });
+});
+    </script>
+
+
+
+
+<script type="text/javascript">
+    $( "#frm-seven" ).submit(function(e) {
+        e.preventDefault();
+            $.ajax({
+                type : 'post',
+                url : '{{URL::to('saveSeven')}}',
+                data:$('#frm-seven').serialize(),
+                success:function(data){
+                    console.log(data);
+                    if(data.status){
+                        $('.progress-bar').css('width', '80%');
+                        $('.progress_title').text('8/10');
+                        $('form').hide();
+                        $('#frm-eight').show();
+                    }
+                }      
+    });
+});
+    </script>
+
+
 
 
 
@@ -1098,6 +1291,8 @@ $( "#address" ).keyup(function() {
                     $("#search-results > ul").remove();  
                 }
                 else{
+                    $width = $("#address").outerWidth();
+                    $("#search-results").css('width', $width);  
                 var ul = $('<ul>').appendTo('#search-results');
                 $(data.search).each(function(index, Address) {
 
@@ -1117,5 +1312,26 @@ $( "#address" ).keyup(function() {
     })
     </script>
 
+
+<script>
+    function goBack(hash){
+        if (hash) {
+            alert(hash);
+            $('form').hide();
+            $(hash).show();
+        }
+    }
+</script>
+
+
+<script>
+    $('.input-group').on('click', '#search-results ul li',function(){
+        $getAddress = $(this).text();
+        $('#address').val($getAddress);
+        $("#search-results > ul").empty();
+    });
+    </script>
+
+    
   </body>
 </html>
