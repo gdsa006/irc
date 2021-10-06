@@ -289,8 +289,7 @@
 <h4>Are you interested in financing this project over time?</h4>
 <h5>Just enter your information and get your no obligation estimate!</h5>
 <input type="button" value="< back" onclick="goBack('#frm-nine');" class="btn back">
-<div class="row">
-    <div class="col-md-12 m-0 p-0">
+
         <div class="input-group" style="position: relative">
             <input type="text" class="form-control new-custom-input" name="email" placeholder="Email">
         </div>
@@ -299,12 +298,9 @@
             <input type="text" class="form-control new-custom-input phone-format" name="mobile" placeholder="Phone">
         </div>
         <div class="buttons w-100 text-center mt-4">
-            <input type="submit" value="Get Estimate" class="btn d-block new-custom-btn">
+            <input type="submit" value="Get Estimate" class="btn btn-block new-custom-btn">
         </div>
-    </div>
 
-    <div class="col-md-6">
-        faq
-    </div>
-</div>
+
+
 </form>
