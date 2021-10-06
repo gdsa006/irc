@@ -912,6 +912,38 @@ input[type=radio]:checked + .radio {
 	}
 
 @media screen and (max-width: 767px){
+    .modal.leads .wrapper{
+        padding: 24px;
+    }
+
+    .modal.leads #frm-one .new-custom-input{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px
+    }
+
+    .modal.leads #frm-two .new-custom-input{
+        margin-right: 0;
+        margin-bottom: 10px
+    }
+
+    .modal.leads #frm-two .input-group-prepend{
+        margin-right: 0;
+        margin-bottom: 10px
+    }
+
+    .modal.leads .radio{
+        width: 100%
+    }
+
+    .modal.leads .buttons{
+        width: 100%
+    }
+
+    .modal.leads .new-custom-btn{
+        width: 100%
+    }
+
     footer{
     padding:20px 5% 20px !important
 }
@@ -1068,7 +1100,7 @@ section#review blockquote{
     <div class="modal bd-example-modal-lg leads" id="exampleModal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close">
                 <span aria-hidden="true">&times;</span>
               </button>
           
@@ -1712,11 +1744,7 @@ $( "#address" ).keyup(function() {
     </script>
 
 
-<script>
-$("#exampleModal button.close").on('click', function(){
-    $("#exampleModal").modal('close');
-});
-</script>
+
 
 
 <script>
@@ -1741,6 +1769,44 @@ $("#exampleModal button.close").on('click', function(){
   });
 });
 </script>
+
+
+<script>
+
+$('#exampleModal button').on('click', function(){
+    alert('clk');
+    $.ajax({
+                type : 'post',
+                url : '{{URL::to('destroy')}}',
+                data: {},
+                success:function(data){
+                    console.log(data);
+                    if(data.status){
+                        $('#exampleModal').modal('hide');
+                    }
+                }      
+    });
+});
+</script>
+
+
+<!-- <script>
+$checkSession = "{{ session()->get('leadID') }}";
+if($checkSession){
+    $.ajax({
+                type : 'get',
+                url : '{{URL::to('process')}}',
+                data:{},
+                success:function(data){
+                    console.log(data);
+                    $('#exampleModal').modal('show');
+                    $('form').hide();
+                    $('#frm-one').show();
+                }      
+    });
+}
+
+    </script> -->
 
   </body>
 </html>

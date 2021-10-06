@@ -58,6 +58,8 @@ Route::post('/saveEight', [App\Http\Controllers\LeadsController::class,'saveEigh
 Route::post('/saveNine', [App\Http\Controllers\LeadsController::class,'saveNine'])->name('saveNine');
 Route::post('/saveTen', [App\Http\Controllers\LeadsController::class,'saveTen'])->name('saveTen');
 
+Route::post('/destroy', [App\Http\Controllers\LeadsController::class,'destroySession'])->name('destroySession');
+
 Route::get('/estimate', [App\Http\Controllers\LeadsController::class,'estimate'])->name('estimate');
 
 

@@ -376,4 +376,9 @@ class LeadsController extends Controller
         return View('new.final', compact('data'));
     }
 
+    public function destroySession(Request $request){
+        $request->session()->forget('leadID');
+        return response()->json(array('status' => true));
+    }
+
 }
