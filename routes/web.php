@@ -55,7 +55,10 @@ Route::post('/saveFive', [App\Http\Controllers\LeadsController::class,'saveFive'
 Route::post('/saveSix', [App\Http\Controllers\LeadsController::class,'saveSix'])->name('saveSix');
 Route::post('/saveSeven', [App\Http\Controllers\LeadsController::class,'saveSeven'])->name('saveSeven');
 Route::post('/saveEight', [App\Http\Controllers\LeadsController::class,'saveEight'])->name('saveEight');
+Route::post('/saveNine', [App\Http\Controllers\LeadsController::class,'saveNine'])->name('saveNine');
+Route::post('/saveTen', [App\Http\Controllers\LeadsController::class,'saveTen'])->name('saveTen');
 
+Route::get('/estimate', [App\Http\Controllers\LeadsController::class,'estimate'])->name('estimate');
 
 
 Route::get('ircfileimportexport', [App\Http\Controllers\LocationFinderController::class, 'fileImportExport']);

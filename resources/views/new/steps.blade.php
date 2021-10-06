@@ -70,7 +70,7 @@
         </div>
 </div>
     <div class="buttons w-100 text-center mt-4">
-        <input type="submit" value="next" class="btn new-custom-btn">
+        <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
     </div>
 </form>
 
@@ -108,7 +108,7 @@
         </div>
 </div>
     <div class="buttons w-100 text-center mt-4">
-        <input type="submit" value="next" class="btn new-custom-btn">
+        <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
     </div>
 </form>
 
@@ -125,15 +125,15 @@
                 </label>
         </div>
         <div class="form-check col-6">
-                <input type="radio" class="form-check-input" id="is_commercial-residential" name="is_commercial" value="commercial">
-                <label class="radio text-center" for="is_commercial-residential">
+                <input type="radio" class="form-check-input" id="is_commercial-commercial" name="is_commercial" value="commercial">
+                <label class="radio text-center" for="is_commercial-commercial">
                     <img src="{{ asset('images/flat.jpg') }}" width="100">
                     <span>Commercial</span>
                 </label>
         </div>
 </div>
         <div class="buttons w-100 text-center mt-4">
-            <input type="submit" value="next" class="btn new-custom-btn">
+            <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
         </div>
 </form>
 
@@ -144,23 +144,29 @@
 <input type="button" value="< back" onclick="goBack('#frm-five');" class="btn back">
 <div class="input-group">
         <div class="form-check col-4">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="urgency" value="checking">Checking
-            </label>
+                <input type="radio" class="form-check-input" id="urgency-checking" name="urgency" value="checking">
+                <label class="radio text-center" for="urgency-checking">
+                    <img src="{{ asset('images/happy.png') }}" width="100">
+                    <span>Checking</span>
+                </label>
         </div>
         <div class="form-check col-4">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="urgency" value="soon">Soon
-            </label>
+                <input type="radio" class="form-check-input" id="urgency-soon" name="urgency" value="soon">
+                <label class="radio text-center" for="urgency-soon">
+                    <img src="{{ asset('images/surprised.png') }}" width="100">
+                    <span>Soon</span>
+                </label>
         </div>
         <div class="form-check col-4">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="urgency" value="urgent">Urgent
-            </label>
+                <input type="radio" class="form-check-input" id="urgency-urgent" name="urgency" value="urgent">
+                <label class="radio text-center" for="urgency-urgent">
+                    <img src="{{ asset('images/sad.png') }}" width="100">
+                    <span>Urgent</span>
+                </label>
         </div>
 </div>
         <div class="buttons w-100 text-center mt-4">
-            <input type="submit" value="next" class="btn new-custom-btn">
+            <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
         </div>
 </form>
 
@@ -171,24 +177,30 @@
 <input type="button" value="< back" onclick="goBack('#frm-six');" class="btn back">
 <div class="input-group">
         <div class="form-check col-4">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="true" value="yes">Yes
-            </label>
+                <input type="radio" class="form-check-input" id="true-yes" name="true" value="yes">
+                <label class="radio text-center" for="true-yes">
+                    <img src="{{ asset('images/yes.png') }}" width="100">
+                    <span>Yes</span>
+                </label>
         </div>
         <div class="form-check col-4">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="true" value="no">No
-            </label>
+                <input type="radio" class="form-check-input" id="true-no" name="true" value="no">
+                <label class="radio text-center" for="true-no">
+                    <img src="{{ asset('images/no.png') }}" width="100">
+                    <span>No</span>
+                </label>
         </div>
         <div class="form-check col-4">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="true" value="maybe">Maybe
-            </label>
+                <input type="radio" class="form-check-input" id="true-maybe" name="true" value="maybe">
+                <label class="radio text-center" for="true-maybe">
+                    <img src="{{ asset('images/maybe.png') }}" width="100">
+                    <span>Maybe</span>
+                </label>
         </div>
 </div>
     
         <div class="buttons w-100 text-center mt-4">
-            <input type="submit" value="next" class="btn new-custom-btn">
+            <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
         </div>
 </form>
 
@@ -200,27 +212,99 @@
 <input type="button" value="< back" onclick="goBack('#frm-seven');" class="btn back">
     <div class="input-group" style="position: relative">
         <div class="form-check col-3">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="material" value="asphalt">Asphalt
-            </label>
+                <input type="radio" class="form-check-input" id="material-asphalt" name="material" value="asphalt">
+                <label class="radio text-center" for="material-asphalt">
+                    <img src="{{ asset('images/asphalt.jpg') }}" width="100">
+                    <span>Asphalt</span>
+                </label>
         </div>
         <div class="form-check col-3">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="material" value="metal">Metal
-            </label>
+                <input type="radio" class="form-check-input" id="material-metal" name="material" value="metal">
+                <label class="radio text-center" for="material-metal">
+                    <img src="{{ asset('images/metal.jpg') }}" width="100">
+                    <span>Asphalt</span>
+                </label>
         </div>
         <div class="form-check col-3">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="material" value="tile">Tile
-            </label>
+                <input type="radio" class="form-check-input" id="material-tile" name="material" value="tile">
+                <label class="radio text-center" for="material-tile">
+                    <img src="{{ asset('images/tile.jpg') }}" width="100">
+                    <span>Tile</span>
+                </label>
         </div>
         <div class="form-check col-3">
-            <label class="form-check-label">
-                <input type="radio" class="form-check-input" name="material" value="other">Other
-            </label>
+                <input type="radio" class="form-check-input" id="material-other" name="material" value="other">
+                <label class="radio text-center" for="material-other">
+                    <img src="{{ asset('images/other.jpg') }}" width="100">
+                    <span>Other</span>
+                </label>
         </div>
 </div>
         <div class="buttons w-100 text-center mt-4">
-            <input type="submit" value="next" class="btn new-custom-btn">
+            <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
         </div>
+</form>
+
+
+
+
+
+<form method="post" id="frm-nine" name="frm-nine" class="row">
+<h4>Are you interested in financing this project over time?</h4>
+<input type="button" value="< back" onclick="goBack('#frm-eight');" class="btn back">
+    <div class="input-group" style="position: relative">
+        <div class="form-check col-3">
+                <input type="radio" class="form-check-input" id="is_interested_in_financing-true" name="is_interested_in_financing" value="true">
+                <label class="radio text-center" for="is_interested_in_financing-true">
+                    <img src="{{ asset('images/yes.png') }}" width="100">
+                    <span>Yes</span>
+                </label>
+        </div>
+        <div class="form-check col-3">
+                <input type="radio" class="form-check-input" id="is_interested_in_financing-false" name="is_interested_in_financing" value="false">
+                <label class="radio text-center" for="is_interested_in_financing-false">
+                    <img src="{{ asset('images/no.png') }}" width="100">
+                    <span>No</span>
+                </label>
+        </div>
+        <div class="form-check col-3">
+                <input type="radio" class="form-check-input" id="is_interested_in_financing-maybe" name="is_interested_in_financing" value="maybe">
+                <label class="radio text-center" for="is_interested_in_financing-maybe">
+                    <img src="{{ asset('images/maybe.png') }}" width="100">
+                    <span>Maybe</span>
+                </label>
+        </div>
+</div>
+        <div class="buttons w-100 text-center mt-4">
+            <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
+        </div>
+</form>
+
+
+
+
+
+
+<form method="post" id="frm-ten" name="frm-ten" class="row">
+<h4>Are you interested in financing this project over time?</h4>
+<h5>Just enter your information and get your no obligation estimate!</h5>
+<input type="button" value="< back" onclick="goBack('#frm-nine');" class="btn back">
+<div class="row">
+    <div class="col-md-12 m-0 p-0">
+        <div class="input-group" style="position: relative">
+            <input type="text" class="form-control new-custom-input" name="email" placeholder="Email">
+        </div>
+        <div class="input-group mt-2">
+            <input type="text" class="form-control new-custom-input" placeholder="Name" name="fname">
+            <input type="text" class="form-control new-custom-input phone-format" name="mobile" placeholder="Phone">
+        </div>
+        <div class="buttons w-100 text-center mt-4">
+            <input type="submit" value="Get Estimate" class="btn d-block new-custom-btn">
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        faq
+    </div>
+</div>
 </form>

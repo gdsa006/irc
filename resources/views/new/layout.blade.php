@@ -644,6 +644,14 @@ footer ul li:last-child a::before{
     padding-top: 30px;
 }
 
+.modal.leads h5{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
 .modal.leads .new-custom-btn{
     background-color: #259ad7;
     border-color: #259ad7;
@@ -726,7 +734,9 @@ footer ul li:last-child a::before{
 
 .radio span{
     border: solid 2px #eee;
-    padding: 3px 6px
+    padding: 3px 6px;
+    display: block;
+    margin-top: 8px;
 }
 
 
@@ -805,6 +815,84 @@ input[type=radio]:checked + .radio {
 
 
 
+
+
+.modal#error-modal {
+
+	background: #fff;
+	border-radius: 3px;
+	box-shadow: 4px 8px 12px 0 rgba(0,0,0,0.4);
+	text-align: center;
+	overflow: hidden;
+	animation: show-modal .7s ease-in-out;
+	
+	&.hide {
+		animation: hide-modal .6s ease-in-out both;
+	}
+}
+
+@keyframes show-modal {
+	0% {
+		transform: scale(0);
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	80% {
+		transform: scale(.95);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes hide-modal {
+	0% {
+		transform: scale(1);
+	}
+	20% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+
+#error-modal .title {
+		display: block;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 400;
+		margin: 14px 0 5px 0;
+	}
+	
+
+    #error-modal p {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 19px;
+		margin: 0;
+		padding: 0 30px;
+	}
+
+    #error-modal .button {
+		height: 40px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: #F65656;
+		color: #fff;
+		line-height: 40px;
+		font-size: 14px;
+		font-weight: 400;
+		cursor: pointer;
+		transition: background .3s ease-in-out;
+		
+		&:hover {
+			background: #EC3434;
+		}
+		
+	}
 
 @media screen and (max-width: 767px){
     footer{
@@ -1007,6 +1095,29 @@ section#review blockquote{
       </div>
 
 
+
+     <!-- The Modal -->
+<div class="modal"  data-backdrop="false" id="error-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal body -->
+      <div class="modal-body">
+      <img src="https://100dayscss.com/codepen/alert.png" width="44" height="38" />
+		<span class="title">Oh snap!</span>
+        <p></p>
+      </div>
+
+      <div class="button" data-dismiss="modal" aria-label="Close">Dismiss</div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -1177,7 +1288,12 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('form').hide();
                         $('#frm-two').show();
                     }
-                }      
+                if(data.address){
+                    $('#error-modal').modal('show');
+                    $("#error-modal").modal({backdrop: false});
+                    $('#error-modal p').text(data.address);
+                }
+            }      
     });
 });
     </script>
@@ -1205,6 +1321,11 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('form').hide();
                         $('#frm-three').show();
                     }
+                    if(data.sqft){
+                    $('#error-modal').modal('show');
+                    $("#error-modal").modal({backdrop: false});
+                    $('#error-modal p').text(data.sqft);
+                }
                 }      
     });
 });
@@ -1234,6 +1355,11 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('form').hide();
                         $('#frm-four').show();
                     }
+                    if(data.steep){
+                    $('#error-modal').modal('show');
+                    $("#error-modal").modal({backdrop: false});
+                    $('#error-modal p').text(data.steep);
+                }
                 }      
     });
 });
@@ -1269,6 +1395,11 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('form').hide();
                         $('#frm-five').show();
                     }
+                    if(data.existing_material){
+                    $('#error-modal').modal('show');
+                    $("#error-modal").modal({backdrop: false});
+                    $('#error-modal p').text(data.existing_material);
+                }
                 }      
     });
 });
@@ -1298,6 +1429,11 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('form').hide();
                         $('#frm-six').show();
                     }
+                    if(data.is_commercial){
+                    $('#error-modal').modal('show');
+                    $("#error-modal").modal({backdrop: false});
+                    $('#error-modal p').text(data.is_commercial);
+                }
                 }      
     });
 });
@@ -1329,6 +1465,11 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('form').hide();
                         $('#frm-seven').show();
                     }
+                    if(data.urgency){
+                    $('#error-modal').modal('show');
+                    $("#error-modal").modal({backdrop: false});
+                    $('#error-modal p').text(data.urgency);
+                }
                 }      
     });
 });
@@ -1356,6 +1497,121 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('.progress_title span').text(Number($stepCount) + 1);
                         $('form').hide();
                         $('#frm-eight').show();
+                    }
+                    if(data.true){
+                    $('#error-modal').modal('show');
+                    $("#error-modal").modal({backdrop: false});
+                    $('#error-modal p').text(data.true);
+                }
+                }      
+    });
+});
+    </script>
+
+
+
+<script type="text/javascript">
+    $( "#frm-eight" ).submit(function(e) {
+        e.preventDefault();
+            $.ajax({
+                type : 'post',
+                url : '{{URL::to('saveEight')}}',
+                data:$('#frm-eight').serialize(),
+                success:function(data){
+                    console.log(data);
+                    if(data.status){
+                        $progressLevel = $('.progress .progress-bar').attr("style");
+                        $percentage = $progressLevel.replace('%', '');
+                        $semicolon = $percentage.replace(';', '');
+                        $convert_to_number = $semicolon.replace('width:', '');
+                        $('.progress .progress-bar').css('width', (Number($convert_to_number) + 10) + '%');
+                        $stepCount = $('.progress_title span').text();
+                        $('.progress_title span').text(Number($stepCount) + 1);
+                        $('form').hide();
+                        $('#frm-nine').show();
+                    }
+                    if(data.material){
+                        $('#error-modal').modal('show');
+                        $("#error-modal").modal({backdrop: false});
+                        $('#error-modal p').text(data.material);
+                    }
+                }      
+    });
+});
+    </script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $( "#frm-nine" ).submit(function(e) {
+        e.preventDefault();
+            $.ajax({
+                type : 'post',
+                url : '{{URL::to('saveNine')}}',
+                data:$('#frm-nine').serialize(),
+                success:function(data){
+                    console.log(data);
+                    if(data.status){
+                        $progressLevel = $('.progress .progress-bar').attr("style");
+                        $percentage = $progressLevel.replace('%', '');
+                        $semicolon = $percentage.replace(';', '');
+                        $convert_to_number = $semicolon.replace('width:', '');
+                        $('.progress .progress-bar').css('width', (Number($convert_to_number) + 10) + '%');
+                        $stepCount = $('.progress_title span').text();
+                        $('.progress_title span').text(Number($stepCount) + 1);
+                        $('form').hide();
+                        $('#frm-ten').show();
+                    }
+                    if(data.is_interested_in_financing){
+                        $('#error-modal').modal('show');
+                        $("#error-modal").modal({backdrop: false});
+                        $('#error-modal p').text(data.is_interested_in_financing);
+                    }
+                }      
+    });
+});
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $( "#frm-ten" ).submit(function(e) {
+        e.preventDefault();
+            $.ajax({
+                type : 'post',
+                url : '{{URL::to('saveTen')}}',
+                data:$('#frm-ten').serialize(),
+                success:function(data){
+                    console.log(data);
+                    if(data.status){
+                        $('form').hide();
+                        window.location.href = "{{URL::to('estimate')}}"
+                    }
+                    if(data.email || data.fname || data.mobile){
+                        $('#error-modal').modal('show');
+                        $("#error-modal").modal({backdrop: false});
+                        if(data.email){
+                            $('#error-modal p').text(data.email);
+                        }
+                        if(data.fname){
+                            $('#error-modal p').text(data.fname);
+                        }
+                        if(data.mobile){
+                            $('#error-modal p').text(data.mobile);
+                        }
                     }
                 }      
     });
@@ -1442,6 +1698,30 @@ $( "#address" ).keyup(function() {
 <script>
 $("#exampleModal button.close").on('click', function(){
     $("#exampleModal").modal('close');
+});
+</script>
+
+
+<script>
+    $(document).ready(function(){
+  /***phone number format***/
+  $(".phone-format").keypress(function (e) {
+    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+      return false;
+    }
+    var curchr = this.value.length;
+    var curval = $(this).val();
+    if (curchr == 3 && curval.indexOf("(") <= -1) {
+      $(this).val("(" + curval + ")" + "-");
+    } else if (curchr == 4 && curval.indexOf("(") > -1) {
+      $(this).val(curval + ")-");
+    } else if (curchr == 5 && curval.indexOf(")") > -1) {
+      $(this).val(curval + "-");
+    } else if (curchr == 9) {
+      $(this).val(curval + "-");
+      $(this).attr('maxlength', '14');
+    }
+  });
 });
 </script>
 

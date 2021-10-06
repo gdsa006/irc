@@ -119,7 +119,7 @@ class LeadsController extends Controller
             $leads->save();
             $current_id = $leads->id;
             $request->session()->put('leadID', $current_id);
-            return response()->json(array('status' => true, 'gotostep' => '2', 'currentID' => '0'));
+            return response()->json(array('status' => true, 'gotostep' => '2', 'currentID' => $current_id));
         }
 
     }
@@ -140,8 +140,10 @@ class LeadsController extends Controller
         } 
         else{
             $leadID = $request->session()->get('leadID');
-           
-            return response()->json(array('status' => true, 'gotostep' => ''));
+            $lead_find = Lead::find($leadID);
+            $lead_find->sqft = $sqft;
+            $lead_find->save();
+            return response()->json(array('status' => true, 'leadID' => $lead_find));
         }
 
     }
@@ -154,7 +156,7 @@ class LeadsController extends Controller
 
     public function saveThree(Request $request){
 
-        $sqft = $request->input('steep');
+        $steep = $request->input('steep');
 
         $validator = \Validator::make($request->all(), [ 
             'steep' => 'required',
@@ -165,7 +167,9 @@ class LeadsController extends Controller
         } 
         else{
             $leadID = $request->session()->get('leadID');
-           
+            $lead_find = Lead::find($leadID);
+            $lead_find->steep = $steep;
+            $lead_find->save();
             return response()->json(array('status' => true, 'gotostep' => ''));
         }
 
@@ -182,7 +186,7 @@ class LeadsController extends Controller
 
     public function saveFour(Request $request){
 
-        $is_commercial = $request->input('existing_material');
+        $existing_material = $request->input('existing_material');
 
         $validator = \Validator::make($request->all(), [ 
             'existing_material' => 'required',
@@ -192,7 +196,10 @@ class LeadsController extends Controller
             return response()->json($validator->errors());
         } 
         else{
-           
+            $leadID = $request->session()->get('leadID');
+            $lead_find = Lead::find($leadID);
+            $lead_find->existingmaterial = $existing_material;
+            $lead_find->save();
             return response()->json(array('status' => true, 'gotostep' => ''));
         }
 
@@ -218,7 +225,10 @@ class LeadsController extends Controller
             return response()->json($validator->errors());
         } 
         else{
-           
+            $leadID = $request->session()->get('leadID');
+            $lead_find = Lead::find($leadID);
+            $lead_find->iscommercial = $is_commercial;
+            $lead_find->save();
             return response()->json(array('status' => true, 'gotostep' => ''));
         }
 
@@ -243,7 +253,10 @@ class LeadsController extends Controller
             return response()->json($validator->errors());
         } 
         else{
-           
+            $leadID = $request->session()->get('leadID');
+            $lead_find = Lead::find($leadID);
+            $lead_find->urgency = $urgency;
+            $lead_find->save();
             return response()->json(array('status' => true, 'gotostep' => ''));
         }
 
@@ -254,7 +267,7 @@ class LeadsController extends Controller
 
     public function saveSeven(Request $request){
 
-        $urgency = $request->input('true');
+        $true = $request->input('true');
 
         $validator = \Validator::make($request->all(), [ 
             'true' => 'required',
@@ -264,7 +277,10 @@ class LeadsController extends Controller
             return response()->json($validator->errors());
         } 
         else{
-           
+            $leadID = $request->session()->get('leadID');
+            $lead_find = Lead::find($leadID);
+            $lead_find->true = $true;
+            $lead_find->save();
             return response()->json(array('status' => true, 'gotostep' => ''));
         }
 
@@ -278,22 +294,86 @@ class LeadsController extends Controller
 
     public function saveEight(Request $request){
 
-        $urgency = $request->input('true');
+        $material = $request->input('material');
 
         $validator = \Validator::make($request->all(), [ 
-            'true' => 'required',
+            'material' => 'required',
         ]);
 
         if($validator->fails()){
             return response()->json($validator->errors());
         } 
         else{
-           
+            $leadID = $request->session()->get('leadID');
+            $lead_find = Lead::find($leadID);
+            $lead_find->material = $material;
+            $lead_find->save();
             return response()->json(array('status' => true, 'gotostep' => ''));
         }
 
     }
 
 
+
+
+
+
+    public function saveNine(Request $request){
+
+        $is_interested_in_financing = $request->input('is_interested_in_financing');
+
+        $validator = \Validator::make($request->all(), [ 
+            'is_interested_in_financing' => 'required',
+        ]);
+
+        if($validator->fails()){
+            return response()->json($validator->errors());
+        } 
+        else{
+            $leadID = $request->session()->get('leadID');
+            $lead_find = Lead::find($leadID);
+            $lead_find->isinterestedinfinancing = $is_interested_in_financing;
+            $lead_find->save();
+            return response()->json(array('status' => true, 'gotostep' => ''));
+        }
+
+    }
+
+
+
+    public function saveTen(Request $request){
+
+        $email = $request->input('email');
+        $fname = $request->input('fname');
+        $mobile = $request->input('mobile');
+
+        $validator = \Validator::make($request->all(), [ 
+            'email' => 'required|email|unique:leads,email',
+            'fname' => 'required',
+            'mobile' => 'required'
+        ]);
+
+        if($validator->fails()){
+            return response()->json($validator->errors());
+        } 
+        else{
+            $leadID = $request->session()->get('leadID');
+            $lead_find = Lead::find($leadID);
+            $lead_find->email = $email;
+            $lead_find->fname = $fname;
+            $lead_find->mobile = $mobile;
+            $lead_find->save();
+            return response()->json(array('status' => true, 'gotostep' => ''));
+        }
+
+    }
+
+    public function estimate(Request $request){
+        $leadID = $request->session()->get('leadID');
+        $lead_find = Lead::find($leadID);
+        $data = new Lead();
+        $data = $data->where('id', $leadID)->get();
+        return View('new.final', compact('data'));
+    }
 
 }
