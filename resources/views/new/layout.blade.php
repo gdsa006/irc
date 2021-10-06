@@ -481,7 +481,7 @@ section#services h2 span{
     color: #269bd6
 }
 section#services p{
-    max-width: 48ch;
+    max-width: 80ch;
     margin: 0 auto
 }
 
@@ -911,6 +911,13 @@ input[type=radio]:checked + .radio {
 		
 	}
 
+    @media screen and (max-width: 1199px){
+        #owl-demo-2{
+            padding:0
+        }
+    }
+
+
 @media screen and (max-width: 767px){
     .modal.leads .wrapper{
         padding: 24px;
@@ -1221,7 +1228,7 @@ jQuery(document).ready(function ($) {
 				nav: true
 			},
 			768: {
-				items: 3,
+				items: 2,
 				// nav: true,
 				loop: true
 			},

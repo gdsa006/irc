@@ -7,7 +7,7 @@
 <div class="col-md-6 col-xs-12">
     <div class="hero-left" data-aos="fade-up" data-aos-duration="1300">
         <h1>
-            Roof repair and replacement made easy
+            Idaho Roof repair and replacement made easy
         </h1>
         <p>
         Connect with trusted roofers. Guaranteed by us.
@@ -390,14 +390,14 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 <section id="logos">
     <div class="container">
         <div class="row">
-    <a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/1year.png') }}" width="90" alt=""></a>
-<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/20reviews.png') }}" loading="lazy" width="90" alt=""></a>
-<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/AngiesList.png') }}" loading="lazy" width="90" alt=""></a>
-<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/boha-2021.png') }}" loading="lazy" width="90" alt=""></a>
-<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/elite.png') }}" loading="lazy" width="90" alt=""></a>
-<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/google-guaranteed-badge.png') }}" loading="lazy" width="90" alt=""></a>
-<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/soap.png') }}" loading="lazy" width="90" alt=""></a>
-<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/toprated.png') }}" loading="lazy" width="90" alt=""></a>
+    <a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/1year.png') }}" width="80" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/20reviews.png') }}" loading="lazy" width="80" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/AngiesList.png') }}" loading="lazy" width="80" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/boha-2021.png') }}" loading="lazy" width="80" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/elite.png') }}" loading="lazy" width="80" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/google-guaranteed-badge.png') }}" loading="lazy" width="80" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/soap.png') }}" loading="lazy" width="80" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/toprated.png') }}" loading="lazy" width="80" alt=""></a>
 </div>
 </section>
 
@@ -409,9 +409,9 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
         <div class="row">
         <div class="col text-center">
             <h2>
-            We've got you <span>covered</span>
+            Local Idaho roofing contractors <span>you can trust</span>
 </h2>
-<p>Enter your address and we'll match you with the best local roofing contractors you can trust.</p>
+<p>We help you with valuable information, access to Idaho based highly rated contractors, and our roof replacement cost estimator. We make roof repairs and replacements a fast and easy.</p>
 </div>
 </div>
 
@@ -460,23 +460,6 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 
 
 
-
-<div class="col-md-3">
-        <div class="d-flex justify-content-center wrapper">
-            <div class="icon">
-            <img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/606b48e0b94ec4a8763405f8_fi_map-pin.svg" alt="">
-</div>
-<h3>
-<span class="vivid">
-    Step4</span>
-    <br>
-    Free estimates
-
-</h3>
-<p>
-Select one or more contractors to prepare a formal quote, then hire the best roofer for the job!</p>
-</div>
-</div>
 <div class="col-md-3">
         <div class="d-flex justify-content-center wrapper">
             <div class="icon">
