@@ -718,6 +718,16 @@ footer ul li:last-child a::before{
     top: 5px;
 }
 
+.modal.leads #frm-ten h4{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.modal.leads #frm-ten h5{
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+
 .radio {
     display: inline-block;
     cursor: pointer;
