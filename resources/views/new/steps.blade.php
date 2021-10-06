@@ -294,7 +294,7 @@
             <input type="text" class="form-control new-custom-input" name="email" placeholder="Email">
         </div>
         <div class="input-group mt-2">
-            <input type="text" class="form-control new-custom-input" placeholder="Name" name="fname">
+            <input type="text" class="form-control new-custom-input fullname" placeholder="Name" name="fname">
             <input type="text" class="form-control new-custom-input phone-format" name="mobile" placeholder="Phone">
         </div>
         <div class="buttons w-100 text-center mt-4">

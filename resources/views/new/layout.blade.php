@@ -726,6 +726,13 @@ footer ul li:last-child a::before{
 .modal.leads #frm-ten h5{
     padding-top: 20px;
     margin-bottom: 0;
+    font-weight: 100;
+    color: #7e7e7e;
+    font-size: 17px;
+}
+
+.modal.leads #frm-ten .fullname{
+    margin-right: 10px
 }
 
 .radio {
