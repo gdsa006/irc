@@ -617,7 +617,8 @@ footer ul li:last-child a::before{
 }
 
 .modal.leads .wrapper{
-    padding: 40px
+    padding: 40px;
+    padding-top: 75px;
 }
 
 .modal.leads .progress_title{
@@ -697,7 +698,8 @@ footer ul li:last-child a::before{
 
 .modal.leads .back{
     position: absolute;
-    top: 0;
+    top: 5px;
+    left: 0;
     background: #0000;
     color: #000;
     /* font-weight: bolder; */
@@ -735,11 +737,16 @@ footer ul li:last-child a::before{
     margin-right: 10px
 }
 
+.modal.leads .dynamic form{
+    position: static
+}
+
 .radio {
     display: inline-block;
     cursor: pointer;
     border: solid 2px #eee;
     padding: 18px;
+    align-items: center;
     border-radius: .25rem;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
@@ -911,6 +918,16 @@ input[type=radio]:checked + .radio {
 		
 	}
 
+    .modal-dialog {
+    margin-top: 0;
+}
+
+    @media (min-width: 992px) {
+  .modal-dialog {
+    max-width: 80%;
+  }
+}
+
     @media screen and (max-width: 1199px){
         #owl-demo-2{
             padding:0
@@ -919,8 +936,13 @@ input[type=radio]:checked + .radio {
 
 
 @media screen and (max-width: 767px){
+    .radio span{
+        align-self: center;
+    border: 0;
+    }
     .modal.leads .wrapper{
         padding: 24px;
+        padding-top: 60px;
     }
 
     .modal.leads #frm-one .new-custom-input{
@@ -940,7 +962,8 @@ input[type=radio]:checked + .radio {
     }
 
     .modal.leads .radio{
-        width: 100%
+        width: 100%;
+        padding: 0
     }
 
     .modal.leads .buttons{
@@ -1116,7 +1139,7 @@ section#review blockquote{
 
 
 
-<div class="wrapper">
+<div class="wrapper" style="position: relative">
 <div class="row">
               
     <div class="col-md-11 px-0">

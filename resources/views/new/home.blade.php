@@ -421,7 +421,7 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 
 
 
-<div class="col-md-3">
+<div class="col-md-4">
         <div class="d-flex justify-content-center wrapper">
             <div class="icon">
             <img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/606b48e0b94ec4a8763405f8_fi_map-pin.svg" alt="">
@@ -441,7 +441,7 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 
 
 
-<div class="col-md-3">
+<div class="col-md-4">
         <div class="d-flex justify-content-center wrapper">
             <div class="icon">
             <img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/606b48e0b94ec4a8763405f8_fi_map-pin.svg" alt="">
@@ -460,7 +460,7 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 
 
 
-<div class="col-md-3">
+<div class="col-md-4">
         <div class="d-flex justify-content-center wrapper">
             <div class="icon">
             <img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/606b48e0b94ec4a8763405f8_fi_map-pin.svg" alt="">
