@@ -40,7 +40,7 @@
     <div class="col-md-4" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">
         <div class="d-flex justify-content-center wrapper">
             <div class="icon">
-            <img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/606b48e0b94ec4a8763405f8_fi_map-pin.svg" alt="">
+            <img src="{{ asset('images/enter_details.svg') }}" alt="">
 </div>
 <h3>
 <span class="vivid">
@@ -59,7 +59,7 @@ We measure your roof using satellite imagery and ask a few questions about your 
 <div class="col-md-4" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="310">
         <div class="d-flex justify-content-center wrapper">
             <div class="icon">
-            <img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/606b48e0b94ec4a8763405f8_fi_map-pin.svg" alt="">
+            <img src="{{ asset('images/get_estimates.svg') }}" alt="">
 </div>
 <h3>
 <span class="vivid">
@@ -78,7 +78,7 @@ Our software generates estimates from the best local contractors using their act
 <div class="col-md-4" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="320">
         <div class="d-flex justify-content-center wrapper">
             <div class="icon">
-            <img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/606b48e0b94ec4a8763405f8_fi_map-pin.svg" alt="">
+            <img src="{{ asset('images/choose_idaho.svg') }}" alt="">
 </div>
 <h3>
 <span class="vivid">
@@ -424,37 +424,39 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 <div class="col-md-4">
         <div class="d-flex justify-content-center wrapper">
             <div class="icon">
-            <img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/606b48e0b94ec4a8763405f8_fi_map-pin.svg" alt="">
+            <img src="{{ asset('images/free_estimates.svg') }}" alt="">
+</div>
+<h3>
+<span class="vivid">
+    Step1</span>
+    <br>
+    Free estimates
+
+</h3>
+<p>
+Select one or more contractors to prepare a formal quote, then hire the best roofer for the job!
+</p>
+</div>
+</div>
+
+
+
+
+<div class="col-md-4">
+        <div class="d-flex justify-content-center wrapper">
+            <div class="icon">
+            <img src="{{ asset('images/only_the_best.svg') }}" alt="">
 </div>
 <h3>
 <span class="vivid">
     Step2</span>
     <br>
-    Free estimates
+    Only the best roofers
 
 </h3>
 <p>
-Select one or more contractors to prepare a formal quote, then hire the best roofer for the job!</p>
-</div>
-</div>
-
-
-
-
-<div class="col-md-4">
-        <div class="d-flex justify-content-center wrapper">
-            <div class="icon">
-            <img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/606b48e0b94ec4a8763405f8_fi_map-pin.svg" alt="">
-</div>
-<h3>
-<span class="vivid">
-    Step3</span>
-    <br>
-    Free estimates
-
-</h3>
-<p>
-Select one or more contractors to prepare a formal quote, then hire the best roofer for the job!</p>
+We only work with Roofers that are highly rated and fully insured.
+</p>
 </div>
 </div>
 
@@ -463,16 +465,17 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 <div class="col-md-4">
         <div class="d-flex justify-content-center wrapper">
             <div class="icon">
-            <img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/606b48e0b94ec4a8763405f8_fi_map-pin.svg" alt="">
+            <img src="{{ asset('images/free_expert_consultation.svg') }}" alt="">
 </div>
 <h3>
 <span class="vivid">
     Step5</span>
     <br>
-    Free estimates
+    Free expert consultations
 </h3>
 <p>
-Select one or more contractors to prepare a formal quote, then hire the best roofer for the job!</p>
+Our team will answer questions, help you compare quotes, and hire the right roofer.
+</p>
 </div>
 </div>
 </div>
