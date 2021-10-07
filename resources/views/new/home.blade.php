@@ -469,7 +469,7 @@ We only work with Roofers that are highly rated and fully insured.
 </div>
 <h3>
 <span class="vivid">
-    Step5</span>
+    Step3</span>
     <br>
     Free expert consultations
 </h3>
