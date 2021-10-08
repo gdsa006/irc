@@ -350,7 +350,7 @@ class LeadsController extends Controller
         $validator = \Validator::make($request->all(), [ 
             'email' => 'required|email|unique:leads,email',
             'fname' => 'required',
-            'mobile' => 'required'
+            'mobile' => ''
         ]);
 
         if($validator->fails()){

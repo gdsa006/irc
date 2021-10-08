@@ -718,6 +718,7 @@ footer ul li:last-child a::before{
     position: absolute;
     right: 0;
     top: 5px;
+    z-index: 99;
 }
 
 .modal.leads #frm-ten h4{
@@ -1368,9 +1369,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('#frm-two').show();
                     }
                 if(data.address){
-                    $('#error-modal').modal('show');
-                    $("#error-modal").modal({backdrop: false});
-                    $('#error-modal p').text(data.address);
+                   alert(data.address);
                 }
             }      
     });
@@ -1401,9 +1400,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('#frm-three').show();
                     }
                     if(data.sqft){
-                    $('#error-modal').modal('show');
-                    $("#error-modal").modal({backdrop: false});
-                    $('#error-modal p').text(data.sqft);
+                    alert(data.sqft);
                 }
                 }      
     });
@@ -1435,9 +1432,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('#frm-four').show();
                     }
                     if(data.steep){
-                    $('#error-modal').modal('show');
-                    $("#error-modal").modal({backdrop: false});
-                    $('#error-modal p').text(data.steep);
+                    alert(data.steep);
                 }
                 }      
     });
@@ -1475,9 +1470,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('#frm-five').show();
                     }
                     if(data.existing_material){
-                    $('#error-modal').modal('show');
-                    $("#error-modal").modal({backdrop: false});
-                    $('#error-modal p').text(data.existing_material);
+                   alert(data.existing_material);
                 }
                 }      
     });
@@ -1509,9 +1502,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('#frm-six').show();
                     }
                     if(data.is_commercial){
-                    $('#error-modal').modal('show');
-                    $("#error-modal").modal({backdrop: false});
-                    $('#error-modal p').text(data.is_commercial);
+                    alert(data.is_commercial);
                 }
                 }      
     });
@@ -1545,9 +1536,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('#frm-seven').show();
                     }
                     if(data.urgency){
-                    $('#error-modal').modal('show');
-                    $("#error-modal").modal({backdrop: false});
-                    $('#error-modal p').text(data.urgency);
+                   alert(data.urgency);
                 }
                 }      
     });
@@ -1578,9 +1567,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('#frm-eight').show();
                     }
                     if(data.true){
-                    $('#error-modal').modal('show');
-                    $("#error-modal").modal({backdrop: false});
-                    $('#error-modal p').text(data.true);
+                    alert(data.true);
                 }
                 }      
     });
@@ -1610,9 +1597,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('#frm-nine').show();
                     }
                     if(data.material){
-                        $('#error-modal').modal('show');
-                        $("#error-modal").modal({backdrop: false});
-                        $('#error-modal p').text(data.material);
+                        alert(data.material);
                     }
                 }      
     });
@@ -1646,9 +1631,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('#frm-ten').show();
                     }
                     if(data.is_interested_in_financing){
-                        $('#error-modal').modal('show');
-                        $("#error-modal").modal({backdrop: false});
-                        $('#error-modal p').text(data.is_interested_in_financing);
+                       alert(data.is_interested_in_financing);
                     }
                 }      
     });
@@ -1683,13 +1666,13 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $('#error-modal').modal('show');
                         $("#error-modal").modal({backdrop: false});
                         if(data.email){
-                            $('#error-modal p').text(data.email);
+                           alert(data.email);
                         }
                         if(data.fname){
-                            $('#error-modal p').text(data.fname);
+                            alert(data.fname);
                         }
                         if(data.mobile){
-                            $('#error-modal p').text(data.mobile);
+                            alert(data.mobile);
                         }
                     }
                 }      
@@ -1804,7 +1787,6 @@ $( "#address" ).keyup(function() {
 <script>
 
 $('#exampleModal button').on('click', function(){
-    alert('clk');
     $.ajax({
                 type : 'post',
                 url : '{{URL::to('destroy')}}',
@@ -1819,6 +1801,12 @@ $('#exampleModal button').on('click', function(){
 });
 </script>
 
+<script type="text/javascript">
+  $('#error-modal').on('shown.bs.modal', function () {
+      alert('0');
+      $(".modal-backdrop.show").hide();
+   })
+</script>
 
 <!-- <script>
 $checkSession = "{{ session()->get('leadID') }}";

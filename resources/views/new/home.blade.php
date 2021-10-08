@@ -50,7 +50,7 @@
 
 </h3>
 <p>
-We measure your roof using satellite imagery and ask a few questions about your roofing project!
+Measure your roof quickly by answering a few simple questions.
 </p>
 </div>
 </div>
@@ -69,7 +69,7 @@ We measure your roof using satellite imagery and ask a few questions about your 
 
 </h3>
 <p>
-Our software generates estimates from the best local contractors using their actual pricing, instantly!
+    Get quotes and options based on our Idaho roof replacement database.
 </p>
 </div>
 </div>
@@ -84,11 +84,10 @@ Our software generates estimates from the best local contractors using their act
 <span class="vivid">
     Step3</span>
     <br>
-    Choose roofers
+    Get Started
 
 </h3>
-<p>
-Select one or more contractors to prepare a formal quote, then hire the best roofer for the job!x</p>
+<p>Get detailed estimates from the highest rated Idaho based contractors.</p>
 </div>
 </div>
 
