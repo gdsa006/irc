@@ -69,10 +69,7 @@
                 </label>
         </div>
 </div>
-    <div class="buttons w-100 text-center mt-4">
-        <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
-    </div>
-</form>
+    </form>
 
 <form method="post" id="frm-four" name="frm-four" class="col-md-10 offset-md-1 col-12">
 <h4>What's currently on your roof?</h4>
@@ -107,9 +104,7 @@
                 </label>
         </div>
 </div>
-    <div class="buttons w-100 text-center mt-4">
-        <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
-    </div>
+  
 </form>
 
 
@@ -132,9 +127,7 @@
                 </label>
         </div>
 </div>
-        <div class="buttons w-100 text-center mt-4">
-            <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
-        </div>
+      
 </form>
 
 
@@ -165,9 +158,7 @@
                 </label>
         </div>
 </div>
-        <div class="buttons w-100 text-center mt-4">
-            <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
-        </div>
+       
 </form>
 
 
@@ -199,9 +190,7 @@
         </div>
 </div>
     
-        <div class="buttons w-100 text-center mt-4">
-            <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
-        </div>
+       
 </form>
 
 
@@ -240,9 +229,7 @@
                 </label>
         </div>
 </div>
-        <div class="buttons w-100 text-center mt-4">
-            <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
-        </div>
+      
 </form>
 
 
@@ -275,9 +262,7 @@
                 </label>
         </div>
 </div>
-        <div class="buttons w-100 text-center mt-4">
-            <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
-        </div>
+       
 </form>
 
 
@@ -295,7 +280,7 @@
         </div>
         <div class="input-group mt-2">
             <input type="text" class="form-control new-custom-input fullname" placeholder="Name" name="fname">
-            <input type="text" class="form-control new-custom-input phone-format" name="mobile" placeholder="Phone">
+            <input type="text" class="form-control new-custom-input phone-format" autocomplete="off" name="mobile" placeholder="Phone">
         </div>
         <div class="form-group">
         <div class="form-check">

@@ -1176,27 +1176,6 @@ section#review blockquote{
 
 
 
-     <!-- The Modal -->
-<div class="modal"  data-backdrop="false" id="error-modal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal body -->
-      <div class="modal-body">
-      <img src="https://100dayscss.com/codepen/alert.png" width="44" height="38" />
-		<span class="title">Oh snap!</span>
-        <p></p>
-      </div>
-
-      <div class="button" data-dismiss="modal" aria-label="Close">Dismiss</div>
-
-
-    </div>
-  </div>
-</div>
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -1338,6 +1317,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                 success:function(data){
                     console.log(data);
                     $('#exampleModal').modal('show');
+                    $('.progress_title span').text('0');
                     $('form').hide();
                     $('#frm-one').show();
                 }      
@@ -1411,9 +1391,9 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 <script type="text/javascript">
-    $( "#frm-three" ).submit(function(e) {
+ $('input[name=steep]').change(function(e){
         e.preventDefault();
-        $steep = 'metal';
+        $steep = $(this).val();
             $.ajax({
                 type : 'post',
                 url : '{{URL::to('saveThree')}}',
@@ -1450,7 +1430,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 <script type="text/javascript">
-    $( "#frm-four" ).submit(function(e) {
+ $('input[name=existing_material]').change(function(e){
         e.preventDefault();
             $.ajax({
                 type : 'post',
@@ -1482,7 +1462,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 <script type="text/javascript">
-    $( "#frm-five" ).submit(function(e) {
+ $('input[name=is_commercial]').change(function(e){
         e.preventDefault();
             $.ajax({
                 type : 'post',
@@ -1516,7 +1496,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 <script type="text/javascript">
-    $( "#frm-six" ).submit(function(e) {
+ $('input[name=urgency]').change(function(e){
         e.preventDefault();
             $.ajax({
                 type : 'post',
@@ -1547,7 +1527,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 <script type="text/javascript">
-    $( "#frm-seven" ).submit(function(e) {
+ $('input[name=true]').change(function(e){
         e.preventDefault();
             $.ajax({
                 type : 'post',
@@ -1577,7 +1557,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 <script type="text/javascript">
-    $( "#frm-eight" ).submit(function(e) {
+ $('input[name=material]').change(function(e){
         e.preventDefault();
             $.ajax({
                 type : 'post',
@@ -1611,7 +1591,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 <script type="text/javascript">
-    $( "#frm-nine" ).submit(function(e) {
+ $('input[name=is_interested_in_financing]').change(function(e){
         e.preventDefault();
             $.ajax({
                 type : 'post',
@@ -1663,8 +1643,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         window.location.href = "{{URL::to('estimate')}}"
                     }
                     if(data.email || data.fname || data.mobile){
-                        $('#error-modal').modal('show');
-                        $("#error-modal").modal({backdrop: false});
+                        
                         if(data.email){
                            alert(data.email);
                         }
