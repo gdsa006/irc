@@ -742,6 +742,12 @@ footer ul li:last-child a::before{
     position: static
 }
 
+.modal.leads .new-custom-btn{
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
 .modal-leads #faq{
 
 }
@@ -756,6 +762,10 @@ footer ul li:last-child a::before{
     font-size: 1rem;
     color: #024864;
     text-decoration: none;
+}
+
+.modal.leads #faq .panel-body{
+    font-size: 14px
 }
 
 .radio {
