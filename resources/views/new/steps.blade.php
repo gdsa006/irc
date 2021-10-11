@@ -274,7 +274,8 @@
 <h4>Are you interested in financing this project over time?</h4>
 <h5>Just enter your information and get your no obligation estimate!</h5>
 <a href="javascript:void(0)" onclick="goBack('#frm-nine');" class="back"><i class="fas fa-arrow-left"></i></a>
-
+<div class="row">
+    <div class="col-md-7">
         <div class="input-group" style="position: relative">
             <input type="text" class="form-control new-custom-input" name="email" placeholder="Email">
         </div>
@@ -298,8 +299,52 @@
             <input type="submit" value="Get Estimate" class="btn btn-block new-custom-btn">
         </div>
 
+</div>
 
 
+<div class="col-md-5" id="faq">
+<div class="panel-group">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title border-bottom pb-3">
+                                                <a data-toggle="collapse" href="#collapse-message-1">
+                                                    <strong>+</strong> Why do you need my information?
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapse-message-1" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                We need your information to send you your estimate.
+                                                Additionally, we know the roof replacement process is confusing.
+                                                Our in house roofing experts team will call you and help you
+                                                throughout your entire roofing project.
+                                                                                                We will not send your information to any contractors without your permission!
+                                                                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title border-bottom pb-3">
+                                                <a data-toggle="collapse" href="#collapse-message-2">
+                                                    <strong>+</strong>
+                                                    What will I receive next?
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapse-message-2" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                On the next page, our roofing estimation software will have created an
+                                                estimate based on the information you provided for your roof replacement.
+                                                                                                This price is based on regional contractors pricing including materials and labour.
+                                                                                                Within seconds, our software calculates how much your roof will cost,
+                                                and is accurate to &gt;95% for most standard replacements.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+</div>
+
+</div>
 
 
 

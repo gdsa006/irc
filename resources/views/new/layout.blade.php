@@ -742,6 +742,22 @@ footer ul li:last-child a::before{
     position: static
 }
 
+.modal-leads #faq{
+
+}
+
+.modal.leads #faq h4{
+    font-size: 1.5rem;
+    color: #024864;
+    text-align: left
+}
+
+.modal.leads #faq a{
+    font-size: 1rem;
+    color: #024864;
+    text-decoration: none;
+}
+
 .radio {
     display: inline-block;
     cursor: pointer;
