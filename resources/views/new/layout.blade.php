@@ -562,6 +562,51 @@ section#estimate .roof-image{
 }
 
 
+
+
+
+
+section.page#estimate{
+    padding: 50px 0;
+    background-color: #ffffff !important;
+    background-image: none;
+}
+
+
+
+section.page#estimate .card h2{
+    font-size: 2rem
+}
+
+
+section.page#estimate .card h4{
+    font-weight: 100;
+    font-family: system-ui
+}
+
+section.page#estimate .estimate-tax{
+    color: #89a9b3
+}
+
+section.page#estimate .card p{
+    font-family: system-ui;
+    font-size: 15px
+}
+
+section.page#estimate h5{
+    font-family: system-ui;
+    font-weight: 100
+}
+
+section.page#estimate h5 a{
+    color: #89a9b3
+}
+
+section.page#estimate h4{
+    color: #89a9b3
+}
+
+
 footer{
     padding: 34px 5% 34px;
     background-color: #0b0f12;
@@ -866,6 +911,14 @@ input[type=radio]:checked + .radio {
 
 
 
+#tocModal{
+    background: #ffffff;
+    padding: 40px 0;
+}
+#tocModal h4{
+    text-align: left;
+    
+}
 
 
 .modal#error-modal {
@@ -1144,7 +1197,6 @@ section#review blockquote{
 
 
 
-
     </style>
   </head>
   <body>
@@ -1181,6 +1233,24 @@ section#review blockquote{
 </div>
 
 
+
+
+
+
+
+
+<div class="modal bd-example-modal-lg toc" id="tocModal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          <div class="modal-content">
+        @include('new.toc')    
+
+
+</div>
+</div>
+</div>
 
 
 <div class="dynamic">
@@ -1343,7 +1413,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                 success:function(data){
                     console.log(data);
                     $('#exampleModal').modal('show');
-                    $('.progress_title span').text('0');
+                    $('.progress_title span').text('1');
                     $('form').hide();
                     $('#frm-one').show();
                 }      
@@ -1808,7 +1878,6 @@ $('#exampleModal button').on('click', function(){
 
 <script type="text/javascript">
   $('#error-modal').on('shown.bs.modal', function () {
-      alert('0');
       $(".modal-backdrop.show").hide();
    })
 </script>

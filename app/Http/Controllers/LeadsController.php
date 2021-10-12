@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Location;
 use App\Models\Lead;
+use View;
 
 class LeadsController extends Controller
 {
@@ -373,7 +374,8 @@ class LeadsController extends Controller
         $lead_find = Lead::find($leadID);
         $data = new Lead();
         $data = $data->where('id', $leadID)->get();
-        return View('new.final', compact('data'));
+        return View::make('new.final')->with('data', $data);
+
     }
 
     public function destroySession(Request $request){

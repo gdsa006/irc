@@ -288,7 +288,7 @@
         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
         <label class="form-check-label" for="invalidCheck">
         <small><p>To ensure you’re getting the best offers and pricing, Roofr and our providers you select may need to contact you by text/call. By checking this box, you agree to these communications, some of which may be automated. You can opt-out anytime.</p></small>
-        <small><p>Your use of our services is also subject to our Terms of Service and Privacy Policy.</p></small>
+        <small><p>Your use of our services is also subject to our Terms of Service and <a href="#"  data-toggle="modal" data-target="#tocModal">Privacy Policy.</p></small>
         </label>
         <div class="invalid-feedback">
             You must agree before submitting.
