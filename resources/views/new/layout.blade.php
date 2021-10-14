@@ -1239,18 +1239,6 @@ section#review blockquote{
 
 
 
-<div class="modal bd-example-modal-lg toc" id="tocModal" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-          <div class="modal-content">
-        @include('new.toc')    
-
-
-</div>
-</div>
-</div>
 
 
 <div class="dynamic">

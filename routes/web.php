@@ -61,6 +61,9 @@ Route::post('/saveTen', [App\Http\Controllers\LeadsController::class,'saveTen'])
 Route::post('/destroy', [App\Http\Controllers\LeadsController::class,'destroySession'])->name('destroySession');
 
 Route::get('/estimate', [App\Http\Controllers\LeadsController::class,'estimate'])->name('estimate');
+Route::get('/terms-of-service', [App\Http\Controllers\LeadsController::class,'termsOfService'])->name('terms-of-service');
+Route::get('/privacy-policy', [App\Http\Controllers\LeadsController::class,'privacyPolicy'])->name('privacy-policy');
+
 
 
 Route::get('ircfileimportexport', [App\Http\Controllers\LocationFinderController::class, 'fileImportExport']);

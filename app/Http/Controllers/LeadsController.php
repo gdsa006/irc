@@ -383,4 +383,13 @@ class LeadsController extends Controller
         return response()->json(array('status' => true));
     }
 
+    public function termsOfService(){
+        return View::make('new.terms-of-service');
+    }
+
+
+    public function privacyPolicy(){
+        return View::make('new.privacy-policy');
+    }
+
 }

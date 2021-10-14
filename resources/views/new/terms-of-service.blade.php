@@ -1,4 +1,9 @@
-<h3>Terms of Use</h3>
+@extends('new.layout')
+@section('content')
+
+<section class="py-5">
+    <div class="container">
+<h3>Terms of Service</h3>
 <p>Effective Date: October 5, 2021</p>
 
 <p>This agreement describes the terms and conditions applicable to your use of our services. If you have any questions regarding this Agreement you may contact us as instructed below. We may amend this Agreement at any time. You further agree that by accessing this Web site or utilizing the services, you agree to be bound by the Terms and Conditions as are in effect at such time.</p>
@@ -89,3 +94,6 @@ Re: Idaho Roofing Cost</p>
 <p>Email:</p>
 
 <a href="mailto: privacy@idahoroofingcost.com">privacy@idahoroofingcost.com</a>
+</div>
+</section>
+@endsection
