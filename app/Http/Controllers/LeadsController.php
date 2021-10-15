@@ -374,7 +374,42 @@ class LeadsController extends Controller
         $lead_find = Lead::find($leadID);
         $data = new Lead();
         $data = $data->where('id', $leadID)->get();
-        return View::make('new.final')->with('data', $data);
+
+        //calculation
+        $sqft = $lead_find->sqft;
+        $material = $lead_find->material;
+        $steep = $lead_find->steep;
+
+        if($material == 'asphalt'){
+            if($steep == 'mellow'){
+                $x = $sqft * 5.5;
+            }
+            else if($steep == 'steep'){
+                $x = $sqft * 7.5;
+            }
+        }
+
+        else if($material == 'tile'){
+            $x = $sqft * 12.5;
+        }
+
+        else if($material == 'metal'){
+            if($steep == 'mellow'){
+                $x = $sqft * 12.5;
+            }
+            else if($steep == 'steep'){
+                $x = $sqft * 14.5;
+            }
+        }
+
+        else if($material == 'other')
+        {
+            $x = $sqft * 5.5;
+        }
+
+
+
+        return View::make('new.final')->with('data', $data)->with('x', $x);
 
     }
 

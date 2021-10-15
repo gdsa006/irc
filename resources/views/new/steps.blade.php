@@ -1,4 +1,4 @@
-<form method="post" id="frm-one" name="frm-one" class="col-md-10 offset-md-1 col-12">
+<form method="post" id="frm-one" name="frm-one" class="col-md-8 offset-md-2 col-12">
     <h4>Enter your address to begin!</h4>
     <div class="row">
     <div class="input-group" >
@@ -19,7 +19,7 @@
 </form>
 
 
-<form method="post" id="frm-two" name="frm-two" class="col-md-10 offset-md-1 col-12">
+<form method="post" id="frm-two" name="frm-two" class="col-md-8 offset-md-2 col-12">
 <h4>Enter your homes square footage</h4>
 <a href="javascript:void(0)" onclick="goBack('#frm-one');" class="back"><i class="fas fa-arrow-left"></i></a>
 <div class="row">

@@ -3,6 +3,7 @@
 
 <section class="py-5">
     <div class="container">
+    <div class="col-md-8 offset-md-2 col-12">
 <h3>Terms of Service</h3>
 <p>Effective Date: October 5, 2021</p>
 
@@ -94,6 +95,7 @@ Re: Idaho Roofing Cost</p>
 <p>Email:</p>
 
 <a href="mailto: privacy@idahoroofingcost.com">privacy@idahoroofingcost.com</a>
+</div>
 </div>
 </section>
 @endsection

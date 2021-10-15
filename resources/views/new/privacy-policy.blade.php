@@ -3,6 +3,7 @@
 
 <section class="py-5">
     <div class="container">
+        <div class="col-md-8 offset-md-2 col-12">
 <h3>Privacy Policy</h3>
 <p>Effective date: October 5, 2021</p>
 <p>We at Idaho Roofing Costs, hereinafter referred to as "IRC", know that you care about how your personal information is used and shared, and we take your privacy seriously.  Please read the following to learn more about our Privacy Policy.  By visiting or using the <a href="idahoroofingcost.com">idahoroofingcost.com</a> website and domain name, and any other linked pages, features, content, or any other services we offer from time to time by in connection therewith (collectively, the "Website"), you acknowledge that you accept the practices and policies outlined in this Privacy Policy, and you hereby consent that we will collect, use, and share your information in the following ways.</p>
@@ -80,6 +81,7 @@ Questions or concerns<br>
 
 
 </ol>
+</div>
 </div>
 </section>
 @endsection

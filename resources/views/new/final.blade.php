@@ -13,6 +13,7 @@
         box-shadow: 0 0.05rem 0.3rem rgb(0 0 0 / 10%)
     }
     </style>
+    {{$x}}
 <section class="page" id="estimate">
     <div class="container">
 <div class="row">
