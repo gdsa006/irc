@@ -682,12 +682,22 @@ footer ul li:last-child a::before{
     background-color: #259ad7
 }
 
-.modal.leads h4{
+.modal.leads h2{
     display: block;
     text-align: center;
     width: 100%;
     padding-bottom: 30px;
     padding-top: 30px;
+    color: #333;
+    font-weight: 700;
+    font-size:2rem;
+    margin-bottom: 0
+}
+
+.modal.leads p.sec-text{
+    font-size: 1.7rem;
+    text-align: center;
+    font-family: system-ui
 }
 
 .modal.leads h5{
@@ -743,7 +753,7 @@ footer ul li:last-child a::before{
 
 .modal.leads .back{
     position: absolute;
-    top: 5px;
+    top: 15px;
     left: 0;
     background: #0000;
     color: #000;
@@ -762,7 +772,7 @@ footer ul li:last-child a::before{
 .modal.leads button.close{
     position: absolute;
     right: 0;
-    top: 5px;
+    top: 15px;
     z-index: 99;
 }
 
@@ -816,8 +826,9 @@ footer ul li:last-child a::before{
 .radio {
     display: inline-block;
     cursor: pointer;
-    border: solid 2px #eee;
-    padding: 18px;
+    border: solid 1px #eee;
+    /* padding: 18px; */
+    padding-top: 16px;
     align-items: center;
     border-radius: .25rem;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
@@ -833,6 +844,8 @@ footer ul li:last-child a::before{
     padding: 3px 6px;
     display: block;
     margin-top: 8px;
+    min-width: 132px;
+    margin: 18px;
 }
 
 
