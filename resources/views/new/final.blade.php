@@ -13,7 +13,7 @@
         box-shadow: 0 0.05rem 0.3rem rgb(0 0 0 / 10%)
     }
     </style>
-    {{$x}}
+    
 <section class="page" id="estimate">
     <div class="container">
 <div class="row">
@@ -37,8 +37,7 @@
 
                         <div class="ml-md-auto mr-md-3 mx-auto position-relative text-center text-md-right">
                             <h2 class="d-inline text-info font-weight-bold">
-    <sup>$</sup>1,792 -
-    <sup>$</sup>2,061
+    <sup>$</sup>@money($x)
 </h2>
 <span class="estimate-tax ml-2 d-block">+ TAX</span>
 <p>
@@ -75,12 +74,11 @@
             
             <div class="d-none d-md-flex">
                 <div class="col-md border rounded py-3 px-4 mt-3 mt-md-0 ">
-                    <h5 class="text-center mb-0 mt-3 text-dark">Metal</h5>
+                    <h5 class="text-center mb-5 mt-3 text-dark">Metal</h5>
 
-                    <h4 class="text-center font-weight-bold mt-2">
-                        <sup>$</sup>4,181 -
-                        <sup>$</sup>4,808
-                    </h4>
+                    <!-- <h4 class="text-center font-weight-bold mt-2">
+                        <sup>$</sup>
+                    </h4> -->
 
                     <div class="ruler mt-0"></div>
 
@@ -92,12 +90,12 @@
                                     </div>
                                 
                             <div class="col-md border rounded py-3 px-4 mt-3 mt-md-0 ml-md-3">
-                    <h5 class="text-center mb-0 mt-3 text-dark">Slate</h5>
+                    <h5 class="text-center mb-5 mt-3 text-dark">Slate</h5>
 
-                    <h4 class="text-center font-weight-bold mt-2">
+                    <!-- <h4 class="text-center font-weight-bold mt-2">
                         <sup>$</sup>14,933 -
                         <sup>$</sup>17,172
-                    </h4>
+                    </h4> -->
 
                     <div class="ruler mt-0"></div>
 

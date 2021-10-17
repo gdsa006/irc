@@ -39,7 +39,7 @@
 
 
 <form method="post" id="frm-three" name="frm-three" class="col-md-10 offset-md-1 col-12">
-<h4>How steep is your roof?</h4>
+<h2>How steep is your roof?</h2>
 <a href="javascript:void(0)" onclick="goBack('#frm-two');" class="back"><i class="fas fa-arrow-left"></i></a>
 <div class="input-group">
         <div class="form-check col-12 col-md-3">
@@ -74,7 +74,7 @@
     </form>
 
 <form method="post" id="frm-four" name="frm-four" class="col-md-10 offset-md-1 col-12">
-<h4>What's currently on your roof?</h4>
+<h2>What's currently on your roof?</h2>
 <a href="javascript:void(0)" onclick="goBack('#frm-three');" class="back"><i class="fas fa-arrow-left"></i></a>
 <div class="input-group">
         <div class="form-check col-12 col-md-3">
@@ -110,8 +110,8 @@
 </form>
 
 
-<form method="post" id="frm-five" name="frm-five" class="col-md-10 offset-md-1 col-12">
-<h4>Is this a residential or commercial roof?</h4>
+<!-- <form method="post" id="frm-five" name="frm-five" class="col-md-10 offset-md-1 col-12">
+<h2>Is this a residential or commercial roof?</h2>
 <a href="javascript:void(0)" onclick="goBack('#frm-four');" class="back"><i class="fas fa-arrow-left"></i></a>
 <div class="input-group">
         <div class="form-check col-12 col-md-3 offset-md-3">
@@ -130,13 +130,13 @@
         </div>
 </div>
       
-</form>
+</form> -->
 
 
 
 <form method="post" id="frm-six" name="frm-six" class="col-md-10 offset-md-1 col-12">
-<h4>How urgent is this project?</h4>
-<a href="javascript:void(0)" onclick="goBack('#frm-five');" class="back"><i class="fas fa-arrow-left"></i></a>
+<h2>How urgent is this project?</h2>
+<a href="javascript:void(0)" onclick="goBack('#frm-four');" class="back"><i class="fas fa-arrow-left"></i></a>
 <div class="input-group">
         <div class="form-check col-12 col-md-3 offset-md-1">
                 <input type="radio" class="form-check-input" id="urgency-checking" name="urgency" value="checking">
@@ -166,7 +166,7 @@
 
 
 <form method="post" id="frm-seven" name="frm-seven" class="col-md-10 offset-md-1 col-12">
-<h4>Are you using insurance to repair your roof?</h4>
+<h2>Are you using insurance to repair your roof?</h2>
 <a href="javascript:void(0)" onclick="goBack('#frm-six');" class="back"><i class="fas fa-arrow-left"></i></a>
 <div class="input-group">
         <div class="form-check col-12 col-md-3 offset-md-1">
@@ -199,10 +199,10 @@
 
 
 <form method="post" id="frm-eight" name="frm-eight" class="col-md-10 offset-md-1 col-12">
-<h4>What would you like on your roof?</h4>
+<h2>What would you like on your roof?</h2>
 <a href="javascript:void(0)" onclick="goBack('#frm-seven');" class="back"><i class="fas fa-arrow-left"></i></a>
     <div class="input-group" style="position: relative">
-        <div class="form-check col-12 col-md-3">
+        <div class="form-check col-12 col-md-3 offset-md-1">
                 <input type="radio" class="form-check-input" id="material-asphalt" name="material" value="asphalt">
                 <label class="radio text-center d-flex flex-row flex-sm-column text-center" for="material-asphalt">
                     <img src="{{ asset('images/asphalt.jpg') }}" width="130">
@@ -216,13 +216,13 @@
                     <span>Metal</span>
                 </label>
         </div>
-        <div class="form-check col-12 col-md-3">
+        <!-- <div class="form-check col-12 col-md-3">
                 <input type="radio" class="form-check-input" id="material-tile" name="material" value="tile">
                 <label class="radio text-center d-flex flex-row flex-sm-column text-center" for="material-tile">
                     <img src="{{ asset('images/tile.jpg') }}" width="130">
                     <span>Tile</span>
                 </label>
-        </div>
+        </div> -->
         <div class="form-check col-12 col-md-3">
                 <input type="radio" class="form-check-input" id="material-other" name="material" value="other">
                 <label class="radio text-center d-flex flex-row flex-sm-column text-center" for="material-other">
@@ -239,7 +239,7 @@
 
 
 <form method="post" id="frm-nine" name="frm-nine" class="col-md-10 offset-md-1 col-12">
-<h4>Are you interested in financing this project over time?</h4>
+<h2>Are you interested in financing this project over time?</h2>
 <a href="javascript:void(0)" onclick="goBack('#frm-eight');" class="back"><i class="fas fa-arrow-left"></i></a>
     <div class="input-group" style="position: relative">
         <div class="form-check col-12 col-md-3 offset-md-1">
@@ -273,7 +273,7 @@
 
 
 <form method="post" id="frm-ten" name="frm-ten" class="col-md-10 offset-md-1 col-12">
-<h4>Are you interested in financing this project over time?</h4>
+<h2>Are you interested in financing this project over time?</h2>
 <h5>Just enter your information and get your no obligation estimate!</h5>
 <a href="javascript:void(0)" onclick="goBack('#frm-nine');" class="back"><i class="fas fa-arrow-left"></i></a>
 <div class="row">
@@ -286,16 +286,11 @@
             <input type="text" class="form-control new-custom-input phone-format" autocomplete="off" name="mobile" placeholder="Phone">
         </div>
         <div class="form-group">
-        <div class="form-check">
-        <!-- <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required> -->
         <label class="form-check-label" for="invalidCheck">
         <small><p>To ensure you’re getting the best offers and pricing, Roofr and our providers you select may need to contact you by text/call. By checking this box, you agree to these communications, some of which may be automated. You can opt-out anytime.</p></small>
         <small><p>Your use of our services is also subject to our <a href="/terms-of-service" target="_blank">Terms of Service</a> and <a target="_blank" href="/privacy-policy">Privacy Policy.</p></small>
         </label>
-        <div class="invalid-feedback">
-            You must agree before submitting.
-        </div>
-        </div>
+      
     </div>
         <div class="buttons w-100 text-center mt-4">
             <input type="submit" value="Get Estimate" class="btn btn-block new-custom-btn">
@@ -308,11 +303,11 @@
 <div class="panel-group">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
-                                            <h4 class="panel-title border-bottom pb-3">
+                                            <h2 class="panel-title border-bottom pb-3">
                                                 <a data-toggle="collapse" href="#collapse-message-1">
                                                     <strong>+</strong> Why do you need my information?
                                                 </a>
-                                            </h4>
+                                            </h2>
                                         </div>
                                         <div id="collapse-message-1" class="panel-collapse collapse">
                                             <div class="panel-body">

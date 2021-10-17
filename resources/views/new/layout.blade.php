@@ -813,6 +813,10 @@ footer ul li:last-child a::before{
     text-align: left
 }
 
+.modal.leads #faq h2{
+    text-align: left
+}
+
 .modal.leads #faq a{
     font-size: 1rem;
     color: #024864;
@@ -1236,12 +1240,12 @@ section#review blockquote{
               
     <div class="col-md-11 px-0">
       <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuemin="10" aria-valuemax="100"></div>
       </div>
     </div>
 
     <div class="col-md-1">
-      <p class="progress_title"><span>1</span>/10</p>
+      <p class="progress_title"><span>1</span>/9</p>
     </div>
 </div>
 
@@ -1488,8 +1492,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 <script type="text/javascript">
- $('input[name=steep]').change(function(e){
-        e.preventDefault();
+ $('input[name=steep]').click(function(e){
         $steep = $(this).val();
             $.ajax({
                 type : 'post',
@@ -1527,8 +1530,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 <script type="text/javascript">
- $('input[name=existing_material]').change(function(e){
-        e.preventDefault();
+ $('input[name=existing_material]').click(function(e){
             $.ajax({
                 type : 'post',
                 url : '{{URL::to('saveFour')}}',
@@ -1544,7 +1546,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         $stepCount = $('.progress_title span').text();
                         $('.progress_title span').text(Number($stepCount) + 1);
                         $('form').hide();
-                        $('#frm-five').show();
+                        $('#frm-six').show();
                     }
                     if(data.existing_material){
                    alert(data.existing_material);
@@ -1559,8 +1561,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 <script type="text/javascript">
- $('input[name=is_commercial]').change(function(e){
-        e.preventDefault();
+ $('input[name=is_commercial]').click(function(e){
             $.ajax({
                 type : 'post',
                 url : '{{URL::to('saveFive')}}',
@@ -1593,8 +1594,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 <script type="text/javascript">
- $('input[name=urgency]').change(function(e){
-        e.preventDefault();
+ $('input[name=urgency]').click(function(e){
             $.ajax({
                 type : 'post',
                 url : '{{URL::to('saveSix')}}',
@@ -1624,8 +1624,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 <script type="text/javascript">
- $('input[name=true]').change(function(e){
-        e.preventDefault();
+ $('input[name=true]').click(function(e){
             $.ajax({
                 type : 'post',
                 url : '{{URL::to('saveSeven')}}',
@@ -1654,8 +1653,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 <script type="text/javascript">
- $('input[name=material]').change(function(e){
-        e.preventDefault();
+ $('input[name=material]').click(function(e){
             $.ajax({
                 type : 'post',
                 url : '{{URL::to('saveEight')}}',
@@ -1688,8 +1686,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 
 
 <script type="text/javascript">
- $('input[name=is_interested_in_financing]').change(function(e){
-        e.preventDefault();
+ $('input[name=is_interested_in_financing]').click(function(e){
             $.ajax({
                 type : 'post',
                 url : '{{URL::to('saveNine')}}',
