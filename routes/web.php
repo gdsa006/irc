@@ -73,7 +73,8 @@ Route::get('file-export', [App\Http\Controllers\LocationFinderController::class,
 
 
 
-
+Route::get('dashboard/welcome', [App\Http\Controllers\DashboardController::class, 'dashboard'])->name('dashboard')->middleware('auth');
+Route::get('dashboard/rates', [App\Http\Controllers\DashboardController::class, 'rates'])->name('rates')->middleware('auth');
 
 
 
