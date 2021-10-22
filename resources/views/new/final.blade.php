@@ -52,7 +52,8 @@
                                     <div class="row">
                         <div class="col-lg-6 mr-lg-5 d-block text-center text-md-left">
                             <h4 class="text-dark font-weight-bold">Ready to move forward?</h4>
-                            <p>You will need to have your roof inspected prior to receiving a formal proposal</p>
+                            <p>We need this to say what is going on the roof. e.g. Your Asphalt roof being replaced by a new Metal Roof will cost approximately.</p>
+                            <a href="callto: 121" class="btn btn-block btn-primary py-2">Call Us Now</a>
                         </div>
                         <div class="col ml-lg-auto d-none d-md-block">
                             
@@ -119,17 +120,17 @@
 
     <div class="d-flex justify-content-center flex-md-column">
         <div class="mb-2 text-right text-md-center">
-            <img class="rounded-circle" height="120" src="https://app.roofr.com/images/pms/nic.jpg">
+            <img class="rounded-circle d-none" height="120" src="https://app.roofr.com/images/pms/nic.jpg">
         </div>
 
         <div class="text-left ml-3 ml-md-0 text-md-center">
-            <h5 class="text-dark mt-3">Your Roofing Project Advisor</h5>
+            <h5 class="text-dark mt-3">Call a Roofing Project Advisor</h5>
 
-            <h5 class="text-dark mb-0"><strong>Nic Capobianco</strong></h5>
+            <h5 class="text-dark mb-0 d-none"><strong>Nic Capobianco</strong></h5>
 
                             <h5 class="text-dark mb-0"><a class="d-block text-info" href="tel:(866) 819-5215">(866) 819-5215</a></h5>
             
-                            <h5 class="text-dark"><a class="d-block" href="mailto:info@roofr.com">info@roofr.com</a></h5>
+                            <h5 class="text-dark"><a class="d-block" href="mailto:info@idahoroofingcost.com">info@idahoroofingcost.com</a></h5>
                     </div>
     </div>
 </div>

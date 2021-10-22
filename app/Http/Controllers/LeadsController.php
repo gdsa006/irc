@@ -10,7 +10,7 @@ use View;
 class LeadsController extends Controller
 {
     public function Steps(Request $request){
-        $address = $request->address;
+        $address = $request->autocomplete;
         $findAddress = Location::where('Address', $address)->count();
         if($findAddress){
             // return View('form.step.one');
@@ -105,10 +105,10 @@ class LeadsController extends Controller
 
 
     public function saveOne(Request $request){
-        $address = $request->input('address');
+        $address = $request->input('autocomplete');
 
         $validator = \Validator::make($request->all(), [ 
-            'address' => 'required',
+            'autocomplete' => 'required',
         ]);
 
         if($validator->fails()){

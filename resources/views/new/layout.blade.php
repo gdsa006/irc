@@ -63,6 +63,9 @@
     }
 }
 
+.pac-container {
+    z-index: 10000 !important;
+}
 
         #background-gradient{
             position: absolute;
@@ -1286,6 +1289,7 @@ section#review blockquote{
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDE0Sxu6eGN0Mc25thJEay6PrphUwF0gAQ&libraries=places" ></script>
 
     <script type="text/javascript">
 $.ajaxSetup({
@@ -1294,6 +1298,48 @@ $.ajaxSetup({
     }
 });
 </script>
+
+
+
+
+
+
+<script>
+        $(document).ready(function () {
+            $("#latitudeArea").addClass("d-none");
+            $("#longtitudeArea").addClass("d-none");
+        });
+    </script>
+<script>
+         google.maps.event.addDomListener(window, 'load', initialize);
+  
+  function initialize() {
+      var input = document.getElementById('autocomplete');
+      var autocomplete = new google.maps.places.Autocomplete(input);
+
+      autocomplete.addListener('place_changed', function () {
+          var place = autocomplete.getPlace();
+          $('#latitude').val(place.geometry['location'].lat());
+          $('#longitude').val(place.geometry['location'].lng());
+
+        //   $("#latitudeArea").removeClass("d-none");
+        //   $("#longtitudeArea").removeClass("d-none");
+      });
+
+      autocomplete.setComponentRestrictions(
+            {'country': ['uk']});
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+  });
+  }
+    </script>
+
+
+
+
+
+
+
+
 
     <script>
 
@@ -1431,7 +1477,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 <script type="text/javascript">
     $( "#frm-one" ).submit(function(e) {
         e.preventDefault();
-        $address = $('#address').val();
+        $address = $('#autocomplete').val();
             $.ajax({
                 type : 'post',
                 url : '{{URL::to('saveOne')}}',
@@ -1879,6 +1925,11 @@ $('#exampleModal button').on('click', function(){
       $(".modal-backdrop.show").hide();
    })
 </script>
+
+
+
+
+
 
 <!-- <script>
 $checkSession = "{{ session()->get('leadID') }}";

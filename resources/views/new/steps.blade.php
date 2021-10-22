@@ -5,8 +5,15 @@
         <!-- <span id="location-icon">
             <i class="fas fa-map-marker-alt"></i>
         </span> -->
-        <input type="text" class="form-control new-custom-input" id="address" placeholder="Enter address..."
-            value="" name="address" autocomplete="off">
+        <input type="text" class="form-control new-custom-input" name="autocomplete" id="autocomplete" placeholder="Enter address...">
+        <div class="form-group" id="latitudeArea">
+            <label>Latitude</label>
+            <input type="text" id="latitude" name="latitude" class="form-control">
+        </div>  
+        <div class="form-group" id="longtitudeArea">
+            <label>Longitude</label>
+            <input type="text" name="longitude" id="longitude" class="form-control">
+        </div>
         <div id="search-results">
             <!-- populate results -->
         </div>
@@ -21,8 +28,7 @@
 
 <form method="post" id="frm-two" name="frm-two" class="col-md-6 offset-md-3 col-12">
 <h2>Enter your homes square footage</h2>
-<p class="sec-text">Change the following if necessary</p>
-<p class="sec-small">This should include your garage square footage (if applicable).</p>
+<p class="sec-small">This should include your garage square footage (if applicable)</p>
 <a href="javascript:void(0)" onclick="goBack('#frm-one');" class="back"><i class="fas fa-arrow-left"></i></a>
 <div class="row">
     <div class="input-group" style="position: relative">
