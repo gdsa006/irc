@@ -22,17 +22,18 @@
                         
             <h4 class="text-dark text-center d-block d-md-none">
                 Your <strong class="text-info text-uppercase">
-                {{ $data[0]->steep}}
+                {{ $data[0]->existing_material}}
 
-                </strong> roof replacement will cost approximately
+                </strong> roof being replaced by a new <strong class="font-weight-bold">{{ $data[0]->steep }}</strong> Roof will cost approximately
             </h4>
 
             <div class="card mb-3 px-5 py-4">
                                     <div class="row text-center text-md-left">
                         <h4 class="col-6 text-dark d-md-block d-none">
-                            Your
-                            <strong class="font-weight-bold">Asphalt</strong>
-                            roof replacement will cost approximately:
+                        Your <strong class="text-info text-uppercase">
+                {{ $data[0]->existing_material}}
+
+                </strong> roof being replaced by a new <strong class="font-weight-bold">{{ $data[0]->steep }}</strong> Roof will cost approximately
                         </h4>
 
                         <div class="ml-md-auto mr-md-3 mx-auto position-relative text-center text-md-right">
@@ -52,7 +53,7 @@
                                     <div class="row">
                         <div class="col-lg-6 mr-lg-5 d-block text-center text-md-left">
                             <h4 class="text-dark font-weight-bold">Ready to move forward?</h4>
-                            <p>We need this to say what is going on the roof. e.g. Your Asphalt roof being replaced by a new Metal Roof will cost approximately.</p>
+                            <p>You will need to have your roof inspected prior to receiving a formal proposal</p>
                             <a href="callto: 121" class="btn btn-block btn-primary py-2">Call Us Now</a>
                         </div>
                         <div class="col ml-lg-auto d-none d-md-block">
@@ -75,7 +76,8 @@
             
             <div class="d-none d-md-flex">
                 <div class="col-md border rounded py-3 px-4 mt-3 mt-md-0 ">
-                    <h5 class="text-center mb-5 mt-3 text-dark">Metal</h5>
+                    <img src="{{ asset('images/MetalShingle-01.png') }}" class="img-fluid">
+                    <!-- <h5 class="text-center mb-5 mt-3 text-dark">Metal</h5> -->
 
                     <!-- <h4 class="text-center font-weight-bold mt-2">
                         <sup>$</sup>
@@ -85,13 +87,14 @@
 
                     
 
-                                            <p><i class="fa fa-check rounded-circle p-1 text-info mr-3"></i>50 Years</p>
+                                            <!-- <p><i class="fa fa-check rounded-circle p-1 text-info mr-3"></i>50 Years</p>
                                             <p><i class="fa fa-check rounded-circle p-1 text-info mr-3"></i>Weather Resistant</p>
-                                            <p><i class="fa fa-check rounded-circle p-1 text-info mr-3"></i>Energy Efficient</p>
+                                            <p><i class="fa fa-check rounded-circle p-1 text-info mr-3"></i>Energy Efficient</p> -->
                                     </div>
                                 
                             <div class="col-md border rounded py-3 px-4 mt-3 mt-md-0 ml-md-3">
-                    <h5 class="text-center mb-5 mt-3 text-dark">Slate</h5>
+                            <img src="{{ asset('images/MetalShingle-02.png') }}" class="img-fluid">
+                    <!-- <h5 class="text-center mb-5 mt-3 text-dark">Slate</h5> -->
 
                     <!-- <h4 class="text-center font-weight-bold mt-2">
                         <sup>$</sup>14,933 -
@@ -102,9 +105,9 @@
 
                     
 
-                                            <p><i class="fa fa-check rounded-circle p-1 text-info mr-3"></i>50 Years</p>
+                                            <!-- <p><i class="fa fa-check rounded-circle p-1 text-info mr-3"></i>50 Years</p>
                                             <p><i class="fa fa-check rounded-circle p-1 text-info mr-3"></i>Eco-friendly</p>
-                                            <p><i class="fa fa-check rounded-circle p-1 text-info mr-3"></i>Aesthetic</p>
+                                            <p><i class="fa fa-check rounded-circle p-1 text-info mr-3"></i>Aesthetic</p> -->
                                     </div>
                                 </div>
 
@@ -116,11 +119,11 @@
                                     <div class="sidebar flex-grow-1 flex-lg-grow-0 text-center ">
     <div class="align-self-start mb-4">
         <div id="project-manager-container" class="border mb-3 p-4 ml-2 mr-1 mt-1 mt-md-0">
-    <p class="text-dark"><strong>Need Advice?</strong></p>
+    <p class="text-dark"><strong>Schedule an Inspection?</strong></p>
 
     <div class="d-flex justify-content-center flex-md-column">
         <div class="mb-2 text-right text-md-center">
-            <img class="rounded-circle d-none" height="120" src="https://app.roofr.com/images/pms/nic.jpg">
+            <img class="rounded-circle-" height="320" src="{{ asset('images/need-advice.jpg') }}">
         </div>
 
         <div class="text-left ml-3 ml-md-0 text-md-center">

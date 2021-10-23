@@ -63,6 +63,7 @@ Route::post('/destroy', [App\Http\Controllers\LeadsController::class,'destroySes
 Route::get('/estimate', [App\Http\Controllers\LeadsController::class,'estimate'])->name('estimate');
 Route::get('/terms-of-service', [App\Http\Controllers\LeadsController::class,'termsOfService'])->name('terms-of-service');
 Route::get('/privacy-policy', [App\Http\Controllers\LeadsController::class,'privacyPolicy'])->name('privacy-policy');
+Route::get('/our-guarantee', [App\Http\Controllers\LeadsController::class,'ourGuarantee'])->name('our-guarantee');
 
 
 

@@ -13,14 +13,14 @@
         Connect with trusted roofers. Guaranteed by us.
         </p>
         <div class="action-area">
-        <a href="#" class="custom-main-btn">Get an instant estimate</a>
+        <a href="#" class="custom-main-btn userForm">Get an instant estimate</a>
 </div>
     </div>
 </div>
 <div class="col-md-6 col-xs-12"  data-aos="fade-up" data-aos-duration="1300">
     <div class="hero-right text-center">
         <h4>Find today's best prices on a new roof!</h4>
-        <img src="{{ asset('images/Price2-01.jpg') }}" style="width: 100%; max-width: 480px" data-aos="fade-up" data-aos-duration="1800" data-aos-easing="ease-in-sine" data-aos-offset="-100">
+        <img src="{{ asset('images/pricing-img.png') }}" style="width: 100%; max-width: 480px" data-aos="fade-up" data-aos-duration="1800" data-aos-easing="ease-in-sine" data-aos-offset="-100">
     </div>
 </div>
 </div>
@@ -127,35 +127,7 @@ Measure your roof quickly by answering a few simple questions.
 
 
 
-			<article class="thumbnail item">
-				<div class="wrapper">
-                    <div class="avatar rounded-circle" style="background-image: url('https://modernize.com/quote/resources/assets/images/avatars/people/woman-at-the-office.jpg')">
-</div>
-
-<div class="rating">
-
-
-<span class="star-rating star-rating--sm">
-    <span class="star-rating__stars star-rating__stars--50">
-
-    </span>
-</span>
-
-
-</div>
-
-<div class="comment">
-    <p>"The pros did an excellent job for a reasonable price. Roofing crew was amazing. I would highly recommend this company."</p>
-</div>
-
-<div class="name">
-    <h6>Gagan A.</h6>
-    <p>Mohali, PB</p>
-</div>
-
-			</article>
-
-
+	
 
 
 
@@ -163,14 +135,14 @@ Measure your roof quickly by answering a few simple questions.
 
             <article class="thumbnail item">
 				<div class="wrapper">
-                    <div class="avatar rounded-circle" style="background-image: url('https://modernize.com/quote/resources/assets/images/avatars/people/woman-at-the-office.jpg')">
+                    <div class="avatar rounded-circle" style="background-image: url('images/ICON-01.png')">
 </div>
 
 <div class="rating">
 
 
 <span class="star-rating star-rating--sm">
-    <span class="star-rating__stars star-rating__stars--50">
+    <span class="star-rating__stars star-rating__stars--100">
 
     </span>
 </span>
@@ -200,14 +172,14 @@ Measure your roof quickly by answering a few simple questions.
 
             <article class="thumbnail item">
 				<div class="wrapper">
-                    <div class="avatar rounded-circle" style="background-image: url('https://modernize.com/quote/resources/assets/images/avatars/people/woman-at-the-office.jpg')">
+                    <div class="avatar rounded-circle"  style="background-image: url('images/ICON-01.png')">
 </div>
 
 <div class="rating">
 
 
 <span class="star-rating star-rating--sm">
-    <span class="star-rating__stars star-rating__stars--50">
+    <span class="star-rating__stars star-rating__stars--100">
 
     </span>
 </span>
@@ -216,12 +188,11 @@ Measure your roof quickly by answering a few simple questions.
 </div>
 
 <div class="comment">
-    <p>"The pros did an excellent job for a reasonable price. Roofing crew was amazing. I would highly recommend this company."</p>
+    <p>"The contractors we received estimates from were professional, upfront, honest, and did not pressure us. Out of the three best contractors we narrowed it down a great local Idaho company. We saved thousands and got a lifetime labor warranty as well."</p>
 </div>
 
 <div class="name">
-    <h6>Gagan A.</h6>
-    <p>Mohali, PB</p>
+    <h6>Dennis K</h6>
 </div>
 
 			</article>
@@ -237,14 +208,14 @@ Measure your roof quickly by answering a few simple questions.
 
             <article class="thumbnail item">
 				<div class="wrapper">
-                    <div class="avatar rounded-circle" style="background-image: url('https://modernize.com/quote/resources/assets/images/avatars/people/woman-at-the-office.jpg')">
+                    <div class="avatar rounded-circle"  style="background-image: url('images/ICON-01.png')">
 </div>
 
 <div class="rating">
 
 
 <span class="star-rating star-rating--sm">
-    <span class="star-rating__stars star-rating__stars--50">
+    <span class="star-rating__stars star-rating__stars--100">
 
     </span>
 </span>
@@ -253,12 +224,11 @@ Measure your roof quickly by answering a few simple questions.
 </div>
 
 <div class="comment">
-    <p>"The pros did an excellent job for a reasonable price. Roofing crew was amazing. I would highly recommend this company."</p>
+    <p>"Our roof was replaced in a fast but professional way. We chose a local contractor and saved over three thousand dollars in comparison to the big name referrals websites. They also provided and referral for great financing which made transaction fast and easy."</p>
 </div>
 
 <div class="name">
-    <h6>Gagan A.</h6>
-    <p>Mohali, PB</p>
+    <h6>David W</h6>
 </div>
 
 			</article>
@@ -267,14 +237,14 @@ Measure your roof quickly by answering a few simple questions.
 
             <article class="thumbnail item">
 				<div class="wrapper">
-                    <div class="avatar rounded-circle" style="background-image: url('https://modernize.com/quote/resources/assets/images/avatars/people/woman-at-the-office.jpg')">
+                    <div class="avatar rounded-circle"  style="background-image: url('images/ICON-01.png')">
 </div>
 
 <div class="rating">
 
 
 <span class="star-rating star-rating--sm">
-    <span class="star-rating__stars star-rating__stars--50">
+    <span class="star-rating__stars star-rating__stars--100">
 
     </span>
 </span>
@@ -283,12 +253,11 @@ Measure your roof quickly by answering a few simple questions.
 </div>
 
 <div class="comment">
-    <p>"The pros did an excellent job for a reasonable price. Roofing crew was amazing. I would highly recommend this company."</p>
+    <p>"I used IRC for a no cost and no pressure inspection. All the contractors were honest and professional. They took their time and gave me the information I needed and didn't charge me anything.  I will highly recommend IRC to anyone."</p>
 </div>
 
 <div class="name">
-    <h6>Gagan A.</h6>
-    <p>Mohali, PB</p>
+    <h6>Casey J</h6>
 </div>
 
 			</article>
@@ -305,14 +274,14 @@ Measure your roof quickly by answering a few simple questions.
 
             <article class="thumbnail item">
 				<div class="wrapper">
-                    <div class="avatar rounded-circle" style="background-image: url('https://modernize.com/quote/resources/assets/images/avatars/people/woman-at-the-office.jpg')">
+                    <div class="avatar rounded-circle"  style="background-image: url('images/ICON-01.png')">
 </div>
 
 <div class="rating">
 
 
 <span class="star-rating star-rating--sm">
-    <span class="star-rating__stars star-rating__stars--50">
+    <span class="star-rating__stars star-rating__stars--100">
 
     </span>
 </span>
@@ -321,12 +290,11 @@ Measure your roof quickly by answering a few simple questions.
 </div>
 
 <div class="comment">
-    <p>"The pros did an excellent job for a reasonable price. Roofing crew was amazing. I would highly recommend this company."</p>
+    <p>"I am so impressed by this local service. I tried to get other estimates on my own but found myself frustrated, knowing the insurance claim would be a hassle. I learned how the  entire process works from the information I found at IRC. Also, it was reassuring to have a local trustworthy, reputable company to work with."</p>
 </div>
 
 <div class="name">
-    <h6>Gagan A.</h6>
-    <p>Mohali, PB</p>
+    <h6>Ralph B</h6>
 </div>
 
 			</article>
@@ -352,14 +320,14 @@ Measure your roof quickly by answering a few simple questions.
 
             <article class="thumbnail item">
 				<div class="wrapper">
-                    <div class="avatar rounded-circle" style="background-image: url('https://modernize.com/quote/resources/assets/images/avatars/people/woman-at-the-office.jpg')">
+                    <div class="avatar rounded-circle"  style="background-image: url('images/ICON-01.png')">
 </div>
 
 <div class="rating">
 
 
 <span class="star-rating star-rating--sm">
-    <span class="star-rating__stars star-rating__stars--50">
+    <span class="star-rating__stars star-rating__stars--100">
 
     </span>
 </span>
@@ -368,12 +336,11 @@ Measure your roof quickly by answering a few simple questions.
 </div>
 
 <div class="comment">
-    <p>"The pros did an excellent job for a reasonable price. Roofing crew was amazing. I would highly recommend this company."</p>
+    <p>"We were highly impressed with the companies that gave us estimates. The contractor we chose was polite, professional, and clean cut. Their crew arrived on time and did exceptional work. We would highly recommend IRC and we especially appreciated the no pressure approach."</p>
 </div>
 
 <div class="name">
-    <h6>Gagan A.</h6>
-    <p>Mohali, PB</p>
+    <h6>Wayne P</h6>
 </div>
 
 			</article>
@@ -487,7 +454,7 @@ Our team will answer questions, help you compare quotes, and hire the right roof
         <div class="row">
             <div class="col text-center wrapper">
         <h2 data-aos="fade-up" data-aos-duration="1300">Get your <span class="vivid">free estimate</span> in less than 30 seconds</h2>
-        <a href="#" class="custom-main-btn" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">Get an estimate</a>
+        <a href="#" class="custom-main-btn userForm" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="300">Get an estimate</a>
     </div>
 </div>
 </div>

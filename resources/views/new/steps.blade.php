@@ -289,6 +289,9 @@
         </div>
         <div class="input-group mt-2">
             <input type="text" class="form-control new-custom-input fullname" placeholder="Name" name="fname">
+            <div class="input-group-prepend">
+        <span class="input-group-text">+1</span>
+    </div>
             <input type="text" class="form-control new-custom-input phone-format" autocomplete="off" name="mobile" placeholder="Phone">
         </div>
         <div class="form-group">

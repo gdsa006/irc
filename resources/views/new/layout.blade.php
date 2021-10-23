@@ -328,6 +328,26 @@ section#review .owl-carousel .rating .star-rating--sm .star-rating__stars.star-r
     width: 50%;
 }
 
+section#review .owl-carousel .rating .star-rating--sm .star-rating__stars.star-rating__stars--60::after{
+    width: 60%;
+}
+
+section#review .owl-carousel .rating .star-rating--sm .star-rating__stars.star-rating__stars--70::after{
+    width: 70%;
+}
+
+section#review .owl-carousel .rating .star-rating--sm .star-rating__stars.star-rating__stars--80::after{
+    width: 80%;
+}
+
+section#review .owl-carousel .rating .star-rating--sm .star-rating__stars.star-rating__stars--90::after{
+    width: 90%;
+}
+
+section#review .owl-carousel .rating .star-rating--sm .star-rating__stars.star-rating__stars--100::after{
+    width: 100%;
+}
+
 
 section#review .owl-carousel .star-rating__stars::after, section#review .owl-carousel .star-rating__stars::before {
     -moz-osx-font-smoothing: grayscale;
@@ -1122,6 +1142,7 @@ section#hero .hero-left{
     margin-top: 5px
 }
 
+
     section#estimate{
 
     }
@@ -1315,7 +1336,12 @@ $.ajaxSetup({
   
   function initialize() {
       var input = document.getElementById('autocomplete');
-      var autocomplete = new google.maps.places.Autocomplete(input);
+
+      var options = {
+             componentRestrictions: {country: "US"},
+      };
+
+      var autocomplete = new google.maps.places.Autocomplete(input, options);
 
       autocomplete.addListener('place_changed', function () {
           var place = autocomplete.getPlace();
@@ -1326,10 +1352,13 @@ $.ajaxSetup({
         //   $("#longtitudeArea").removeClass("d-none");
       });
 
-      autocomplete.setComponentRestrictions(
-            {'country': ['uk']});
+     
         google.maps.event.addListener(autocomplete, 'place_changed', function() {
   });
+
+
+
+  
   }
     </script>
 
@@ -1478,6 +1507,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
     $( "#frm-one" ).submit(function(e) {
         e.preventDefault();
         $address = $('#autocomplete').val();
+        $longitude = $('#longitude').val();
             $.ajax({
                 type : 'post',
                 url : '{{URL::to('saveOne')}}',
@@ -1497,6 +1527,9 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                     }
                 if(data.address){
                    alert(data.address);
+                }
+                if(data.longitude){
+                    alert("Enter correct address!");
                 }
             }      
     });
@@ -1850,6 +1883,11 @@ $( "#address" ).keyup(function() {
 <script>
     function goBack(hash){
         if (hash) {
+            if(hash == '#frm-one'){
+                $('#latitude').val('');
+                $('#longitude').val('');
+                $('#autocomplete').val('');
+            }
             $('form').hide();
             $(hash).show();
             $stepCount = $('.progress_title span').text();

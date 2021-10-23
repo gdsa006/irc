@@ -106,9 +106,11 @@ class LeadsController extends Controller
 
     public function saveOne(Request $request){
         $address = $request->input('autocomplete');
+        $longitude = $request->input('longitude');
 
         $validator = \Validator::make($request->all(), [ 
             'autocomplete' => 'required',
+            'longitude' => 'required',
         ]);
 
         if($validator->fails()){
@@ -431,6 +433,10 @@ class LeadsController extends Controller
 
     public function privacyPolicy(){
         return View::make('new.privacy-policy');
+    }
+
+    public function ourGuarantee(){
+        return View::make('new.guarantee');
     }
 
 }
