@@ -22,18 +22,18 @@
                         
             <h4 class="text-dark text-center d-block d-md-none">
                 Your <strong class="text-info text-uppercase">
-                {{ $data[0]->existing_material}}
+                {{ $data[0]->existingmaterial}}
 
-                </strong> roof being replaced by a new <strong class="font-weight-bold">{{ $data[0]->steep }}</strong> Roof will cost approximately
+                </strong> roof being replaced by a new <strong class="text-info text-uppercase">{{ $data[0]->steep }}</strong> Roof will cost approximately
             </h4>
 
             <div class="card mb-3 px-5 py-4">
                                     <div class="row text-center text-md-left">
                         <h4 class="col-6 text-dark d-md-block d-none">
                         Your <strong class="text-info text-uppercase">
-                {{ $data[0]->existing_material}}
+                {{ $data[0]->existingmaterial}}
 
-                </strong> roof being replaced by a new <strong class="font-weight-bold">{{ $data[0]->steep }}</strong> Roof will cost approximately
+                </strong> roof being replaced by a new <strong class="text-info text-uppercase">{{ $data[0]->steep }}</strong> Roof will cost approximately
                         </h4>
 
                         <div class="ml-md-auto mr-md-3 mx-auto position-relative text-center text-md-right">
@@ -121,7 +121,7 @@
         <div id="project-manager-container" class="border mb-3 p-4 ml-2 mr-1 mt-1 mt-md-0">
     <p class="text-dark"><strong>Schedule an Inspection?</strong></p>
 
-    <div class="d-flex justify-content-center flex-md-column">
+    <div class="d-md-flex justify-content-center flex-md-column">
         <div class="mb-2 text-right text-md-center">
             <img class="rounded-circle-" height="320" src="{{ asset('images/need-advice.jpg') }}">
         </div>

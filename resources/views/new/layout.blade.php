@@ -298,7 +298,7 @@ section#review .owl-carousel .avatar{
   height: 320px;
   background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 45px;
     border-radius: 100px;
     content: "";
     height: 73px;
@@ -1056,6 +1056,29 @@ input[type=radio]:checked + .radio {
 
 
 @media screen and (max-width: 767px){
+    #estimate .sidebar {
+        width: 100% !important
+    }
+
+    #estimate .sidebar #project-manager-container .text-md-center{
+         text-align: center !important
+    }
+    
+    #frm-ten .fullname{
+        width: 100% !important;
+        margin-right: 0 !important
+    }
+
+    #frm-ten .phone-format{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #frm-ten .input-group-prepend{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
     .radio span{
         align-self: center;
     border: 0;
