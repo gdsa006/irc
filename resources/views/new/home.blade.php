@@ -10,7 +10,7 @@
             Idaho Roof repair and replacement made easy
         </h1>
         <p>
-        Connect with trusted roofers. Guaranteed by us.
+        Connect with idaho's most trusted company.
         </p>
         <div class="action-area">
         <a href="#" class="custom-main-btn userForm">Get an instant estimate</a>
