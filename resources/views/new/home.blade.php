@@ -347,7 +347,7 @@ Measure your roof quickly by answering a few simple questions.
             <h2>
             Local Idaho roofing contractors <span>you can trust</span>
 </h2>
-<p>We help you with valuable information, access to Idaho based highly rated contractors, and our roof replacement cost estimator. We make roof repairs and replacements a fast and easy.</p>
+<p>We help you with valuable information, access to Idaho based highly rated contractors, and our roof replacement cost estimator. We make roof repairs and replacements fast and easy.</p>
 </div>
 </div>
 
@@ -370,7 +370,7 @@ Measure your roof quickly by answering a few simple questions.
 
 </h3>
 <p>
-Select one or more contractors to prepare a formal quote, then hire the best roofer for the job!
+Select one or more estimates to prepare formal quotes for your specific roofing project.
 </p>
 </div>
 </div>
@@ -391,7 +391,7 @@ Select one or more contractors to prepare a formal quote, then hire the best roo
 
 </h3>
 <p>
-We only work with Roofers that are highly rated and fully insured.
+Compare your detailed quotes and choose the best one for YOU!
 </p>
 </div>
 </div>
