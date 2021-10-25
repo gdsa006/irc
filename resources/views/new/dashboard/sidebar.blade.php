@@ -12,8 +12,8 @@
             alt="User picture">
         </div>
         <div class="user-info">
-          <span class="user-name">Idaho
-            <strong>Admin</strong>
+          <span class="user-name">{{ auth()->user()->name }}
+            <!-- <strong>Admin</strong> -->
           </span>
           <span class="user-role">Administrator</span>
           <span class="user-status d-none">
@@ -42,9 +42,9 @@
             <span>General</span>
           </li>
           <li class="sidebar-dropdown">
-            <a href="/dashboard/welcome">
-              <i class="fa fa-tachometer-alt"></i>
-              <span>Dashboard</span>
+            <a href="/dashboard/leads">
+            <i class="far fa-address-card"></i>
+              <span>Leads</span>
               <span class="badge badge-pill badge-warning d-none">New</span>
             </a>
             <div class="sidebar-submenu d-none">
@@ -64,8 +64,8 @@
             </div>
           </li>
           <li class="sidebar-dropdown">
-            <a href="/dashboard/rates1">
-              <i class="fa fa-shopping-cart"></i>
+            <a href="/dashboard/rates">
+            <i class="far fa-money-bill-alt"></i>
               <span>Rates</span>
               <span class="badge badge-pill badge-danger d-none">3</span>
             </a>
@@ -188,7 +188,7 @@
         <i class="fa fa-cog"></i>
         <span class="badge-sonar"></span>
       </a> -->
-      <a href="#">
+      <a href="{{ route('logout') }}">
         <i class="fa fa-power-off"></i>
       </a>
     </div>

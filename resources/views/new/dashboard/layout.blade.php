@@ -553,9 +553,12 @@ body {
   <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
     <i class="fas fa-bars"></i>
   </a>
- @include('new.dashboard.sidebar')
+ 
+  @auth
+    @include('new.dashboard.sidebar')
+  @endauth
   <!-- sidebar-wrapper  -->
-  <main class="page-content">
+  <main class="page-content" @auth  @else style="padding-left:0 !important" @endauth>
     <div class="container-fluid">
         @yield('dashboard-content')
     </div>
