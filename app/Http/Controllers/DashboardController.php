@@ -17,7 +17,13 @@ class DashboardController extends Controller
     }
 
     public function leads(){
-        $leads = Lead::all();
+        $lead = new Lead();
+        $leads = $lead->paginate(10);
         return View::make('new.dashboard.leads', compact('leads'));
+    }
+
+    public function showLead($id){
+        $lead = Lead::find($id);
+        return VIew::make('new.dashboard.show-lead', compact('lead'));
     }
 }

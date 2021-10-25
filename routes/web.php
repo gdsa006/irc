@@ -77,6 +77,7 @@ Route::get('file-export', [App\Http\Controllers\LocationFinderController::class,
 Route::get('dashboard/welcome', [App\Http\Controllers\DashboardController::class, 'dashboard'])->name('welcome');
 Route::get('dashboard/rates', [App\Http\Controllers\DashboardController::class, 'rates'])->name('rates');
 Route::get('dashboard/leads', [App\Http\Controllers\DashboardController::class, 'leads'])->name('leads');
+Route::get('dashboard/leads/{id}', [App\Http\Controllers\DashboardController::class, 'showLead'])->name('leads');
 
 
 Route::get('/login', [App\Http\Controllers\LoginController::class, 'show_login_form'])->name('login');
