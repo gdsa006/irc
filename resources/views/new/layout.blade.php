@@ -1645,7 +1645,7 @@ section#review blockquote{
           <div class="modal-content">
             <button type="button" class="close">
                 <span aria-hidden="true">&times;</span>
-              </button>
+            </button>
           
 
 
@@ -1901,6 +1901,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                 data:{},
                 success:function(data){
                     console.log(data);
+                    window.history.pushState('input', 'Input', '/');
                     $('#exampleModal').modal('show');
                     $('.progress_title span').text('1');
                     $('form').hide();
@@ -2227,7 +2228,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         setTimeout(function(){ 
                             $('.spinner-box').hide();
                             window.location.href = "{{URL::to('estimate')}}";
-                         }, 10000);
+                         }, 5000);
 
                     }
                     if(data.email || data.fname || data.mobile){
@@ -2380,6 +2381,14 @@ $('#exampleModal button').on('click', function(){
 </script>
 
 
+<script>
+    $('.leads .close').on('click', function(){
+        $('.progress-bar').css('width', '20%');
+        $(".leads input:radio").attr("checked", false);
+        $('.leads input[type="text"]').val("");
+        $('.leads').close();
+    });
+</script>
 
 
 

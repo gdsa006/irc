@@ -389,32 +389,49 @@ class LeadsController extends Controller
         $steep = $lead_find->steep;
 
         if($material == 'asphalt'){
-            if($steep == 'mellow'){
+            if($steep == 'flat'){
+                $x = $sqft * 12.5;
+            }
+            else if($steep == 'mellow'){
                 $x = $sqft * 5.5;
             }
             else if($steep == 'steep'){
                 $x = $sqft * 7.5;
             }
-        }
-
-        else if($material == 'tile'){
-            $x = $sqft * 12.5;
+            else{
+                $x = $sqft * 5.5;
+            }
         }
 
         else if($material == 'metal'){
-            if($steep == 'mellow'){
+            if($steep == 'flat'){
+                $x = $sqft * 12.5;
+            }
+            else if($steep == 'mellow'){
                 $x = $sqft * 12.5;
             }
             else if($steep == 'steep'){
                 $x = $sqft * 14.5;
             }
+            else{
+                $x = $sqft * 5.5;
+            }
         }
 
-        else if($material == 'other')
-        {
-            $x = $sqft * 5.5;
+        else{
+            if($steep == 'flat'){
+                $x = $sqft * 12.5;
+            }
+            else if($steep == 'mellow'){
+                $x = $sqft * 5.5;
+            }
+            else if($steep == 'steep'){
+                $x = $sqft * 5.5;
+            }
+            else{
+                $x = $sqft * 5.5;
+            }
         }
-
 
 
         return View::make('new.final')->with('data', $data)->with('x', $x);

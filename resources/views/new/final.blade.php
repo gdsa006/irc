@@ -29,11 +29,12 @@
 
             <div class="card mb-3 px-5 py-4">
                                     <div class="row text-center text-md-left">
+                                        
                         <h4 class="col-6 text-dark d-md-block d-none">
                         Your <strong class="text-info text-uppercase">
                 {{ $data[0]->existingmaterial}}
 
-                </strong> roof being replaced by a new <strong class="text-info text-uppercase">{{ $data[0]->steep }}</strong> Roof will cost approximately
+                </strong> roof being replaced by a new <strong class="text-info text-uppercase">{{ $data[0]->material }}</strong> Roof will cost approximately
                         </h4>
 
                         <div class="ml-md-auto mr-md-3 mx-auto position-relative text-center text-md-right">
