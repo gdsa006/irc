@@ -24,7 +24,7 @@
                 Your <strong class="text-info text-uppercase">
                 {{ $data[0]->existingmaterial}}
 
-                </strong> roof being replaced by a new <strong class="text-info text-uppercase">{{ $data[0]->steep }}</strong> Roof will cost approximately
+                </strong> roof being replaced by a new {{ $data[0]->steep }} slope <strong class="text-info text-uppercase">{{ $data[0]->matrial }}</strong> Roof will cost approximately
             </h4>
 
             <div class="card mb-3 px-5 py-4">
@@ -34,7 +34,7 @@
                         Your <strong class="text-info text-uppercase">
                 {{ $data[0]->existingmaterial}}
 
-                </strong> roof being replaced by a new <strong class="text-info text-uppercase">{{ $data[0]->material }}</strong> Roof will cost approximately
+                </strong> roof being replaced by a new {{ $data[0]->steep }} slope <strong class="text-info text-uppercase">{{ $data[0]->material }}</strong> Roof will cost approximately
                         </h4>
 
                         <div class="ml-md-auto mr-md-3 mx-auto position-relative text-center text-md-right">

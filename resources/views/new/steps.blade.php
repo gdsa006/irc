@@ -290,7 +290,7 @@
         <div class="input-group mt-2">
             <input type="text" class="form-control new-custom-input fullname" placeholder="Name" name="fname">
             <div class="input-group-prepend">
-        <span class="input-group-text">+1</span>
+        <span class="input-group-text" style="">+1</span>
     </div>
             <input type="text" class="form-control new-custom-input phone-format" autocomplete="off" name="mobile" placeholder="Phone">
         </div>
@@ -320,10 +320,8 @@
                                         <div id="collapse-message-1" class="panel-collapse collapse">
                                             <div class="panel-body">
                                                 We need your information to send you your estimate.
-                                                Additionally, we know the roof replacement process is confusing.
-                                                Our in house roofing experts team will call you and help you
-                                                throughout your entire roofing project.
-                                                                                                We will not send your information to any contractors without your permission!
+                                                Additionally, we know the roof replacement process is complex.
+                                                One of our roofing experts will call you and assist you with your roofing project. We will never send your information to any contractors without your permission!
                                                                                             </div>
                                         </div>
                                     </div>
@@ -338,11 +336,7 @@
                                         </div>
                                         <div id="collapse-message-2" class="panel-collapse collapse">
                                             <div class="panel-body">
-                                                On the next page, our roofing estimation software will have created an
-                                                estimate based on the information you provided for your roof replacement.
-                                                                                                This price is based on regional contractors pricing including materials and labour.
-                                                                                                Within seconds, our software calculates how much your roof will cost,
-                                                and is accurate to &gt;95% for most standard replacements.
+                                                On the next page, our roofing estimation software will have created an estimate based on the information you provided for your roof replacement. This price is based on local idaho contractors pricing including materials and labour.
                                             </div>
                                         </div>
                                     </div>
