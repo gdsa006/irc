@@ -621,6 +621,16 @@ body {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+
+    <script type="text/javascript">
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+</script>
+
+
 <script>
 $(".sidebar-dropdown > a").click(function() {
   $(".sidebar-submenu").slideUp(200);
@@ -657,9 +667,54 @@ $("#show-sidebar").click(function() {
 
 
 
+
+<script type="text/javascript">
+    $( "#fetchrates" ).change(function(e) {
+        e.preventDefault();
+        $value = $(this).val();
+            $.ajax({
+                type : 'get',
+                url : '{{URL::to('getrates')}}',
+                data: {val: $value},
+                success:function(data){
+                    console.log(data);
+                    $('#flat').val(data.data[0]);
+                    $('#mellow').val(data.data[1]);
+                    $('#steep').val(data.data[2]);
+                    $('#other').val(data.data[3]);
+                    $('.myoptions').attr('data-type', data.type);
+                }      
+    });
+});
+</script>
+
+
+
+<script type="text/javascript">
+    $( "#updateRates" ).submit(function(e) {
+        e.preventDefault();
+        $type = $('.myoptions').data('type');
+            $.ajax({
+                type : 'post',
+                url : '{{URL::to('saverates')}}',
+                data: $('#updateRates').serialize() + '&type=' + $type,
+                success:function(data){
+                    console.log(data);
+                    alert('updated!');
+                    location.reload();
+                }      
+    });
+});
+    </script>
+
+
+
+
+
 <script>
 $('.viewDetail').click(function(e){
           $id = $(this).data('id');
+
 });
 </script>
 </body>

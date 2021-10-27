@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Location;
 use App\Models\Lead;
+use App\Models\Rate;
 use View;
 
 class LeadsController extends Controller
@@ -388,48 +389,51 @@ class LeadsController extends Controller
         $material = $lead_find->material;
         $steep = $lead_find->steep;
 
+        //get rates
+        $rate = Rate::first();
+
         if($material == 'asphalt'){
             if($steep == 'flat'){
-                $x = $sqft * 12.5;
+                $x = $sqft * $rate->af;
             }
             else if($steep == 'mellow'){
-                $x = $sqft * 5.5;
+                $x = $sqft * $rate->am;
             }
             else if($steep == 'steep'){
-                $x = $sqft * 7.5;
+                $x = $sqft * $rate->as;
             }
             else{
-                $x = $sqft * 5.5;
+                $x = $sqft * $rate->ao;
             }
         }
 
         else if($material == 'metal'){
             if($steep == 'flat'){
-                $x = $sqft * 12.5;
+                $x = $sqft * $rate->mf;
             }
             else if($steep == 'mellow'){
-                $x = $sqft * 12.5;
+                $x = $sqft * $rate->mm;
             }
             else if($steep == 'steep'){
-                $x = $sqft * 14.5;
+                $x = $sqft * $rate->ms;
             }
             else{
-                $x = $sqft * 5.5;
+                $x = $sqft * $rate->mo;
             }
         }
 
         else{
             if($steep == 'flat'){
-                $x = $sqft * 12.5;
+                $x = $sqft * $rate->of;
             }
             else if($steep == 'mellow'){
-                $x = $sqft * 5.5;
+                $x = $sqft * $rate->om;
             }
             else if($steep == 'steep'){
-                $x = $sqft * 5.5;
+                $x = $sqft * $rate->os;
             }
             else{
-                $x = $sqft * 5.5;
+                $x = $sqft * $rate->oo;
             }
         }
 

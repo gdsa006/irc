@@ -4,35 +4,36 @@
 
 <h2>Rates</h2>
 <hr>
-<form method="post">
+<div class="input-group">
+<select class="form-control" id="fetchrates">
+    <option>Select</option>
+    <option value="asphalt">Asphalt</option>
+    <option value="metal">Metal</option>
+    <option value="other">Other</option>
+</select>
+</div>
+<hr>
+<form method="post" id="updateRates">
     <div class="input-group">
-        <label class="col-md-2">Asphalt</label> &nbsp;
-        <input type="text" name="asphalt-mellow" value="32" placeholder="mellow">
-        &nbsp;
-        <input type="text" name="steep-steep" value="43" placeholder="steep">
-    </div>
-
-    <div class="input-group mt-2">
         <label class="col-md-2">Flat</label> &nbsp;
-        <input type="text" name="asphalt-mellow" value="23" placeholder="mellow">
-        &nbsp;
-        <input type="text" name="steep-steep" value="56" placeholder="steep">
+        <input type="text" name="flat" id="flat" class="form-control myoptions" value="" placeholder="">
     </div>
 
     <div class="input-group mt-2">
-        <label class="col-md-2">Metal</label> &nbsp;
-        <input type="text" name="asphalt-mellow" value="34" placeholder="mellow">
-        &nbsp;
-        <input type="text" name="steep-steep" value="34" placeholder="steep">
+        <label class="col-md-2">Mellow</label> &nbsp;
+        <input type="text" name="mellow" id="mellow" class="form-control myoptions" value="" placeholder="">
     </div>
 
     <div class="input-group mt-2">
-        <label class="col-md-2">Other</label> &nbsp;
-        <input type="text" name="asphalt-mellow" value="33" placeholder="mellow">
-        &nbsp;
-        <input type="text" name="steep-steep" value="45" placeholder="steep">
+        <label class="col-md-2">Steep</label> &nbsp;
+        <input type="text" name="steep" id="steep" class="form-control myoptions" value="" placeholder="">
+    </div>
+
+    <div class="input-group mt-2">
+        <label class="col-md-2">Unsure</label> &nbsp;
+        <input type="text" name="unsure" id="other" class="form-control myoptions" value="" placeholder="">
     </div>
     <hr>
-    <input type="button" class="btn btn-lg btn-primary" value="Update">
+    <input type="submit" class="btn btn-lg btn-primary updateRates" value="Update">
 </form>
 @endsection

@@ -78,6 +78,8 @@ Route::get('dashboard/welcome', [App\Http\Controllers\DashboardController::class
 Route::get('dashboard/rates', [App\Http\Controllers\DashboardController::class, 'rates'])->name('rates');
 Route::get('dashboard/leads', [App\Http\Controllers\DashboardController::class, 'leads'])->name('leads');
 Route::get('dashboard/leads/{id}', [App\Http\Controllers\DashboardController::class, 'showLead'])->name('leads');
+Route::get('getrates', [App\Http\Controllers\DashboardController::class, 'getRates'])->name('getRates');
+Route::post('saverates', [App\Http\Controllers\DashboardController::class, 'saveRates'])->name('saveRates');
 
 
 Route::get('/login', [App\Http\Controllers\LoginController::class, 'show_login_form'])->name('login');
