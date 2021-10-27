@@ -2228,7 +2228,7 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                         setTimeout(function(){ 
                             $('.spinner-box').hide();
                             window.location.href = "{{URL::to('estimate')}}";
-                         }, 5000);
+                         }, 3000);
 
                     }
                     if(data.email || data.fname || data.mobile){
