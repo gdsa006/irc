@@ -1,9 +1,10 @@
 @extends('new.dashboard.layout')
 @section('dashboard-content')
 
-
-<h2>Leads</h2>
-<hr>
+<div class="d-block mb-5">
+<h2 class="float-left">Leads</h2>
+<a class="btn btn-warning float-right" href="{{ route('export') }}">Export Data</a>
+</div>
 
 
 <div class="table-responsive">

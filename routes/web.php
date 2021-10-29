@@ -87,7 +87,9 @@ Route::post('/login', [App\Http\Controllers\LoginController::class, 'process_log
 Route::get('/logout', [App\Http\Controllers\LoginController::class, 'logout'])->name('logout');
 
 
-
+Route::get('importExportView', [App\Http\Controllers\Controller::class, 'importExportView']);
+Route::get('export', [App\Http\Controllers\Controller::class, 'export'])->name('export');
+Route::post('import', [App\Http\Controllers\Controller::class, 'import'])->name('import');
 
 
 
