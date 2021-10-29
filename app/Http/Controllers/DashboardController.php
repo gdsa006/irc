@@ -10,7 +10,13 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
     public function dashboard(){
-        return View::make('new.dashboard.dashboard');
+        $lead = new Lead();
+        $leads = $lead->latest()->limit(3)->get();
+
+        $rate = new Rate();
+        $rates =  $rate->latest()->limit(3)->get();
+
+        return View::make('new.dashboard.dashboard')->with('leads', $leads)->with('rates', $rates);
     }
 
     public function rates(){

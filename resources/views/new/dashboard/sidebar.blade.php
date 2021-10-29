@@ -41,7 +41,8 @@
           <li class="header-menu">
             <span>General</span>
           </li>
-          <li class="sidebar-dropdown">
+          
+          <li class="sidebar-dropdown {{ Request::is('dashboard/leads') ? 'active' : 'inactive' }}">
             <a href="/dashboard/leads">
             <i class="far fa-address-card"></i>
               <span>Leads</span>
@@ -63,7 +64,7 @@
               </ul>
             </div>
           </li>
-          <li class="sidebar-dropdown">
+          <li class="sidebar-dropdown {{ Request::is('dashboard/rates') ? 'active' : 'inactive' }}">
             <a href="/dashboard/rates">
             <i class="far fa-money-bill-alt"></i>
               <span>Rates</span>
@@ -90,7 +91,7 @@
               <i class="far fa-gem"></i>
               <span>Components</span>
             </a>
-            <div class="sidebar-submenu">
+            <div class="sidebar-submenu d-none">
               <ul>
                 <li>
                   <a href="#">General</a>

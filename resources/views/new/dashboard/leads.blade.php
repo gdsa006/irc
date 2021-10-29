@@ -9,12 +9,13 @@
 <div class="table-responsive">
   <table class="table">
     <tbody>
-    @foreach($leads as $lead)
+    @foreach($leads as $k=>$lead)
       <tr>
-        <td>{{ $lead->fname }} {{ $lead->lname }}</td>
-        <td>{{ $lead->mobile }}</td>
+        <td>{{ $lead->id }}</td>
+        <td>{{ $lead->fname ? $lead->fname . $lead->lname : '-' }} </td>
+        <td>{{ $lead->mobile ? $lead->mobile : '-' }}</td>
         <td>{{ $lead->address }}</td>
-        <td><a href="/dashboard/leads/{{ $lead->id }}" target="_blank">Details</a></td>
+        <td><a href="/dashboard/leads/{{ $lead->id }}">Details</a></td>
       </tr>
 @endforeach
 <tr>

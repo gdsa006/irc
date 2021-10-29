@@ -21,15 +21,14 @@
   <table class="table">
    
     <tbody>
-      <tr>
-        <td>Cell</td>
-        <td>Cell</td>
-  
-      </tr>
-      <tr>
-        <td>Cell</td>
-        <td>Cell</td>
-</tr>
+      @foreach($leads as $lead)
+        <tr>
+          <td>{{ $lead->fname }}</td>
+          <td>{{ Str::limit($lead->address, 22) }}</td>
+          <td>{{ $lead->sqft }} Sqft</td>
+        </tr>
+      @endforeach
+
     </tbody>
   </table>
 </div>
@@ -55,15 +54,13 @@
                     <table class="table">
    
    <tbody>
-     <tr>
-       <td>Cell</td>
-       <td>Cell</td>
- 
-     </tr>
-     <tr>
-       <td>Cell</td>
-       <td>Cell</td>
-</tr>
+   @foreach($rates as $rate)
+        <tr>
+          <td>{{ $rate->af }}</td>
+          <td>{{ $rate->mf }}</td>
+          <td>{{ $rate->of }}</td>
+        </tr>
+      @endforeach
    </tbody>
  </table>
                     </div>

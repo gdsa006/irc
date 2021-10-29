@@ -279,6 +279,7 @@ body {
   position: absolute;
   right: 15px;
   top: 14px;
+  display: none
 }
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu ul {
