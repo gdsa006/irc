@@ -16,6 +16,7 @@
     <link rel="icon" type="image/png" href="{{ asset('images/Favicon-01.png') }}"><!-- Major Browsers -->
     <link rel=“stylesheet” href=“https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css”>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
 
     <title>Hello, world!</title>
 
@@ -621,6 +622,7 @@ body {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 
 
     <script type="text/javascript">
@@ -718,6 +720,18 @@ $('.viewDetail').click(function(e){
 
 });
 </script>
+
+
+<script>
+$(function() {
+    $( document ).tooltip({
+      content:function(){
+        return this.getAttribute("title");
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
 

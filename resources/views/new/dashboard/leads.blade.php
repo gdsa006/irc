@@ -16,7 +16,7 @@
         <td>{{ $lead->fname ? $lead->fname . $lead->lname : '-' }} </td>
         <td>{{ $lead->mobile ? $lead->mobile : '-' }}</td>
         <td>{{ $lead->address }}</td>
-        <td><a href="/dashboard/leads/{{ $lead->id }}">Details</a></td>
+        <td><a data-html="true" href="javascript:void(0)" title="Sqft: {{ $lead->sqft }} <br/> Roof: {{ $lead->steep }} <br/> Currently: {{ $lead->existingmaterial }} <br/> Required: {{ $lead->material }} <br/> Urgent: {{ $lead->urgency }} <br/> Insurance: {{ $lead->true }} <br/> Interested in financing: {{ $lead->isinterestedinfinancing }} ">Details</a></td>
       </tr>
 @endforeach
 <tr>
