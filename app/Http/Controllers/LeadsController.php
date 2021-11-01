@@ -373,13 +373,32 @@ class LeadsController extends Controller
             $lead_find->fname = $fname;
             $lead_find->mobile = $mobile;
             $lead_find->save();
+
+            $details = [
+                'title' => 'Thankyou',
+                'body' => 'asdas'
+            ];
+
+            $details2 = [
+                'title' => 'Thankyou',
+                'body' => 'asdas'
+            ];
+
+            \Mail::to('gdsa006@gmail.com')->send(new \App\Mail\AdminNotificationEmail($details));
+
+            \Mail::to($email)->send(new \App\Mail\CustomerNotificationEmail($details2));
+
             return response()->json(array('status' => true, 'gotostep' => ''));
         }
 
     }
 
     public function estimate(Request $request){
+
         $leadID = $request->session()->get('leadID');
+        if(!$leadID){
+            return redirect()->route('homepage');
+        }
         $lead_find = Lead::find($leadID);
         $data = new Lead();
         $data = $data->where('id', $leadID)->get();

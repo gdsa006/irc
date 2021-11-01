@@ -2215,6 +2215,9 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
 <script type="text/javascript">
     $( "#frm-ten" ).submit(function(e) {
         e.preventDefault();
+        $('.spinner-box').show();
+        $('form').hide();
+        $('.wrapper').hide();
             $.ajax({
                 type : 'post',
                 url : '{{URL::to('saveTen')}}',
@@ -2222,14 +2225,8 @@ var vTop = $cache.offset().top - parseFloat($cache.css('marginTop').replace(/aut
                 success:function(data){
                     console.log(data);
                     if(data.status){
-                        $('form').hide();
-                        $('.wrapper').hide();
-                        $('.spinner-box').show();
-                        setTimeout(function(){ 
                             $('.spinner-box').hide();
                             window.location.href = "{{URL::to('estimate')}}";
-                         }, 3000);
-
                     }
                     if(data.email || data.fname || data.mobile){
                         

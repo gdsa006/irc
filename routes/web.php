@@ -76,8 +76,15 @@ Route::get('file-export', [App\Http\Controllers\LocationFinderController::class,
 
 Route::get('dashboard/welcome', [App\Http\Controllers\DashboardController::class, 'dashboard'])->name('welcome')->middleware('auth');
 Route::get('dashboard/rates', [App\Http\Controllers\DashboardController::class, 'rates'])->name('rates')->middleware('auth');
-Route::get('dashboard/leads', [App\Http\Controllers\DashboardController::class, 'leads'])->name('leads')->middleware('auth');
-Route::get('dashboard/leads/{id}', [App\Http\Controllers\DashboardController::class, 'showLead'])->name('leads')->middleware('auth');
+
+
+Route::get('dashboard/leads/all', [App\Http\Controllers\DashboardController::class, 'leads'])->name('leads')->middleware('auth');
+Route::get('dashboard/leads/checking', [App\Http\Controllers\DashboardController::class, 'leadsChecking'])->name('leadsChecking')->middleware('auth');
+Route::get('dashboard/leads/soon', [App\Http\Controllers\DashboardController::class, 'leadsSoon'])->name('leadsSoon')->middleware('auth');
+Route::get('dashboard/leads/urgent', [App\Http\Controllers\DashboardController::class, 'leadsUrgent'])->name('leadsUrgent')->middleware('auth');
+
+Route::get('dashboard/lead-delete', [App\Http\Controllers\DashboardController::class, 'leadDelete'])->name('leadDelete')->middleware('auth');
+
 Route::get('getrates', [App\Http\Controllers\DashboardController::class, 'getRates'])->name('getRates')->middleware('auth');
 Route::post('saverates', [App\Http\Controllers\DashboardController::class, 'saveRates'])->name('saveRates')->middleware('auth');
 
@@ -89,6 +96,9 @@ Route::get('/logout', [App\Http\Controllers\LoginController::class, 'logout'])->
 
 Route::get('importExportView', [App\Http\Controllers\Controller::class, 'importExportView']);
 Route::get('export', [App\Http\Controllers\Controller::class, 'export'])->name('export');
+Route::get('export-checking-leads', [App\Http\Controllers\Controller::class, 'exportCheckingLeads'])->name('export-checking-lead');
+Route::get('export-soon-leads', [App\Http\Controllers\Controller::class, 'exportSoonLeads'])->name('export-soon-leads');
+Route::get('export-urgent-leads', [App\Http\Controllers\Controller::class, 'exportUrgentLeads'])->name('export-urgent-leads');
 Route::post('import', [App\Http\Controllers\Controller::class, 'import'])->name('import');
 
 

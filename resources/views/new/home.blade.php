@@ -428,6 +428,6 @@ Our team will answer questions, help you compare quotes, and hire the right roof
     </div>
 </div>
 </div>
-<img src="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/60b8ce130115709db7edbac1_6065f6e2f474d565d99bb280_roof1.png" loading="lazy" width="1440" sizes="100vw" srcset="https://assets-global.website-files.com/606477f876b285d1aaa0ea55/60b8ce130115709db7edbac1_6065f6e2f474d565d99bb280_roof1-p-500.png 500w, https://assets-global.website-files.com/606477f876b285d1aaa0ea55/60b8ce130115709db7edbac1_6065f6e2f474d565d99bb280_roof1-p-800.png 800w, https://assets-global.website-files.com/606477f876b285d1aaa0ea55/60b8ce130115709db7edbac1_6065f6e2f474d565d99bb280_roof1-p-1080.png 1080w, https://assets-global.website-files.com/606477f876b285d1aaa0ea55/60b8ce130115709db7edbac1_6065f6e2f474d565d99bb280_roof1-p-1600.png 1600w, https://assets-global.website-files.com/606477f876b285d1aaa0ea55/60b8ce130115709db7edbac1_6065f6e2f474d565d99bb280_roof1.png 2880w" alt="" class="roof-image">
+<img src="{{ asset('images/banner2880.png') }}" loading="lazy" width="1440" sizes="100vw" srcset="{{ asset('images/banner500.png') }} 500w, {{ asset('images/banner800.png') }} 800w, {{ asset('images/banner1080.png') }} 1080w, {{ asset('images/banner1600.png') }} 1600w, {{ asset('images/banner2880.png') }} 2880w" alt="" class="roof-image">
 </section>
 @endsection

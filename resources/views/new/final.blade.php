@@ -77,7 +77,7 @@
             
             <div class="d-none d-md-flex">
                 <div class="col-md border rounded py-3 px-4 mt-3 mt-md-0 ">
-                    <img src="{{ asset('images/MetalShingle-01.png') }}" class="img-fluid">
+                    <img src="{{ asset('images/MetalShingle.svg') }}" class="img-fluid">
                     <!-- <h5 class="text-center mb-5 mt-3 text-dark">Metal</h5> -->
 
                     <!-- <h4 class="text-center font-weight-bold mt-2">
@@ -94,7 +94,7 @@
                                     </div>
                                 
                             <div class="col-md border rounded py-3 px-4 mt-3 mt-md-0 ml-md-3">
-                            <img src="{{ asset('images/MetalShingle-02.png') }}" class="img-fluid">
+                            <img src="{{ asset('images/MetalShingle2.svg') }}" class="img-fluid">
                     <!-- <h5 class="text-center mb-5 mt-3 text-dark">Slate</h5> -->
 
                     <!-- <h4 class="text-center font-weight-bold mt-2">

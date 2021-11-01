@@ -42,29 +42,35 @@
             <span>General</span>
           </li>
           
-          <li class="sidebar-dropdown {{ Request::is('dashboard/leads') ? 'active' : 'inactive' }}">
-            <a href="/dashboard/leads">
+          <li class="sidebar-dropdown {{ Request::is('dashboard/leads/all') || Request::is('dashboard/leads/checking') || Request::is('dashboard/leads/soon') || Request::is('dashboard/leads/urgent')  ? 'active' : 'inactive' }}">
+            <a href="#">
             <i class="far fa-address-card"></i>
               <span>Leads</span>
               <span class="badge badge-pill badge-warning d-none">New</span>
             </a>
-            <div class="sidebar-submenu d-none">
+            <div class="sidebar-submenu">
               <ul>
-                <li>
-                  <a href="#">Dashboard 1
-                    <span class="badge badge-pill badge-success">Pro</span>
+              <li>
+                  <a href="/dashboard/leads/all">All
+                    <span class="badge badge-pill badge-success d-none">Text</span>
                   </a>
                 </li>
-                <li>
-                  <a href="#">Dashboard 2</a>
+                <li class="{{ Request::is('dashboard/leads/checking') ? 'active' : 'inactive' }}">
+                  <a href="/dashboard/leads/checking">Checking
+                  </a>
                 </li>
-                <li>
-                  <a href="#">Dashboard 3</a>
+                <li class="{{ Request::is('dashboard/leads/soon') ? 'active' : 'inactive' }}">
+                  <a href="/dashboard/leads/soon">Soon
+                  </a>
+                </li>
+                <li class="{{ Request::is('dashboard/leads/urgent') ? 'active' : 'inactive' }}">
+                  <a href="/dashboard/leads/urgent">Urgent
+                 </a>
                 </li>
               </ul>
             </div>
           </li>
-          <li class="sidebar-dropdown {{ Request::is('dashboard/rates') ? 'active' : 'inactive' }}">
+          <li class="sidebar-dropdown hidearrow {{ Request::is('dashboard/rates') ? 'active' : 'inactive' }}">
             <a href="/dashboard/rates">
             <i class="far fa-money-bill-alt"></i>
               <span>Rates</span>

@@ -8,6 +8,9 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
 use App\Exports\LeadsExport;
+use App\Exports\LeadsCheckingExport;
+use App\Exports\LeadsSoonExport;
+use App\Exports\LeadsUrgentExport;
 use Maatwebsite\Excel\Facades\Excel;
 
 
@@ -31,6 +34,21 @@ class Controller extends BaseController
     public function export() 
     {
         return Excel::download(new LeadsExport, 'leads.xlsx');
+    }
+
+    public function exportCheckingLeads() 
+    {
+        return Excel::download(new LeadsCheckingExport, 'leads-checking.xlsx');
+    }
+
+    public function exportSoonLeads() 
+    {
+        return Excel::download(new LeadsSoonExport, 'leads-soon.xlsx');
+    }
+
+    public function exportUrgentLeads() 
+    {
+        return Excel::download(new LeadsUrgentExport, 'leads-urgent.xlsx');
     }
      
 

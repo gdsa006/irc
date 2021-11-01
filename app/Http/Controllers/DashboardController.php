@@ -29,9 +29,30 @@ class DashboardController extends Controller
         return View::make('new.dashboard.leads', compact('leads'));
     }
 
-    public function showLead($id){
-        $lead = Lead::find($id);
-        return VIew::make('new.dashboard.show-lead', compact('lead'));
+    public function leadsChecking(Request $request){
+        $lead = new Lead();
+        $leads = $lead->where('urgency', 'checking')->paginate(10);
+        return View::make('new.dashboard.leads-checking', compact('leads'));
+    }
+
+    public function leadsSoon(Request $request){
+        $lead = new Lead();
+        $leads = $lead->where('urgency', 'soon')->paginate(10);
+        return View::make('new.dashboard.leads-soon', compact('leads'));
+    }
+
+    public function leadsUrgent(Request $request){
+        $lead = new Lead();
+        $leads = $lead->where('urgency', 'urgent')->paginate(10);
+        return View::make('new.dashboard.leads-urgent', compact('leads'));
+    }
+
+    public function leadDelete(Request $request){
+        $id = $request->input('id');
+        $lead = new Lead();
+        $findLead = $lead->find($id);
+        $findLead->delete();
+        return response()->json(array('status' => true));
     }
 
     public function getRates(Request $request){
@@ -86,4 +107,6 @@ class DashboardController extends Controller
 
         return response()->json(array('status' => true, 'data' => $type));
     }
+
+
 }

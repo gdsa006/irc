@@ -280,7 +280,11 @@ body {
   position: absolute;
   right: 15px;
   top: 14px;
-  display: none
+
+}
+
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown.hidearrow > a:after {
+    display: none
 }
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu ul {
@@ -322,6 +326,7 @@ body {
 .sidebar-wrapper .sidebar-menu .sidebar-submenu {
   display: none;
 }
+
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown.active > a:after {
   transform: rotate(90deg);
@@ -693,6 +698,35 @@ $("#show-sidebar").click(function() {
 
 
 
+
+<script type="text/javascript">
+    $( ".deleteLead" ).on('click', function(e) {
+        e.preventDefault();
+        $id = $(this).data('id');
+        if(confirm("Are you sure you want to delete (ID:" + $id + ")")){
+            $.ajax({
+                type : 'get',
+                url : '{{URL::to('dashboard/lead-delete')}}',
+                data: {'id' : $id},
+                success:function(data){
+                    console.log(data);
+                    if(data){
+                        alert($id + ' deleted successfully!');
+                        $('#lead-' + $id).remove();
+                    }
+                }      
+            });
+        }
+        else{
+            return false;
+        }
+            
+});
+    </script>
+
+
+
+
 <script type="text/javascript">
     $( "#updateRates" ).submit(function(e) {
         e.preventDefault();
@@ -731,6 +765,10 @@ $(function() {
     });
   });
 </script>
+
+
+
+
 
 </body>
 </html>
