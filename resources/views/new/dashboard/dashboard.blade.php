@@ -36,7 +36,7 @@
 
                     </div>
                     <div class="card-body text-center">
-                <a href="/dashboard/leads" class="btn btn-default">View All</a>
+                <a href="/dashboard/leads/all" class="btn btn-default">View All</a>
 </div>
                 </div>
             </div>
