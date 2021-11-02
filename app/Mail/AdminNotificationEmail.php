@@ -30,6 +30,6 @@ class AdminNotificationEmail extends Mailable
      */
     public function build()
     {
-        return $this->subject('New Estimate')->view('new.dashboard.admin-mail');
+        return $this->subject('New Lead')->view('new.dashboard.admin-mail');
     }
 }

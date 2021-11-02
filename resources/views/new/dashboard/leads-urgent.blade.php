@@ -11,7 +11,7 @@
   <table class="table">
     <tbody>
     @foreach($leads as $k=>$lead)
-      <tr>
+      <tr id="lead-{{ $lead->id }}">
         <td>{{ $lead->id }}</td>
         <td>{{ $lead->fname ? $lead->fname . $lead->lname : '-' }} </td>
         <td>{{ $lead->mobile ? $lead->mobile : '-' }}</td>

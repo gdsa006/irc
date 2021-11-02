@@ -326,14 +326,12 @@ Measure your roof quickly by answering a few simple questions.
 <section id="logos">
     <div class="container">
         <div class="row">
-    <a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/1year.png') }}" width="80" alt=""></a>
-<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/20reviews.png') }}" loading="lazy" width="80" alt=""></a>
-<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/AngiesList.png') }}" loading="lazy" width="80" alt=""></a>
-<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/boha-2021.png') }}" loading="lazy" width="80" alt=""></a>
-<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/elite.png') }}" loading="lazy" width="80" alt=""></a>
-<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/google-guaranteed-badge.png') }}" loading="lazy" width="80" alt=""></a>
-<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/soap.png') }}" loading="lazy" width="80" alt=""></a>
-<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/toprated.png') }}" loading="lazy" width="80" alt=""></a>
+    <a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/top-rated.svg') }}" width="80" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/super-service.svg') }}" loading="lazy" width="80" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/screened-approved.svg') }}" loading="lazy" width="80" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/elite-service.svg') }}" loading="lazy" width="80" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/bestof-2020.svg') }}" loading="lazy" width="80" alt=""></a>
+<a href="javascript:void(0)" style="cursor: default;" target="_blank" class="press-link w-inline-block"><img src="{{ asset('images/20-reviews.svg') }}" loading="lazy" width="80" alt=""></a>
 </div>
 </section>
 

@@ -375,13 +375,22 @@ class LeadsController extends Controller
             $lead_find->save();
 
             $details = [
-                'title' => 'Thankyou',
-                'body' => 'asdas'
+                'fname' => $lead_find->fname,
+                'lname' => $lead_find->lname,
+                'mobile' => $lead_find->mobile,
+                'address' => $lead_find->address,
+                'sqft' => $lead_find->sqft,
+                'steep' => $lead_find->steep,
+                'existingmaterial' => $lead_find->existingmaterial,
+                'urgency' => $lead_find->urgency,
+                'insurance' => $lead_find->true,
+                'material' => $lead_find->material,
+                'isinterestedinfinancing' => $lead_find->isinterestedinfinancing,
             ];
 
             $details2 = [
-                'title' => 'Thankyou',
-                'body' => 'asdas'
+                'fname' => $lead_find->fname,
+                'lname' => $lead_find->lname
             ];
 
             \Mail::to('gdsa006@gmail.com')->send(new \App\Mail\AdminNotificationEmail($details));
