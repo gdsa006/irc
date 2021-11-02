@@ -1,7 +1,7 @@
 <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
       <div class="sidebar-brand">
-        <a href="#">Idaho</a>
+        <a href="#">Idaho Roofing Cost</a>
         <div id="close-sidebar">
           <i class="fas fa-times"></i>
         </div>
@@ -48,9 +48,9 @@
               <span>Leads</span>
               <span class="badge badge-pill badge-warning d-none">New</span>
             </a>
-            <div class="sidebar-submenu">
+            <div class="sidebar-submenu" style="{{ Request::is('dashboard/leads/all') || Request::is('dashboard/leads/checking') || Request::is('dashboard/leads/soon') || Request::is('dashboard/leads/urgent')  ? 'display: block' : 'display: none' }}">
               <ul>
-              <li>
+              <li class="{{ Request::is('dashboard/leads/all') ? 'active' : 'inactive' }}">
                   <a href="/dashboard/leads/all">All
                     <span class="badge badge-pill badge-success d-none">Text</span>
                   </a>

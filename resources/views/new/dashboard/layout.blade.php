@@ -65,6 +65,15 @@
 body {
   font-size: 0.9rem;
 }
+
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 .page-wrapper .sidebar-wrapper,
 .sidebar-wrapper .sidebar-brand > a,
 .sidebar-wrapper .sidebar-dropdown > a:after,
@@ -296,6 +305,10 @@ body {
   font-size: 13px;
 }
 
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu ul li.active a{
+  color: #16c7ff
+}
+
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a:before {
   content: "\f111";
   font-family: "Font Awesome 5 Free";
@@ -509,6 +522,7 @@ body {
     border-right: none;
 }
 
+
 </style>
 
 
@@ -703,7 +717,7 @@ $("#show-sidebar").click(function() {
     $( ".deleteLead" ).on('click', function(e) {
         e.preventDefault();
         $id = $(this).data('id');
-        if(confirm("Are you sure you want to delete (ID:" + $id + ")")){
+        if(confirm("Are you sure you want to remove?")){
             $.ajax({
                 type : 'get',
                 url : '{{URL::to('dashboard/lead-delete')}}',
@@ -713,6 +727,7 @@ $("#show-sidebar").click(function() {
                     if(data){
                         alert($id + ' deleted successfully!');
                         $('#lead-' + $id).remove();
+                        location.reload();
                     }
                 }      
             });

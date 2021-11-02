@@ -12,7 +12,7 @@
     <tbody>
     @foreach($leads as $k=>$lead)
       <tr id="lead-{{ $lead->id }}">
-        <td>{{ $lead->id }}</td>
+        <td>  {{ $leads->firstItem() + $k }}</td>
         <td>{{ $lead->fname ? $lead->fname . $lead->lname : '-' }} </td>
         <td>{{ $lead->mobile ? $lead->mobile : '-' }}</td>
         <td>{{ $lead->address }}</td>

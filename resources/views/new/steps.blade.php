@@ -35,7 +35,7 @@
     <div class="input-group-prepend">
       <span class="input-group-text">Sqft</span>
     </div>
-        <input type="text" class="form-control new-custom-input" autocomplete="off" id="sqft" placeholder="Home SqFt" value="" name="sqft">
+        <input type="number" max="5000" min="1" class="form-control new-custom-input" autocomplete="off" id="sqft" placeholder="Home SqFt" value="" name="sqft">
         <div class="buttons">
             <input type="submit" value="Looks good, next step!" class="btn new-custom-btn">
         </div>

@@ -8,7 +8,7 @@
 body {
 margin:0;
 padding:0;
-background-color: #ddd;
+background-color: red;
 text-align: center;
 	}
 
@@ -30,7 +30,18 @@ margin: -3em 0 0 -3em;
 padding: 1.5em;
 	}
 
--->
+
+    @media(max-width: 768px){
+        #container{
+            width: 90%;
+            margin: 20px auto
+        }
+    }
+
+    #btn{
+        background-color: #269bd6
+    }
+
 </style>
 </head>
 <body>
@@ -54,7 +65,7 @@ padding: 1.5em;
 <p>Let me know how I can help!</p>
 
  
-<p><a href="call: 121">Call Now Button</a></p>
+<p><a id="btn" href="call: 121">Call Now Button</a></p>
  
 <p>Sincerely,</p>
 <p>Jake</p>
